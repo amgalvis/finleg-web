@@ -11,17 +11,24 @@
         .bg-navy { background-color: #1a2b4c; }
         .text-navy { color: #1a2b4c; }
         .bg-cyan-tech { background-color: #00e5ff; }
+        .bg-cobalto { background-color: #0047AB; }
+        .btn-premium { transition: all 0.3s ease; }
+        .btn-premium:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
 
     <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <img src="finle_logo.png" alt="FINLEG" class="h-12">
-            <nav class="hidden md:flex space-x-8 font-semibold text-sm uppercase tracking-wide">
+        <div class="container mx-auto px-6 h-24 flex justify-between items-center">
+            <a href="index.html">
+                <img src="finle_logo.png" alt="FINLEG" class="h-16 md:h-20 w-auto object-contain">
+            </a>
+            
+            <nav class="hidden md:flex space-x-8 font-semibold text-sm uppercase tracking-wide text-navy items-center">
                 <a href="finanzas.html" class="hover:text-blue-600 transition">Finanzas Corporativas</a>
                 <a href="legal.html" class="hover:text-blue-600 transition">Asesoría Legal</a>
                 <a href="contacto.html" class="hover:text-blue-600 transition">Contacto</a>
+                <a href="https://app.finleg.co" class="bg-navy text-white px-6 py-2 rounded-lg font-bold btn-premium ml-4">Acceso SIAF</a>
             </nav>
         </div>
     </header>
@@ -37,11 +44,11 @@
 
     <section class="py-16 bg-white">
         <div class="container mx-auto px-6">
-            <h1 class="text-3xl md:text-5xl font-light text-left leading-tight text-gray-800">
-                <span class="font-bold text-navy">7 de cada 10 empresas</span> no logra superar los 5 años de existencia, principalmente por una <span class="italic">mala gestión de sus finanzas.</span>
+            <h1 class="text-3xl md:text-5xl font-light text-left leading-tight text-gray-800 mb-8">
+                <span class="font-bold text-navy">7 de cada 10 empresas</span> no logra superar los 5 años de existencia, principalmente por una <span class="font-bold text-navy">mala gestión de sus finanzas.</span>
             </h1>
-            <p class="mt-8 text-xl text-gray-600 max-w-4xl">
-                Optimice su liquidez, gestione riesgos e impulse sus ingresos con **SIAF**, nuestro gestor de finanzas potenciado con Inteligencia Artificial.
+            <p class="text-xl md:text-2xl text-gray-800 w-full leading-relaxed border-t pt-8">
+                Optimice su liquidez, gestione riesgos e impulse sus ingresos con <span class="font-bold text-navy">SIAF</span>, nuestro gestor de finanzas potenciado con Inteligencia Artificial.
             </p>
         </div>
     </section>
@@ -55,6 +62,26 @@
                 <p>
                     <span class="font-semibold text-cyan-tech">Hola, soy Mauricio Galvis,</span> Administrador de empresas, especialista en Finanzas Corporativas y Mg en Gestión Financiera. Tras consolidar una trayectoria de más de 20 años colaborando en las operaciones financieras de organizaciones de alto impacto como Microempresas de Colombia, Comfama, Adeinco, Sufi, entre otras, hoy tengo el orgullo de presentar nuestra solución tecnológica insignia: <span class="font-bold">SIAF</span>.
                 </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="siaf" class="py-20 bg-cobalto text-white overflow-hidden relative">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between relative z-10">
+            <div class="md:w-1/2">
+                <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center mb-8 shadow-xl">
+                    <img src="siaf_logo.png" alt="SIAF Logo" class="w-16">
+                </div>
+                <h2 class="text-4xl font-bold mb-6">Su Gestor Financiero con IA</h2>
+                <p class="text-lg opacity-90 mb-10 max-w-lg">
+                    SIAF analiza sus estados financieros en tiempo real, proporcionando diagnósticos precisos para decisiones inteligentes.
+                </p>
+                <a href="https://app.finleg.co" class="bg-white text-blue-700 px-10 py-4 rounded-xl font-bold text-xl btn-premium inline-block">Agendar Demostración</a>
+            </div>
+            <div class="md:w-1/3 opacity-20 hidden md:block">
+                <svg class="w-full h-auto" viewBox="0 0 200 200" fill="currentColor">
+                    <path d="M44.7,-76.4C58.8,-69.2,71.8,-59.1,79.6,-45.8C87.4,-32.5,90,-16.3,88.5,-0.9C87,14.5,81.4,29,73.1,41.5C64.8,54,53.8,64.5,40.7,71.5C27.6,78.5,13.8,81.9,-0.3,82.4C-14.4,82.9,-28.8,80.5,-42.2,73.8C-55.6,67.1,-68,56.1,-75.8,42.6C-83.6,29.1,-86.8,13.1,-86.2,-2.7C-85.6,-18.5,-81.2,-34.1,-72.1,-46.8C-63,-59.5,-49.2,-69.3,-35.1,-76.5C-21,-83.7,-10.5,-88.3,2.6,-92.8C15.7,-97.3,30.6,-83.6,44.7,-76.4Z" transform="translate(100 100)" />
+                </svg>
             </div>
         </div>
     </section>
@@ -74,28 +101,13 @@
         </div>
     </section>
 
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-6 flex flex-col items-center text-center">
-            <div class="w-32 h-32 bg-gray-100 rounded-full flex items-center justify-center mb-8 shadow-inner border border-gray-200">
-                <img src="siaf_logo.png" alt="SIAF Logo" class="w-20">
+    <footer class="bg-white py-12 border-t border-gray-200">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center space-x-8 mb-8 font-semibold text-navy">
+                <a href="contacto.html" class="hover:text-blue-600">Contáctanos</a>
+                <a href="privacidad.html" class="hover:text-blue-600">Política de Privacidad</a>
             </div>
-            <h2 class="text-4xl font-bold text-navy mb-6">Su Gestor Financiero con IA</h2>
-            <p class="text-gray-600 max-w-2xl mb-10 text-lg">
-                SIAF analiza sus estados financieros en tiempo real, proporcionando diagnósticos precisos para decisiones inteligentes.
-            </p>
-            <a href="https://app.finleg.co" class="bg-navy text-white px-10 py-4 rounded-full font-bold hover:bg-blue-900 transition shadow-lg">
-                ACCESO SIAF
-            </a>
-        </div>
-    </section>
-
-    <footer class="bg-gray-100 py-12 border-t border-gray-200">
-        <div class="container mx-auto px-6 text-center text-sm text-gray-500">
-            <div class="flex justify-center space-x-6 mb-6">
-                <a href="contacto.html" class="hover:text-navy">Contáctanos</a>
-                <a href="privacidad.html" class="hover:text-navy">Política de Privacidad</a>
-            </div>
-            <p>© 2026 <span class="font-bold text-navy">FINLEG Finanzas Inteligentes</span>. Todos los derechos reservados.</p>
+            <p class="text-gray-500 text-sm">© 2026 <span class="font-bold text-navy">FINLEG Finanzas Inteligentes</span>. Todos los derechos reservados.</p>
         </div>
     </footer>
 
