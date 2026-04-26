@@ -141,16 +141,32 @@
 
     <script>
         async function actualizarTRM() {
-            const trmElement = document.getElementById('trm-val');
+            const el = document.getElementById('trm-val');
+            // Fuente 1: Frankfurter (gratis, CORS, sin API key)
             try {
-                const res = await fetch('https://www.datos.gov.co/resource/m97f-n68h.json?$limit=1&$order=vigenciadesde DESC');
-                const data = await res.json();
-                if (data && data.length > 0) {
-                    trmElement.innerText = new Intl.NumberFormat('es-CO', {
+                const r1 = await fetch('https://api.frankfurter.dev/v2/rate/USD/COP');
+                const d1 = await r1.json();
+                if (d1 && d1.rate) {
+                    el.innerText = new Intl.NumberFormat('es-CO', {
                         style: 'currency', currency: 'COP', maximumFractionDigits: 0
-                    }).format(data[0].valor);
+                    }).format(d1.rate);
+                    return;
                 }
-            } catch (e) { trmElement.innerText = "$3.948 (Ref)"; }
+            } catch (_) {}
+            // Fuente 2: datos.gov.co (dataset actualizado)
+            try {
+                const hoy = new Date().toISOString().split('T')[0];
+                const r2 = await fetch(`https://www.datos.gov.co/resource/32sa-8pi3.json?vigenciadesde=${hoy}`);
+                const d2 = await r2.json();
+                if (d2 && d2.length > 0) {
+                    el.innerText = new Intl.NumberFormat('es-CO', {
+                        style: 'currency', currency: 'COP', maximumFractionDigits: 0
+                    }).format(d2[0].valor);
+                    return;
+                }
+            } catch (_) {}
+            // Fallback: referencia estática
+            el.innerText = '$3.551 (Ref)';
         }
         document.addEventListener('DOMContentLoaded', actualizarTRM);
     </script>
