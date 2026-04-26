@@ -14,6 +14,14 @@
         .bg-cobalto { background-color: #0047AB; }
         .btn-premium { transition: all 0.3s ease; }
         .btn-premium:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        /* Nuevo estilo para resaltar el logo de SIAF */
+        .logo-siaf-resalte { 
+            border: 4px solid #1a2b4c; /* Borde azul navy */
+            border-radius: 30px; /* Bordes muy redondeados */
+            padding: 15px; 
+            background-color: white; /* Fondo blanco propio */
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Sombra suave */
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
@@ -46,10 +54,10 @@
     <section class="py-16 bg-white">
         <div class="container mx-auto px-6">
             <h1 class="text-3xl md:text-5xl font-light text-left leading-tight text-gray-800 mb-8">
-                <span class="font-bold text-navy">7 de cada 10 empresas</span> no logra superar los 5 años de existencia, principalmente por una <span class="font-bold text-navy">mala gestión de sus finanzas.</span>
+                <span class="font-bold text-navy">7 de cada 10 empresas en Colombia</span> no logra superar los 5 años de existencia, principalmente por una <span class="font-bold text-navy">mala gestión de sus finanzas.</span>
             </h1>
             <p class="text-xl md:text-2xl text-gray-800 w-full leading-relaxed border-t pt-8">
-                Optimice su liquidez, gestione riesgos e impulse sus ingresos con <span class="font-bold text-navy">SIAF</span>, nuestro gestor de finanzas potenciado con Inteligencia Artificial.
+                Optimice la liquidez de su negocio, gestione los riesgos e impulse sus ingresos con <span class="font-bold text-navy">SIAF</span>, nuestro gestor de finanzas potenciado con Inteligencia Artificial.
             </p>
         </div>
     </section>
@@ -67,37 +75,50 @@
         </div>
     </section>
 
-    <section id="siaf" class="py-20 bg-cobalto text-white overflow-hidden relative">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between relative z-10">
-            <div class="md:w-1/2">
-                <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center mb-8 shadow-xl">
-                    <img src="siaf_logo.png" alt="SIAF Logo" class="w-16">
-                </div>
-                <h2 class="text-4xl font-bold mb-6">Su Gestor Financiero con IA</h2>
-                <p class="text-lg opacity-90 mb-10 max-w-lg">
-                    SIAF analiza sus estados financieros en tiempo real, proporcionando diagnósticos precisos para decisiones inteligentes.
-                </p>
-                <a href="https://siaf.finleg.co/" target="_blank" class="bg-white text-blue-700 px-10 py-4 rounded-xl font-bold text-xl btn-premium inline-block">Agendar Demostración</a>
+    <section id="siaf" class="py-24 bg-white">
+        <div class="container mx-auto px-6 flex flex-col items-center text-center">
+            <div class="mb-12">
+                <img src="siaf_logo.png" alt="SIAF Logo" class="w-36 h-36 md:w-48 md:h-48 object-contain logo-siaf-resalte mx-auto shadow-xl">
             </div>
-            <div class="md:w-1/3 opacity-20 hidden md:block">
-                <svg class="w-full h-auto" viewBox="0 0 200 200" fill="currentColor">
-                    <path d="M44.7,-76.4C58.8,-69.2,71.8,-59.1,79.6,-45.8C87.4,-32.5,90,-16.3,88.5,-0.9C87,14.5,81.4,29,73.1,41.5C64.8,54,53.8,64.5,40.7,71.5C27.6,78.5,13.8,81.9,-0.3,82.4C-14.4,82.9,-28.8,80.5,-42.2,73.8C-55.6,67.1,-68,56.1,-75.8,42.6C-83.6,29.1,-86.8,13.1,-86.2,-2.7C-85.6,-18.5,-81.2,-34.1,-72.1,-46.8C-63,-59.5,-49.2,-69.3,-35.1,-76.5C-21,-83.7,-10.5,-88.3,2.6,-92.8C15.7,-97.3,30.6,-83.6,44.7,-76.4Z" transform="translate(100 100)" />
-                </svg>
+            <h2 class="text-5xl font-bold mb-6 text-navy">Su Gestor Financiero con IA</h2>
+            <p class="text-xl text-gray-700 mb-12 max-w-2xl leading-relaxed">
+                SIAF analiza sus estados financieros en tiempo real, proporcionando diagnósticos precisos para decisiones inteligentes.
+            </p>
+            <a href="https://siaf.finleg.co/" target="_blank" class="bg-navy text-white px-12 py-4 rounded-xl font-bold text-xl btn-premium inline-block shadow-lg">Agendar Demostración</a>
+        </div>
+    </section>
+
+    <section class="py-20 bg-cobalto text-white border-t border-white/10">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 text-center">
+            <div class="bg-white/10 p-10 rounded-2xl border border-white/20 hover:bg-white/20 transition group">
+                <h3 class="text-2xl font-bold mb-4">Finanzas Corporativas</h3>
+                <p class="opacity-90 mb-6 group-hover:opacity-100 transition">Optimización de capital, análisis de rentabilidad y proyecciones estratégicas para su crecimiento.</p>
+                <a href="finanzas.html" target="_blank" class="text-cyan-tech font-semibold hover:underline">Saber más →</a>
+            </div>
+            <div class="bg-white/10 p-10 rounded-2xl border border-white/20 hover:bg-white/20 transition group">
+                <h3 class="text-2xl font-bold mb-4">Asesoría Legal Especializada</h3>
+                <p class="opacity-90 mb-6 group-hover:opacity-100 transition">(Ley 1116 y Ley 2445) Cumplimiento corporativo para salvaguardar su patrimonio.</p>
+                <a href="legal.html" target="_blank" class="text-cyan-tech font-semibold hover:underline">Saber más →</a>
             </div>
         </div>
     </section>
 
-    <section class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 text-center">
-            <div class="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
-                <h3 class="text-2xl font-bold text-navy mb-4">Finanzas Corporativas</h3>
-                <p class="text-gray-600 mb-6">Optimización de capital, análisis de rentabilidad y proyecciones estratégicas para su crecimiento.</p>
-                <a href="finanzas.html" target="_blank" class="text-blue-600 font-semibold hover:underline">Saber más →</a>
+    <section class="bg-white py-12 border-t">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-center items-center gap-10">
+            <div class="flex items-center gap-4">
+                <img src="finle_logo.png" alt="Finleg" class="h-10">
+                <span class="font-bold text-2xl text-navy">@FinlegColombia</span>
             </div>
-            <div class="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
-                <h3 class="text-2xl font-bold text-navy mb-4">Asesoría Legal Especializada</h3>
-                <p class="text-gray-600 mb-6">Expertos en insolvencia (Ley 2445) y cumplimiento corporativo para proteger su patrimonio.</p>
-                <a href="legal.html" target="_blank" class="text-blue-600 font-semibold hover:underline">Saber más →</a>
+            <div class="flex gap-8 text-lg">
+                <a href="#" target="_blank" class="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition">
+                    <span class="font-semibold">Facebook</span>
+                </a>
+                <a href="#" target="_blank" class="flex items-center gap-2 text-gray-600 hover:text-pink-600 transition">
+                    <span class="font-semibold">Instagram</span>
+                </a>
+                <a href="#" target="_blank" class="flex items-center gap-2 text-gray-600 hover:text-blue-800 transition">
+                    <span class="font-semibold">LinkedIn</span>
+                </a>
             </div>
         </div>
     </section>
@@ -116,6 +137,7 @@
         async function actualizarTRM() {
             const trmElement = document.getElementById('trm-val');
             try {
+                // Intento 1: API Superfinanciera
                 const res = await fetch('https://www.datos.gov.co/resource/m97f-n68h.json?$limit=1&$order=vigenciadesde DESC');
                 const data = await res.json();
                 if (data && data.length > 0) {
@@ -124,16 +146,18 @@
                     }).format(data[0].valor);
                     return;
                 }
-            } catch (e) { console.warn("Fuente 1 falló"); }
+            } catch (e) { console.warn("Fuente 1 de TRM falló"); }
 
             try {
+                // Intento 2: Fuente alternativa
                 const resAlt = await fetch('https://mindicador.cl/api/dolar_trm');
                 const dataAlt = await resAlt.json();
                 trmElement.innerText = new Intl.NumberFormat('es-CO', {
                     style: 'currency', currency: 'COP', maximumFractionDigits: 0
                 }).format(dataAlt.serie[0].valor);
             } catch (e) {
-                trmElement.innerText = "$3.948";
+                console.error("Todas las fuentes de TRM fallaron.");
+                trmElement.innerText = "$3.948 (Ref)"; // Valor de referencia
             }
         }
         document.addEventListener('DOMContentLoaded', actualizarTRM);
