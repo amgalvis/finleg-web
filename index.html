@@ -107,9 +107,9 @@
                 <a href="finanzas.html" class="text-cyan-tech font-semibold hover:underline">Saber más →</a>
             </div>
             <div class="bg-navy-light p-10 rounded-2xl border border-white/10 hover:bg-opacity-90 transition group shadow-xl">
-                <h3 class="text-2xl font-bold mb-4">Actualidad</h3>
-                <p class="opacity-90 mb-6">Novedades legales y financieras: (Ley 1116 y Ley 2445) Cumplimiento corporativo para salvaguardar su patrimonio.</p>
-                <a href="actualidad.html" class="text-cyan-tech font-semibold hover:underline">Saber más →</a>
+                <h3 class="text-2xl font-bold mb-4">Asesoría Legal Especializada</h3>
+                <p class="opacity-90 mb-6">(Ley 1116 y Ley 2445) Cumplimiento corporativo para salvaguardar su patrimonio.</p>
+                <a href="legal.html" class="text-cyan-tech font-semibold hover:underline">Saber más →</a>
             </div>
         </div>
     </section>
@@ -144,7 +144,6 @@
     <script>
         async function actualizarTRM() {
             const el = document.getElementById('trm-val');
-            // Fuente 1: Frankfurter (gratis, CORS, sin API key)
             try {
                 const r1 = await fetch('https://api.frankfurter.dev/v2/rate/USD/COP');
                 const d1 = await r1.json();
@@ -155,7 +154,6 @@
                     return;
                 }
             } catch (_) {}
-            // Fuente 2: datos.gov.co (dataset actualizado)
             try {
                 const hoy = new Date().toISOString().split('T')[0];
                 const r2 = await fetch(`https://www.datos.gov.co/resource/32sa-8pi3.json?vigenciadesde=${hoy}`);
@@ -167,7 +165,6 @@
                     return;
                 }
             } catch (_) {}
-            // Fallback: referencia estática
             el.innerText = '$3.551 (Ref)';
         }
         document.addEventListener('DOMContentLoaded', actualizarTRM);
