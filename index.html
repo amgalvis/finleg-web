@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINLEG - Finanzas Inteligentes</title>
+    
+    <link rel="icon" type="image/png" href="finle_logo%20(2).png">
+    <link rel="apple-touch-icon" href="finle_logo%20(2).png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .bg-navy { background-color: #1a2b4c; }
+        .text-navy { color: #1a2b4c; }
+        .bg-cyan-tech { background-color: #00e5ff; }
+        .bg-navy-light { background-color: #243b61; }
+        .btn-premium { transition: all 0.3s ease; }
+        .btn-premium:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        
+        .siaf-container-equal {
+            border: 4px solid #1a2b4c;
+            border-radius: 9999px;
+            width: 10rem; 
+            height: 10rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 h-24 flex justify-between items-center">
+            <a href="index.html">
+                <img src="finle_logo.png" alt="FINLEG" class="h-16 md:h-20 w-auto object-contain">
+            </a>
+            <nav class="hidden md:flex space-x-8 font-semibold text-sm uppercase tracking-wide text-navy items-center">
+                <a href="finanzas.html" class="hover:text-blue-600 transition">Finanzas Corporativas</a>
+                <a href="actualidad.html" class="hover:text-blue-600 transition">Actualidad</a>
+                <a href="https://wa.me/573103992919?text=Hola,%20deseo%20más%20información%20sobre%20FINLEG" class="hover:text-blue-600 transition">Contacto</a>
+                <a href="https://siaf.finleg.co/" target="_blank" class="bg-navy text-white px-6 py-2 rounded-lg font-bold btn-premium ml-4">Acceso SIAF</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="bg-white border-b border-gray-200 py-3">
+        <div class="container mx-auto px-6 flex flex-wrap justify-center gap-8 text-xs font-medium text-gray-500 uppercase tracking-widest">
+            <div class="flex items-center gap-2"><span>UVT 2026:</span> <span class="text-navy font-bold">$51.322</span></div>
+            <div class="flex items-center gap-2"><span>Tasa Banrep:</span> <span class="text-navy font-bold">10,25%</span></div>
+            <div class="flex items-center gap-2"><span>Inflación:</span> <span class="text-navy font-bold">5,56%</span></div>
+            <div class="flex items-center gap-2"><span>Tasa Usura:</span> <span class="text-navy font-bold">26,76%</span></div>
+            <div class="flex items-center gap-2"><span>TRM:</span> <span id="trm-val" class="text-navy font-bold">Cargando...</span></div>
+        </div>
+    </div>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h1 class="text-3xl md:text-5xl font-light text-left leading-tight text-gray-800 mb-8">
+                <span class="font-bold text-navy">7 de cada 10 empresas en Colombia</span> no logra superar los 5 años de existencia, principalmente por una <span class="font-bold text-navy">mala gestión de sus finanzas.</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-800 w-full leading-relaxed border-t pt-8">
+                Optimice la liquidez de su negocio, gestione los riesgos e impulse sus ingresos con <span class="font-bold text-navy">SIAF</span>, nuestro gestor de finanzas potenciado con Inteligencia Artificial.
+            </p>
+        </div>
+    </section>
+
+    <section class="bg-navy text-white py-12">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-8">
+            <div class="w-40 h-40 rounded-full overflow-hidden border-4 border-cyan-tech flex-shrink-0">
+                <img src="mauricio.png" alt="Mauricio Galvis" class="w-full h-full object-cover">
+            </div>
+            <div class="text-lg leading-relaxed font-light text-center w-full">
+                <p>
+                    <span class="font-semibold text-cyan-tech">Hola, soy Mauricio Galvis,</span> Administrador de Empresas de profesión, Especialista en Finanzas Corporativas y tras consolidar una trayectoria de 20 años viviendo las finanzas desde las operaciones financieras en organizaciones de alto impacto como Microempresas de Colombia, Motos Honda, Sufi entre otras, hoy tengo el orgullo de presentar nuestra solución tecnológica insignia: <span class="font-bold uppercase">SIAF</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="siaf" class="py-24 bg-white">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-12">
+            <div class="md:w-2/3 text-left">
+                <h2 class="text-5xl font-bold mb-6 text-navy">Su Gestor Financiero con IA</h2>
+                <p class="text-xl text-gray-700 mb-10 leading-relaxed">
+                    SIAF analiza sus estados financieros en tiempo real, proporcionando diagnósticos precisos para decisiones inteligentes.
+                </p>
+                <a href="https://wa.me/573103992919?text=Hola,%20me%20gustaría%20agendar%20una%20demostración%20de%20SIAF" class="bg-navy text-white px-12 py-4 rounded-xl font-bold text-xl btn-premium inline-block shadow-lg">Agendar Demostración</a>
+            </div>
+            <div class="md:w-1/3 flex justify-center">
+                <div class="siaf-container-equal">
+                    <img src="siaf_logo.png" alt="SIAF Logo" class="w-24 h-24 object-contain">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-navy text-white border-t border-white/10">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 text-center">
+            <div class="bg-navy-light p-10 rounded-2xl border border-white/10 hover:bg-opacity-90 transition group shadow-xl">
+                <h3 class="text-2xl font-bold mb-4">Finanzas Corporativas</h3>
+                <p class="opacity-90 mb-6">Optimización de capital, análisis de rentabilidad y proyecciones estratégicas para su crecimiento.</p>
+                <a href="finanzas.html" class="text-cyan-tech font-semibold hover:underline">Saber más →</a>
+            </div>
+            <div class="bg-navy-light p-10 rounded-2xl border border-white/10 hover:bg-opacity-90 transition group shadow-xl">
+                <h3 class="text-2xl font-bold mb-4">Actualidad</h3>
+                <p class="opacity-90 mb-6">Novedades legales y financieras: (Ley 1116 y Ley 2445) Cumplimiento corporativo para salvaguardar su patrimonio.</p>
+                <a href="actualidad.html" class="text-cyan-tech font-semibold hover:underline">Saber más →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-10 border-t">
+        <div class="container mx-auto px-6 flex flex-wrap justify-center items-center gap-8">
+            <a href="https://www.facebook.com/FinlegColombia/" target="_blank" class="flex items-center gap-2 text-navy hover:text-blue-600 transition">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                <span class="font-semibold">FinlegColombia</span>
+            </a>
+            <a href="https://www.instagram.com/finlegcolombia" target="_blank" class="flex items-center gap-2 text-navy hover:text-pink-600 transition">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                <span class="font-semibold">FinlegColombia</span>
+            </a>
+            <a href="https://www.linkedin.com/in/finlegcolombia" target="_blank" class="flex items-center gap-2 text-navy hover:text-blue-800 transition">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                <span class="font-semibold">FinlegColombia</span>
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-white py-12 border-t border-gray-200 text-center">
+        <div class="flex justify-center items-center space-x-8 mb-8 font-semibold text-navy">
+            <a href="https://wa.me/573103992919?text=Hola,%20deseo%20más%20información" class="hover:text-blue-600">Contáctanos</a>
+            <a href="actualidad.html" class="hover:text-blue-600">Actualidad</a>
+            <a href="https://siaf.finleg.co/" target="_blank" class="hover:text-blue-600">Acceso SIAF</a>
+            <a href="privacidad.html" class="hover:text-blue-600">Política de Privacidad</a>
+        </div>
+        <p class="text-gray-500 text-sm">2026 <span class="font-bold text-navy">FINLEG Finanzas Inteligentes</span> | Comentarios en <a href="mailto:info@finleg.co" class="hover:underline">info@finleg.co</a> | Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        async function actualizarTRM() {
+            const el = document.getElementById('trm-val');
+            // Fuente 1: Frankfurter (gratis, CORS, sin API key)
+            try {
+                const r1 = await fetch('https://api.frankfurter.dev/v2/rate/USD/COP');
+                const d1 = await r1.json();
+                if (d1 && d1.rate) {
+                    el.innerText = new Intl.NumberFormat('es-CO', {
+                        style: 'currency', currency: 'COP', maximumFractionDigits: 0
+                    }).format(d1.rate);
+                    return;
+                }
+            } catch (_) {}
+            // Fuente 2: datos.gov.co (dataset actualizado)
+            try {
+                const hoy = new Date().toISOString().split('T')[0];
+                const r2 = await fetch(`https://www.datos.gov.co/resource/32sa-8pi3.json?vigenciadesde=${hoy}`);
+                const d2 = await r2.json();
+                if (d2 && d2.length > 0) {
+                    el.innerText = new Intl.NumberFormat('es-CO', {
+                        style: 'currency', currency: 'COP', maximumFractionDigits: 0
+                    }).format(d2[0].valor);
+                    return;
+                }
+            } catch (_) {}
+            // Fallback: referencia estática
+            el.innerText = '$3.551 (Ref)';
+        }
+        document.addEventListener('DOMContentLoaded', actualizarTRM);
+    </script>
+</body>
+</html>
