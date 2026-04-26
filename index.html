@@ -35,21 +35,21 @@
 
     <div class="bg-white border-b border-gray-200 py-3">
         <div class="container mx-auto px-6 flex flex-wrap justify-center gap-8 text-xs font-medium text-gray-500 uppercase tracking-widest">
-            <div class="flex items-center gap-2"><span>UVT 2026:</span> <span class="text-navy font-bold">$51.322</span></div>
-            <div class="flex items-center gap-2"><span>Tasa Banrep:</span> <span class="text-navy font-bold">10,25%</span></div>
-            <div class="flex items-center gap-2"><span>Inflación:</span> <span class="text-navy font-bold">5,56%</span></div>
-            <div class="flex items-center gap-2"><span>Tasa Usura:</span> <span class="text-navy font-bold">26,76%</span></div>
-            <div class="flex items-center gap-2"><span>TRM:</span> <span id="trm-val" class="text-navy font-bold">$3.948</span></div>
+            <div class="flex items-center gap-2"><span>UVT 2026:</span> <span id="uvt-val" class="text-navy font-bold">$51.322</span></div>
+            <div class="flex items-center gap-2"><span>Tasa Banrep:</span> <span id="banrep-val" class="text-navy font-bold">10,25%</span></div>
+            <div class="flex items-center gap-2"><span>Inflación:</span> <span id="inflacion-val" class="text-navy font-bold">5,56%</span></div>
+            <div class="flex items-center gap-2"><span>Tasa Usura:</span> <span id="usura-val" class="text-navy font-bold">26,76%</span></div>
+            <div class="flex items-center gap-2"><span>TRM:</span> <span id="trm-val" class="text-navy font-bold">Cargando...</span></div>
         </div>
     </div>
 
-    <section class="py-16 bg-white border-b">
-        <div class="container mx-auto px-6 text-center">
-            <h1 class="text-4xl md:text-6xl font-light text-navy leading-tight mb-6">
-                <span class="font-bold text-navy">7 de cada 10 empresas</span> no superan los 5 años.
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h1 class="text-3xl md:text-5xl font-light text-left leading-tight text-gray-800 mb-8">
+                <span class="font-bold text-navy">7 de cada 10 empresas</span> no logra superar los 5 años de existencia, principalmente por una <span class="font-bold text-navy">mala gestión de sus finanzas.</span>
             </h1>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                La mala gestión financiera es la causa principal. Con <span class="font-bold text-navy">SIAF</span>, transformamos sus datos en decisiones estratégicas para garantizar su liquidez y rentabilidad.
+            <p class="text-xl md:text-2xl text-gray-800 w-full leading-relaxed border-t pt-8">
+                Optimice su liquidez, gestione riesgos e impulse sus ingresos con <span class="font-bold text-navy">SIAF</span>, nuestro gestor de finanzas potenciado con Inteligencia Artificial.
             </p>
         </div>
     </section>
@@ -61,26 +61,28 @@
             </div>
             <div class="text-lg leading-relaxed font-light">
                 <p>
-                    <span class="font-semibold text-cyan-tech">Hola, soy Mauricio Galvis,</span> Administrador de Empresas, Especialista en Finanzas Corporativas y Mg. en Gestión Financiera. Tras consolidar una trayectoria de <span class="font-bold">más de 20 años</span> colaborando en las operaciones financieras de organizaciones como Microempresas de Colombia, Comfama, Adeinco y Sufi, hoy presento <span class="font-bold">SIAF</span>.
+                    <span class="font-semibold text-cyan-tech">Hola, soy Mauricio Galvis,</span> Administrador de Empresas de profesión, Especialista en Finanzas Corporativas y Mg. en Gestión Financiera y tras consolidar una trayectoria de más de 20 años colaborando en las operaciones financieras de organizaciones de alto impacto como Microempresas de Colombia, Comfama, Adeinco, Sufi, entre otras, hoy tengo el orgullo de presentar nuestra solución tecnológica insignia: <span class="font-bold">SIAF</span>.
                 </p>
             </div>
         </div>
     </section>
 
-    <section id="siaf" class="py-20 bg-cobalto text-white relative">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between z-10">
+    <section id="siaf" class="py-20 bg-cobalto text-white overflow-hidden relative">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between relative z-10">
             <div class="md:w-1/2">
                 <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center mb-8 shadow-xl">
                     <img src="siaf_logo.png" alt="SIAF Logo" class="w-16">
                 </div>
-                <h2 class="text-4xl font-bold mb-6">SIAF: Inteligencia Artificial para su Negocio</h2>
+                <h2 class="text-4xl font-bold mb-6">Su Gestor Financiero con IA</h2>
                 <p class="text-lg opacity-90 mb-10 max-w-lg">
-                    Un asistente especializado en la realidad de sus indicadores. Análisis integral de estados financieros sin importar el tamaño de su empresa.
+                    SIAF analiza sus estados financieros en tiempo real, proporcionando diagnósticos precisos para decisiones inteligentes.
                 </p>
                 <a href="https://siaf.finleg.co/" class="bg-white text-blue-700 px-10 py-4 rounded-xl font-bold text-xl btn-premium inline-block">Agendar Demostración</a>
             </div>
-            <div class="md:w-1/3 hidden md:block">
-                <img src="image_49d17e.png" alt="SIAF Dashboard" class="rounded-2xl shadow-2xl">
+            <div class="md:w-1/3 opacity-20 hidden md:block">
+                <svg class="w-full h-auto" viewBox="0 0 200 200" fill="currentColor">
+                    <path d="M44.7,-76.4C58.8,-69.2,71.8,-59.1,79.6,-45.8C87.4,-32.5,90,-16.3,88.5,-0.9C87,14.5,81.4,29,73.1,41.5C64.8,54,53.8,64.5,40.7,71.5C27.6,78.5,13.8,81.9,-0.3,82.4C-14.4,82.9,-28.8,80.5,-42.2,73.8C-55.6,67.1,-68,56.1,-75.8,42.6C-83.6,29.1,-86.8,13.1,-86.2,-2.7C-85.6,-18.5,-81.2,-34.1,-72.1,-46.8C-63,-59.5,-49.2,-69.3,-35.1,-76.5C-21,-83.7,-10.5,-88.3,2.6,-92.8C15.7,-97.3,30.6,-83.6,44.7,-76.4Z" transform="translate(100 100)" />
+                </svg>
             </div>
         </div>
     </section>
@@ -89,29 +91,32 @@
         <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 text-center">
             <div class="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
                 <h3 class="text-2xl font-bold text-navy mb-4">Finanzas Corporativas</h3>
-                <p class="text-gray-600 mb-6">Evaluación de la realidad del negocio, razones financieras e indicadores dinámicos.</p>
-                <a href="finanzas.html" class="text-blue-600 font-semibold hover:underline">Ver servicios →</a>
+                <p class="text-gray-600 mb-6">Optimización de capital, análisis de rentabilidad y proyecciones estratégicas para su crecimiento.</p>
+                <a href="finanzas.html" class="text-blue-600 font-semibold hover:underline">Saber más →</a>
             </div>
             <div class="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
-                <h3 class="text-2xl font-bold text-navy mb-4">Asesoría Legal</h3>
-                <p class="text-gray-600 mb-6">Especialistas en procesos de insolvencia (Ley 2445) y asesoría jurídica empresarial.</p>
-                <a href="legal.html" class="text-blue-600 font-semibold hover:underline">Ver servicios →</a>
+                <h3 class="text-2xl font-bold text-navy mb-4">Asesoría Legal Especializada</h3>
+                <p class="text-gray-600 mb-6">Expertos en insolvencia (Ley 2445) y cumplimiento corporativo para proteger su patrimonio.</p>
+                <a href="legal.html" class="text-blue-600 font-semibold hover:underline">Saber más →</a>
             </div>
         </div>
     </section>
 
     <footer class="bg-white py-12 border-t border-gray-200">
-        <div class="container mx-auto px-6 text-center text-gray-500">
-            <p>© 2026 <span class="font-bold text-navy">FINLEG Finanzas Inteligentes</span>. Todos los derechos reservados.</p>
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center space-x-8 mb-8 font-semibold text-navy">
+                <a href="contacto.html" class="hover:text-blue-600">Contáctanos</a>
+                <a href="privacidad.html" class="hover:text-blue-600">Política de Privacidad</a>
+            </div>
+            <p class="text-gray-500 text-sm">© 2026 <span class="font-bold text-navy">FINLEG Finanzas Inteligentes</span>. Todos los derechos reservados.</p>
         </div>
     </footer>
 
     <script>
         async function actualizarTRM() {
             const trmElement = document.getElementById('trm-val');
-            
             try {
-                // Intento 1: API Superfinanciera (Datos Abiertos)
+                // Intento 1: API Superfinanciera
                 const res = await fetch('https://www.datos.gov.co/resource/m97f-n68h.json?$limit=1&$order=vigenciadesde DESC');
                 const data = await res.json();
                 if (data && data.length > 0) {
@@ -123,15 +128,13 @@
             } catch (e) { console.warn("Fuente 1 falló"); }
 
             try {
-                // Intento 2: Fuente alternativa en caso de bloqueo de CORS o lentitud
+                // Intento 2: Fuente alternativa
                 const resAlt = await fetch('https://mindicador.cl/api/dolar_trm');
                 const dataAlt = await resAlt.json();
                 trmElement.innerText = new Intl.NumberFormat('es-CO', {
                     style: 'currency', currency: 'COP', maximumFractionDigits: 0
                 }).format(dataAlt.serie[0].valor);
             } catch (e) {
-                console.warn("Fuente 2 falló. Usando valor de referencia.");
-                // Valor de referencia manual si todo falla para no mostrar "Cargando"
                 trmElement.innerText = "$3.948";
             }
         }
