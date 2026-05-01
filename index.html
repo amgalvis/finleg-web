@@ -142,17 +142,24 @@
     </footer>
 
     <script>
-        async function actualizarTRM() {
-            const el = document.getElementById('trm-val');
-            try {
-                const r1 = await fetch('https://api.frankfurter.dev/v2/rate/USD/COP');
-                const d1 = await r1.json();
-                if (d1 && d1.rate) {
-                    el.innerText = new Intl.NumberFormat('es-CO', {
-                        style: 'currency', currency: 'COP', maximumFractionDigits: 0
-                    }).format(d1.rate);
-                    return;
-                }
+    async function actualizarTRM() {
+        const el = document.getElementById('trm-val');
+        try {
+        // Proveedor Oficial: SuperFinanciera (Datos Abiertos Colombia)
+        const r1 = await fetch('https://www.datos.gov.co/resource/mcec-87by.json?$order=vigenciadesde%20DESC&$limit=1');
+        const d1 = await r1.json();
+        
+        // Validamos que exista el primer registro de la lista
+        if (d1 && d1[0]) {
+            el.innerText = new Intl.NumberFormat('es-CO', {
+                style: 'currency', 
+                currency: 'COP', 
+                maximumFractionDigits: 0
+            }).format(d1[0].valor); // Accedemos a .valor igual que en Python
+            return;
+        }
+    } catch (e) { console.error(e); }
+}
             } catch (_) {}
             try {
                 const hoy = new Date().toISOString().split('T')[0];
