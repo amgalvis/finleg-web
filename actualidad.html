@@ -6,17 +6,16 @@
     <title>Actualidad - Finleg</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; margin: 0; padding: 0; }
         .bg-navy { background-color: #1a2b4c; }
         .text-navy { color: #1a2b4c; }
         .bg-cyan-tech { background-color: #00e5ff; }
-        .border-cyan-tech { border-color: #00e5ff; }
-        .text-cyan-tech { color: #00e5ff; }
-        .card-academic { transition: all 0.3s ease; border-left: 4px solid #cbd5e1; }
-        .card-academic:hover { border-left-color: #00e5ff; transform: translateX(5px); }
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .editorial-card { transition: transform 0.3s ease; }
+        .editorial-card:hover { transform: translateY(-5px); }
     </style>
 </head>
 <body>
@@ -31,7 +30,7 @@
 
     <header class="bg-white border-b py-16">
         <div class="container mx-auto px-6">
-            <h1 class="text-4xl md:text-5xl font-bold text-navy mt-2">Monitoreo y Coyuntura Financiera</h1>
+            <h1 class="text-4xl md:text-5xl font-bold text-navy mt-2">Monitoreo y Actualidad Financiera</h1>
             <p class="text-xl text-gray-600 mt-4 max-w-3xl leading-relaxed">
                 Análisis técnico y cronológico de los sucesos macroeconómicos y regulatorios que impactan las finanzas corporativas en Colombia.
             </p>
@@ -40,125 +39,80 @@
 
     <main class="container mx-auto px-6 py-12">
         <section class="mb-16">
-            <h2 class="text-2xl font-bold text-navy mb-6 flex items-center gap-2">
-                <span class="w-8 h-1 bg-cyan-tech inline-block"></span>
-                Monitoreo y Actualidad Financiera
-            </h2>
-            
-            <div class="flex overflow-x-auto gap-6 pb-6 snap-x hide-scrollbar">
+            <div class="flex overflow-x-auto gap-6 pb-8 snap-x hide-scrollbar">
                 
-                <div class="min-w-[320px] md:min-w-[520px] bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between snap-start">
+                <div class="min-w-[320px] md:min-w-[550px] bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between snap-start editorial-card">
                     <div>
-                        <div class="flex justify-between items-center mb-4">
+                        <div class="flex justify-between items-center mb-6">
                             <span class="text-xs bg-navy text-white px-3 py-1 rounded-full font-semibold">31 de marzo de 2026</span>
-                            <span class="text-xs text-gray-400 font-bold uppercase tracking-wider">Editorial Finleg</span>
+                            <span class="text-xs text-gray-400 font-bold uppercase tracking-wider">Análisis Finleg</span>
                         </div>
-                        <h3 class="text-xl md:text-2xl font-bold text-navy mb-4">
+                        <h3 class="text-xl md:text-2xl font-bold text-navy mb-6">
                             El Banco de la República mantiene la tasa de intervención en 11.25 por ciento
                         </h3>
                         
-                        <div class="space-y-4 mb-6">
+                        <div class="space-y-6 mb-8">
                             <div>
-                                <h4 class="text-xs font-bold text-cyan-tech uppercase tracking-widest mb-1">Contexto</h4>
+                                <h4 class="text-xs font-bold text-cyan-tech uppercase tracking-widest mb-2">Contexto Macroeconómico</h4>
                                 <p class="text-sm text-gray-600 leading-relaxed">
-                                    En su más reciente sesión de política monetaria, la Junta Directiva del Banco de la República decidió por mayoría mantener estable la tasa de interés en 11.25 por ciento. La autoridad monetaria destacó la necesidad de evaluar el comportamiento de la inflación y las expectativas del mercado antes de retomar la senda de recortes graduales, priorizando la estabilidad macroeconómica en un entorno global de incertidumbre.
+                                    La Junta Directiva decidió por mayoría mantener la tasa estable para evaluar la convergencia de la inflación hacia la meta del 3%. Esta pausa en el ciclo de recortes refleja una postura cautelosa ante la incertidumbre en los mercados externos y la volatilidad del tipo de cambio.
                                 </p>
                             </div>
                             <div>
-                                <h4 class="text-xs font-bold text-navy uppercase tracking-widest mb-1">Análisis de Impacto</h4>
+                                <h4 class="text-xs font-bold text-navy uppercase tracking-widest mb-2">Impacto y Recomendación</h4>
                                 <p class="text-sm text-gray-700 leading-relaxed font-medium">
-                                    Esta decisión implica que el costo del endeudamiento bancario se mantendrá elevado para las organizaciones en el corto plazo. En el análisis de solvencia realizado por Finleg, los gerentes financieros deben priorizar el reperfilamiento de deudas de corto plazo hacia plazos mayores, optimizar el capital de trabajo neto y revisar los presupuestos de inversión de capital (Capex) para mitigar el impacto directo en la cobertura de intereses y preservar el flujo de caja libre.
+                                    Para las empresas, esto significa que el costo financiero de la deuda no bajará en el corto plazo. Se recomienda priorizar la optimización del capital de trabajo y revisar las proyecciones de flujo de caja libre, asegurando que la cobertura de intereses se mantenga en niveles saludables ante un escenario de tasas altas prolongadas.
                                 </p>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="border-t border-gray-100 pt-4 flex justify-between items-center">
-                        <span class="text-xs text-gray-400">Compartir análisis:</span>
-                        <div class="flex gap-3">
-                            <a href="https://www.facebook.com" target="_blank" class="p-2 bg-gray-50 hover:bg-cyan-tech rounded-lg transition text-navy" title="Facebook">
-                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                                    <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
-                                </svg>
-                            </a>
-                            <a href="https://www.instagram.com" target="_blank" class="p-2 bg-gray-50 hover:bg-cyan-tech rounded-lg transition text-navy" title="Instagram">
-                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.34 3.608 1.315.975.975 1.253 2.242 1.315 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.34 2.633-1.315 3.608-.975.975-2.242 1.253-3.608 1.315-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.34-3.608-1.315-.975-.975-1.253-2.242-1.315-3.608C2.012 15.584 2 15.204 2 12s.012-3.584.07-4.85c.062-1.366.34-2.633 1.315-3.608.975-.975 2.242-1.253 3.608-1.315 1.266-.058 1.646-.07 4.85-.07zM12 0C8.741 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14 1.027c-.796.796-1.05 1.706-1.122 3.125C2.96 5.433 2.945 5.842 2.945 9.1s.015 3.667.072 4.947c.058 1.278.26 2.148.954 2.842.796.796 1.706 1.05 3.125 1.122 1.28.057 1.688.072 4.947.072s3.667-.015 4.947-.072c1.278-.058 2.148-.26 2.842-.954.796-.796 1.05-1.706 1.122-3.125.057-1.28.072-1.688.072-4.947s-.015-3.667-.072-4.947c-.058-1.278-.26-2.148-.954-2.842-.796-.796-1.706-1.05-3.125-1.122C15.667.015 15.259 0 12 0zm0 4.382c-4.207 0-7.618 3.411-7.618 7.618 0 4.207 3.411 7.618 7.618 7.618 4.207 0 7.618-3.411 7.618-7.618 0-4.207-3.411-7.618-7.618-7.618zm0 12.839c-2.883 0-5.221-2.338-5.221-5.221 0-2.883 2.338-5.221 5.221-5.221 2.883 0 5.221 2.338 5.221 5.221 0 2.883-2.338 5.221-5.221 5.221zm6.406-11.845a1.215 1.215 0 1 1-2.43 0 1.215 1.215 0 0 1 2.43 0z"/>
-                                </svg>
-                            </a>
-                            <a href="https://www.linkedin.com" target="_blank" class="p-2 bg-gray-50 hover:bg-cyan-tech rounded-lg transition text-navy" title="LinkedIn">
-                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                                </svg>
-                            </a>
-                            <a href="https://twitter.com" target="_blank" class="p-2 bg-gray-50 hover:bg-cyan-tech rounded-lg transition text-navy" title="X">
-                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.03l4.717 6.175 5.497-6.175zm-1.164 17.52h1.833L7.084 4.126H5.117L17.08 19.77z"/>
-                                </svg>
-                            </a>
-                            <a href="https://wa.me/" target="_blank" class="p-2 bg-gray-50 hover:bg-cyan-tech rounded-lg transition text-navy" title="WhatsApp">
-                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.161 5.383 5.551 0 12.18 0c3.212.002 6.231 1.253 8.503 3.526 2.27 2.274 3.52 5.294 3.518 8.506-.007 6.459-5.397 11.842-12.022 11.842-2.016-.001-3.996-.511-5.753-1.482L0 24zm6.49-4.22c1.74 1.026 3.42 1.558 5.637 1.559 5.378 0 9.756-4.375 9.761-9.753.004-5.379-4.37-9.761-9.761-9.761-5.383 0-9.764 4.381-9.764 9.765 0 2.321.616 4.103 1.696 5.8l-.999 3.65 3.73-.979z"/>
-                                </svg>
-                            </a>
+                    <div class="border-t border-gray-100 pt-6 flex justify-between items-center">
+                        <span class="text-xs text-gray-400 font-bold uppercase">Compartir análisis</span>
+                        <div class="flex gap-4">
+                            <a href="#" class="text-navy hover:text-cyan-tech transition text-lg"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="text-navy hover:text-cyan-tech transition text-lg"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-navy hover:text-cyan-tech transition text-lg"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-navy hover:text-cyan-tech transition text-lg"><i class="fab fa-x-twitter"></i></a>
+                            <a href="#" class="text-navy hover:text-cyan-tech transition text-lg"><i class="fab fa-whatsapp"></i></a>
                         </div>
                     </div>
                 </div>
 
-                <div class="min-w-[320px] md:min-w-[520px] bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between snap-start">
+                <div class="min-w-[320px] md:min-w-[550px] bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between snap-start editorial-card">
                     <div>
-                        <div class="flex justify-between items-center mb-4">
+                        <div class="flex justify-between items-center mb-6">
                             <span class="text-xs bg-navy text-white px-3 py-1 rounded-full font-semibold">15 de abril de 2026</span>
-                            <span class="text-xs text-gray-400 font-bold uppercase tracking-wider">Editorial Finleg</span>
+                            <span class="text-xs text-gray-400 font-bold uppercase tracking-wider">Análisis Finleg</span>
                         </div>
-                        <h3 class="text-xl md:text-2xl font-bold text-navy mb-4">
-                            Entrada en vigencia de la nueva Circular Básica Contable de la Superintendencia
+                        <h3 class="text-xl md:text-2xl font-bold text-navy mb-6">
+                            Entrada en vigencia de la nueva Circular Básica Contable y Financiera
                         </h3>
                         
-                        <div class="space-y-4 mb-6">
+                        <div class="space-y-6 mb-8">
                             <div>
-                                <h4 class="text-xs font-bold text-cyan-tech uppercase tracking-widest mb-1">Contexto</h4>
+                                <h4 class="text-xs font-bold text-cyan-tech uppercase tracking-widest mb-2">Contexto Normativo</h4>
                                 <p class="text-sm text-gray-600 leading-relaxed">
-                                    Se oficializaron las directrices de la Superintendencia Financiera para la actualización de los reportes contables. La norma exige mayor granularidad en la revelación de pasivos financieros, endurece los requisitos de información sobre la gestión del riesgo de liquidez y redefine el tratamiento de ciertos activos operativos para garantizar transparencia contable.
+                                    La Superintendencia Financiera ha formalizado los nuevos requerimientos para la revelación de pasivos y gestión de riesgos. Este ajuste busca elevar los estándares de transparencia y facilitar la supervisión preventiva en el sector corporativo.
                                 </p>
                             </div>
                             <div>
-                                <h4 class="text-xs font-bold text-navy uppercase tracking-widest mb-1">Análisis de Impacto</h4>
+                                <h4 class="text-xs font-bold text-navy uppercase tracking-widest mb-2">Impacto Estratégico</h4>
                                 <p class="text-sm text-gray-700 leading-relaxed font-medium">
-                                    SIAF integra estos cambios normativos de manera nativa para asegurar que la presentación de estados financieros cumpla con los nuevos estándares de supervisión. Las organizaciones deben ajustar el cálculo de sus indicadores de liquidez, evaluar el impacto de los nuevos requerimientos en sus flujos de tesorería y capacitar a sus equipos contables antes de junio de 2026 para evitar alertas de riesgo y posibles sanciones.
+                                    SIAF ya cuenta con la parametrización necesaria para estos reportes. Es vital que las gerencias financieras realicen una revisión técnica de sus procesos contables antes de junio, asegurando que la clasificación de riesgos operativos cumpla con la nueva normativa para evitar sanciones o alertas en sus estados financieros.
                                 </p>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="border-t border-gray-100 pt-4 flex justify-between items-center">
-                        <span class="text-xs text-gray-400">Compartir análisis:</span>
-                        <div class="flex gap-3">
-                            <a href="https://www.facebook.com" target="_blank" class="p-2 bg-gray-50 hover:bg-cyan-tech rounded-lg transition text-navy" title="Facebook">
-                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                                    <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
-                                </svg>
-                            </a>
-                            <a href="https://www.instagram.com" target="_blank" class="p-2 bg-gray-50 hover:bg-cyan-tech rounded-lg transition text-navy" title="Instagram">
-                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.34 3.608 1.315.975.975 1.253 2.242 1.315 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.34 2.633-1.315 3.608-.975.975-2.242 1.253-3.608 1.315-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.34-3.608-1.315-.975-.975-1.253-2.242-1.315-3.608C2.012 15.584 2 15.204 2 12s.012-3.584.07-4.85c.062-1.366.34-2.633 1.315-3.608.975-.975 2.242-1.253 3.608-1.315 1.266-.058 1.646-.07 4.85-.07zM12 0C8.741 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14 1.027c-.796.796-1.05 1.706-1.122 3.125C2.96 5.433 2.945 5.842 2.945 9.1s.015 3.667.072 4.947c.058 1.278.26 2.148.954 2.842.796.796 1.706 1.05 3.125 1.122 1.28.057 1.688.072 4.947.072s3.667-.015 4.947-.072c1.278-.058 2.148-.26 2.842-.954.796-.796 1.05-1.706 1.122-3.125.057-1.28.072-1.688.072-4.947s-.015-3.667-.072-4.947c-.058-1.278-.26-2.148-.954-2.842-.796-.796-1.706-1.05-3.125-1.122C15.667.015 15.259 0 12 0zm0 4.382c-4.207 0-7.618 3.411-7.618 7.618 0 4.207 3.411 7.618 7.618 7.618 4.207 0 7.618-3.411 7.618-7.618 0-4.207-3.411-7.618-7.618-7.618zm0 12.839c-2.883 0-5.221-2.338-5.221-5.221 0-2.883 2.338-5.221 5.221-5.221 2.883 0 5.221 2.338 5.221 5.221 0 2.883-2.338 5.221-5.221 5.221zm6.406-11.845a1.215 1.215 0 1 1-2.43 0 1.215 1.215 0 0 1 2.43 0z"/>
-                                </svg>
-                            </a>
-                            <a href="https://www.linkedin.com" target="_blank" class="p-2 bg-gray-50 hover:bg-cyan-tech rounded-lg transition text-navy" title="LinkedIn">
-                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                                </svg>
-                            </a>
-                            <a href="https://twitter.com" target="_blank" class="p-2 bg-gray-50 hover:bg-cyan-tech rounded-lg transition text-navy" title="X">
-                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.03l4.717 6.175 5.497-6.175zm-1.164 17.52h1.833L7.084 4.126H5.117L17.08 19.77z"/>
-                                </svg>
-                            </a>
-                            <a href="https://wa.me/" target="_blank" class="p-2 bg-gray-50 hover:bg-cyan-tech rounded-lg transition text-navy" title="WhatsApp">
-                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.161 5.383 5.551 0 12.18 0c3.212.002 6.231 1.253 8.503 3.526 2.27 2.274 3.52 5.294 3.518 8.506-.007 6.459-5.397 11.842-12.022 11.842-2.016-.001-3.996-.511-5.753-1.482L0 24zm6.49-4.22c1.74 1.026 3.42 1.558 5.637 1.559 5.378 0 9.756-4.375 9.761-9.753.004-5.379-4.37-9.761-9.761-9.761-5.383 0-9.764 4.381-9.764 9.765 0 2.321.616 4.103 1.696 5.8l-.999 3.65 3.73-.979z"/>
-                                </svg>
-                            </a>
+                    <div class="border-t border-gray-100 pt-6 flex justify-between items-center">
+                        <span class="text-xs text-gray-400 font-bold uppercase">Compartir análisis</span>
+                        <div class="flex gap-4">
+                            <a href="#" class="text-navy hover:text-cyan-tech transition text-lg"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="text-navy hover:text-cyan-tech transition text-lg"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-navy hover:text-cyan-tech transition text-lg"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-navy hover:text-cyan-tech transition text-lg"><i class="fab fa-x-twitter"></i></a>
+                            <a href="#" class="text-navy hover:text-cyan-tech transition text-lg"><i class="fab fa-whatsapp"></i></a>
                         </div>
                     </div>
                 </div>
@@ -167,76 +121,54 @@
         </section>
 
         <div class="grid lg:grid-cols-3 gap-8">
-            
             <div class="lg:col-span-2 bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-                <h2 class="text-2xl font-bold text-navy mb-6 flex items-center gap-2">
-                    <span class="w-8 h-1 bg-cyan-tech inline-block"></span>
-                    Calendario de Eventos Económico-Financieros
-                </h2>
+                <h2 class="text-2xl font-bold text-navy mb-6">Calendario Económico-Financiero</h2>
                 <div class="overflow-x-auto">
-                    <table class="w-full border-collapse">
-                        <thead>
-                            <tr class="border-b border-gray-200">
-                                <th class="text-left py-3 text-xs font-bold uppercase tracking-wider text-navy">Fecha</th>
-                                <th class="text-left py-3 text-xs font-bold uppercase tracking-wider text-navy">Evento</th>
-                                <th class="text-left py-3 text-xs font-bold uppercase tracking-wider text-navy">Relevancia</th>
+                    <table class="w-full">
+                        <thead class="border-b border-gray-100">
+                            <tr>
+                                <th class="text-left py-4 text-xs font-bold uppercase text-gray-400">Fecha</th>
+                                <th class="text-left py-4 text-xs font-bold uppercase text-gray-400">Evento</th>
+                                <th class="text-left py-4 text-xs font-bold uppercase text-gray-400">Prioridad</th>
                             </tr>
                         </thead>
-                        <tbody class="divide-y divide-gray-100">
+                        <tbody class="divide-y divide-gray-50">
                             <tr>
-                                <td class="py-4 text-sm text-gray-700 font-bold">12 de mayo de 2026</td>
-                                <td class="py-4 text-sm text-gray-600">Publicación del Índice de Precios al Consumidor (IPC) de abril por el DANE.</td>
-                                <td class="py-4 text-sm"><span class="bg-red-50 text-red-600 px-2 py-1 rounded font-semibold text-xs">Alta</span></td>
+                                <td class="py-4 text-sm font-bold text-navy">12 de Mayo</td>
+                                <td class="py-4 text-sm text-gray-600">Publicación del IPC (DANE)</td>
+                                <td class="py-4 text-xs font-bold text-red-500 uppercase">Alta</td>
                             </tr>
                             <tr>
-                                <td class="py-4 text-sm text-gray-700 font-bold">29 de mayo de 2026</td>
-                                <td class="py-4 text-sm text-gray-600">Reunión de la Junta Directiva del Banco de la República para evaluar tasas de interés.</td>
-                                <td class="py-4 text-sm"><span class="bg-red-50 text-red-600 px-2 py-1 rounded font-semibold text-xs">Alta</span></td>
+                                <td class="py-4 text-sm font-bold text-navy">29 de Mayo</td>
+                                <td class="py-4 text-sm text-gray-600">Junta Directiva BanRep</td>
+                                <td class="py-4 text-xs font-bold text-red-500 uppercase">Alta</td>
                             </tr>
                             <tr>
-                                <td class="py-4 text-sm text-gray-700 font-bold">1 de junio de 2026</td>
-                                <td class="py-4 text-sm text-gray-600">Plena entrada en vigencia de la nueva Circular Básica Financiera de la Superintendencia.</td>
-                                <td class="py-4 text-sm"><span class="bg-red-50 text-red-600 px-2 py-1 rounded font-semibold text-xs">Crítica</span></td>
-                            </tr>
-                            <tr>
-                                <td class="py-4 text-sm text-gray-700 font-bold">18 de junio de 2026</td>
-                                <td class="py-4 text-sm text-gray-600">Presentación de informes trimestrales de solvencia y liquidez.</td>
-                                <td class="py-4 text-sm"><span class="bg-blue-50 text-blue-600 px-2 py-1 rounded font-semibold text-xs">Media</span></td>
+                                <td class="py-4 text-sm font-bold text-navy">1 de Junio</td>
+                                <td class="py-4 text-sm text-gray-600">Entrada en vigor Circular Financiera</td>
+                                <td class="py-4 text-xs font-bold text-red-600 uppercase font-black">Crítica</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
 
-            <div class="bg-navy text-white p-8 rounded-2xl shadow-lg border border-white/10 flex flex-col justify-between">
+            <div class="bg-navy text-white p-8 rounded-2xl shadow-lg flex flex-col justify-between">
                 <div>
-                    <h2 class="text-lg font-bold mb-4 border-b border-white/20 pb-2">Diagnóstico de Impacto</h2>
+                    <h2 class="text-lg font-bold mb-4 border-b border-white/20 pb-2">Blindaje Financiero</h2>
                     <p class="text-sm opacity-80 leading-relaxed mb-6">
-                        No permita que los cambios macroeconómicos y regulatorios tomen por sorpresa a su empresa. Finleg analiza el impacto de la inflación y las tasas de interés directamente en sus estados financieros.
+                        En Finleg transformamos la coyuntura en estrategia. Obtenga un diagnóstico detallado del impacto de las tasas y normativas en su flujo de caja.
                     </p>
-                    <ul class="text-xs opacity-80 space-y-3 mb-6">
-                        <li class="flex items-center gap-2">
-                            <span class="text-cyan-tech font-bold">✓</span> Alertas tempranas de liquidez
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <span class="text-cyan-tech font-bold">✓</span> Proyecciones automáticas de rentabilidad
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <span class="text-cyan-tech font-bold">✓</span> Ajustes normativos en tiempo real
-                        </li>
-                    </ul>
                 </div>
-
-                <a href="https://wa.me/573103992919" class="block text-center bg-cyan-tech text-navy font-bold py-3 rounded-xl hover:opacity-90 transition">
+                <a href="https://wa.me/573103992919" class="block text-center bg-cyan-tech text-navy font-bold py-4 rounded-xl hover:opacity-90 transition uppercase text-xs tracking-widest">
                     Agendar Consultoría
                 </a>
             </div>
-
         </div>
     </main>
 
-    <footer class="container mx-auto px-6 py-12 text-center border-t border-gray-200 mt-12">
-        <p class="text-gray-400 text-sm">© 2026 Finleg | Actualidad y Coyuntura Financiera.</p>
+    <footer class="py-12 text-center text-gray-400 text-sm">
+        <p>© 2026 Finleg | Análisis Técnico y Coyuntura Financiera</p>
     </footer>
 </body>
 </html>
