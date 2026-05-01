@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actualidad - FINLEG</title>
+    <title>Educación Financiera - FINLEG Academy</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -11,30 +11,128 @@
         .bg-navy { background-color: #1a2b4c; }
         .text-navy { color: #1a2b4c; }
         .bg-cyan-tech { background-color: #00e5ff; }
+        .border-cyan-tech { border-color: #00e5ff; }
+        .card-academic { transition: all 0.3s ease; border-left: 4px solid #cbd5e1; }
+        .card-academic:hover { border-left-color: #00e5ff; transform: translateX(5px); }
     </style>
 </head>
 <body>
-    <nav class="bg-navy p-6 shadow-xl">
+    <nav class="bg-navy p-6 shadow-xl sticky top-0 z-50">
         <div class="container mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-white"><span class="text-00e5ff text-[#00e5ff]">FIN</span>LEG</a>
-            <a href="index.html" class="text-white hover:text-[#00e5ff] transition">← Volver</a>
+            <a href="index.html" class="text-2xl font-bold text-white tracking-tighter">
+                <span class="text-[#00e5ff]">FIN</span>LEG <span class="font-light opacity-80 text-sm ml-2 border-l border-white/30 pl-2 uppercase tracking-widest">Academy</span>
+            </a>
+            <a href="index.html" class="text-white hover:text-[#00e5ff] transition font-semibold">← Volver al Portal</a>
         </div>
     </nav>
 
-    <main class="container mx-auto px-6 py-16">
-        <h1 class="text-4xl font-bold text-navy mb-8">Actualidad Financiera y Legal</h1>
-        <div class="grid md:grid-cols-2 gap-6">
-            <article class="bg-white p-6 rounded-xl shadow-md border-t-4 border-[#00e5ff]">
-                <span class="text-xs font-bold text-navy uppercase tracking-widest">Novedad Legislativa</span>
-                <h2 class="text-xl font-bold my-2">Ley de Insolvencia en Colombia</h2>
-                <p class="text-gray-600 text-sm">Análisis actualizado sobre los procedimientos para personas naturales no comerciantes y procesos de reorganización empresarial.</p>
-            </article>
-            <article class="bg-white p-6 rounded-xl shadow-md border-t-4 border-slate-300">
-                <span class="text-xs font-bold text-navy uppercase tracking-widest">Circular Básica</span>
-                <h2 class="text-xl font-bold my-2">Circular Externa 004 de 2026</h2>
-                <p class="text-gray-600 text-sm">Resumen técnico de las nuevas disposiciones de la Superintendencia Financiera para la gestión de riesgos.</p>
-            </article>
+    <header class="bg-white border-b py-16">
+        <div class="container mx-auto px-6">
+            <span class="text-cyan-tech font-bold uppercase tracking-widest text-sm">Centro de Conocimiento</span>
+            <h1 class="text-4xl md:text-5xl font-bold text-navy mt-2">Fundamentos de Finanzas Corporativas</h1>
+            <p class="text-xl text-gray-600 mt-4 max-w-3xl leading-relaxed">
+                Entender las finanzas no se trata de números complejos, sino de tomar decisiones que aseguren la supervivencia y el crecimiento de su empresa.
+            </p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <div class="grid lg:grid-cols-3 gap-8">
+            
+            <div class="lg:col-span-2 space-y-8">
+                
+                <section class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                    <h2 class="text-2xl font-bold text-navy mb-6 flex items-center gap-2">
+                        <span class="w-8 h-1 bg-cyan-tech inline-block"></span>
+                        ¿Qué son las Finanzas Corporativas?
+                    </h2>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        En palabras simples, es el arte de gestionar el dinero de la empresa para **crear valor**. Se basa en tres pilares que todo gerente debe dominar:
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex gap-4">
+                            <span class="bg-blue-50 text-navy font-bold rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">1</span>
+                            <div>
+                                <strong class="text-navy">Decisión de Inversión:</strong> ¿En qué activos o proyectos debemos poner nuestro dinero para que crezca?
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="bg-blue-50 text-navy font-bold rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">2</span>
+                            <div>
+                                <strong class="text-navy">Decisión de Financiación:</strong> ¿De dónde sacamos el capital? ¿Préstamos bancarios, socios o recursos propios?
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="bg-blue-50 text-navy font-bold rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">3</span>
+                            <div>
+                                <strong class="text-navy">Gestión de Liquidez:</strong> Asegurar que siempre haya efectivo para pagar nómina y proveedores sin asfixiar la operación.
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                    <h2 class="text-2xl font-bold text-navy mb-6 flex items-center gap-2">
+                        <span class="w-8 h-1 bg-cyan-tech inline-block"></span>
+                        Conceptos Clave para Gerentes
+                    </h2>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="card-academic p-4 bg-gray-50 rounded-r-lg">
+                            <h3 class="font-bold text-navy uppercase text-xs tracking-wider mb-1">EBITDA</h3>
+                            <p class="text-sm text-gray-600 italic">"La caja que genera tu negocio antes de pagar impuestos e intereses."</p>
+                        </div>
+                        <div class="card-academic p-4 bg-gray-50 rounded-r-lg">
+                            <h3 class="font-bold text-navy uppercase text-xs tracking-wider mb-1">WACC</h3>
+                            <p class="text-sm text-gray-600 italic">"Lo que le cuesta a tu empresa conseguir dinero para operar."</p>
+                        </div>
+                        <div class="card-academic p-4 bg-gray-50 rounded-r-lg">
+                            <h3 class="font-bold text-navy uppercase text-xs tracking-wider mb-1">Punto de Equilibrio</h3>
+                            <p class="text-sm text-gray-600 italic">"¿Cuánto tengo que vender exactamente para no perder ni un peso?"</p>
+                        </div>
+                        <div class="card-academic p-4 bg-gray-50 rounded-r-lg">
+                            <h3 class="font-bold text-navy uppercase text-xs tracking-wider mb-1">Flujo de Caja Libre</h3>
+                            <p class="text-sm text-gray-600 italic">"El dinero real que queda disponible para los dueños tras cubrir todo."</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="space-y-6">
+                <div class="bg-navy text-white p-6 rounded-2xl shadow-lg">
+                    <h2 class="text-lg font-bold mb-4 border-b border-white/20 pb-2">Marco Normativo 2026</h2>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <span class="text-[10px] bg-cyan-tech text-navy px-2 py-0.5 rounded font-bold uppercase">Ley 2445 de 2025</span>
+                            <h3 class="font-semibold mt-1">Insolvencia para No Comerciantes</h3>
+                            <p class="text-xs opacity-80 mt-2 leading-relaxed">Esencial para proteger el patrimonio personal frente a crisis financieras severas.</p>
+                        </div>
+
+                        <div>
+                            <span class="text-[10px] bg-white/20 text-white px-2 py-0.5 rounded font-bold uppercase">Circular CBF</span>
+                            <h3 class="font-semibold mt-1">Nuevos Estándares de Riesgo</h3>
+                            <p class="text-xs opacity-80 mt-2 leading-relaxed">Reportes obligatorios y gestión de liquidez bajo la nueva normativa de la SuperFinanciera.</p>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/573103992919" class="mt-8 block text-center bg-cyan-tech text-navy font-bold py-3 rounded-xl hover:opacity-90 transition">
+                        Consultoría Especializada
+                    </a>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+                    <h3 class="font-bold text-navy mb-2">¿Por qué SIAF?</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        Porque automatiza estos conceptos y los convierte en diagnósticos que usted puede entender sin ser financiero.
+                    </p>
+                </div>
+            </div>
+
         </div>
     </main>
+
+    <footer class="container mx-auto px-6 py-12 text-center border-t border-gray-200 mt-12">
+        <p class="text-gray-400 text-sm">© 2026 FINLEG Academy | Educación para la sostenibilidad empresarial.</p>
+    </footer>
 </body>
 </html>
