@@ -3,24 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidad - FINLEG</title>
+    <title>Privacidad y Términos - Finleg</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #334155; }
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #334155; scroll-behavior: smooth; }
         .bg-navy { background-color: #1a2b4c; }
+        .text-navy { color: #1a2b4c; }
+        .bg-cyan-tech { background-color: #00e5ff; }
+        .legal-text h2 { color: #1a2b4c; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem; border-left: 4px solid #00e5ff; padding-left: 1rem; }
+        .legal-text p { margin-bottom: 1.25rem; text-align: justify; line-height: 1.8; }
+        .legal-text ul { margin-bottom: 1.5rem; list-style-type: none; padding-left: 0; }
+        .legal-text li { margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative; }
+        .legal-text li::before { content: "→"; position: absolute; left: 0; color: #00e5ff; font-weight: bold; }
+        .sidebar-link:hover { color: #00e5ff; padding-left: 5px; transition: all 0.2s; }
     </style>
 </head>
-<body class="bg-slate-50">
-    <nav class="bg-navy p-6"><div class="container mx-auto text-white font-bold text-xl">FINLEG</div></nav>
-    <main class="container mx-auto max-w-4xl px-6 py-16 bg-white my-10 rounded-lg shadow-sm">
-        <h1 class="text-3xl font-bold text-slate-900 mb-6">Política de Tratamiento de Datos</h1>
-        <p class="mb-4">En cumplimiento de la Ley 1581 de 2012, informamos que los datos capturados a través de nuestro portal son tratados con estricta confidencialidad.</p>
-        <h2 class="text-xl font-semibold mt-8 mb-4">Finalidad</h2>
-        <ul class="list-disc ml-6 space-y-2">
-            <li>Gestión de consultas de asesoría financiera.</li>
-            <li>Envío de boletines técnicos de actualidad legal.</li>
-            <li>Mejora de la experiencia de usuario en nuestra plataforma SIAF.</li>
-        </ul>
+<body>
+    <nav class="bg-navy p-6 shadow-xl sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-white tracking-tighter">
+                Finleg <span class="font-light opacity-80 text-sm ml-2 border-l border-white/30 pl-2 uppercase tracking-widest">Legal</span>
+            </a>
+            <a href="index.html" class="text-white hover:text-[#00e5ff] transition font-semibold">← Volver al Portal</a>
+        </div>
+    </nav>
+
+    <header class="bg-white border-b py-12">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold text-navy">Transparencia y Seguridad Jurídica</h1>
+            <p class="text-gray-500 mt-2 italic">Última actualización: 1 de mayo de 2026</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <div class="flex flex-col lg:flex-row gap-12">
+            
+            <aside class="lg:w-1/4">
+                <div class="sticky top-28 bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                    <h3 class="font-bold text-navy mb-4 uppercase text-xs tracking-widest">Contenido</h3>
+                    <nav class="flex flex-col gap-3 text-sm font-medium text-gray-600">
+                        <a href="#tratamiento" class="sidebar-link">Política de Datos</a>
+                        <a href="#gobernanza" class="sidebar-link">Normas y Gobernanza</a>
+                        <a href="#disclaimer" class="sidebar-link">Exención de Responsabilidad</a>
+                        <a href="#contacto" class="sidebar-link">Contacto Legal</a>
+                    </nav>
+                </div>
+            </aside>
+
+            <div class="lg:w-3/4 bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-gray-100 legal-text">
+                
+                <section id="tratamiento">
+                    <h2>1. Política de Tratamiento de Información Personal</h2>
+                    <p>
+                        En **Finleg**, domiciliada en Colombia, reconocemos la importancia de la seguridad, privacidad y confidencialidad de los datos personales. En cumplimiento de la **Ley 1581 de 2012** y el **Decreto 1377 de 2013**, actuamos como Responsables del Tratamiento de la información capturada a través de nuestro portal y la plataforma SIAF.
+                    </p>
+                    <p><strong>Finalidades del Tratamiento:</strong> Los datos recolectados serán utilizados para:</p>
+                    <ul>
+                        <li>Validar la identidad del usuario para el acceso a herramientas de inteligencia financiera.</li>
+                        <li>Procesar estados financieros corporativos bajo entornos seguros de nube.</li>
+                        <li>Enviar actualizaciones técnicas sobre la Circular Básica Financiera y normativa contable.</li>
+                        <li>Gestión administrativa, comercial y de contacto para servicios de consultoría técnica.</li>
+                    </ul>
+                    <p>
+                        <strong>Derechos del Titular:</strong> Usted tiene derecho a conocer, actualizar, rectificar y suprimir sus datos personales, así como a revocar la autorización otorgada para su tratamiento, mediante los canales de atención dispuestos en esta política.
+                    </p>
+                </section>
+
+                <section id="gobernanza">
+                    <h2>2. Normas y Gobernanza de Finleg</h2>
+                    <p>
+                        La estructura ética y operativa de **Finleg** se rige por principios de integridad corporativa y rigor técnico. Nuestra gobernanza interna asegura que:
+                    </p>
+                    <ul>
+                        <li>Toda interpretación normativa se base en fuentes oficiales (Superintendencia Financiera, JCC, Ministerios).</li>
+                        <li>Se mantenga estricta reserva profesional sobre la información financiera cargada por los clientes.</li>
+                        <li>Los algoritmos de la plataforma SIAF sean auditados periódicamente para garantizar la precisión de los indicadores de solvencia, liquidez y endeudamiento.</li>
+                    </ul>
+                </section>
+
+                <section id="disclaimer" class="bg-slate-50 p-8 rounded-xl border-l-4 border-navy mt-12">
+                    <h2 class="!mt-0">3. Exención de Responsabilidad (Disclaimer)</h2>
+                    <p class="font-semibold text-navy">Aviso Legal Importante sobre Asesoría de Inversiones:</p>
+                    <p>
+                        **Finleg** y su plataforma de inteligencia analítica proporcionan herramientas de diagnóstico, educación y monitoreo financiero corporativo. Conforme a lo establecido en la **Ley 964 de 2005** y el **Decreto 2555 de 2010** de la República de Colombia:
+                    </p>
+                    <p class="italic text-gray-700 bg-white p-4 border border-gray-200 rounded-lg">
+                        "La información, análisis y proyecciones presentadas en este portal NO constituyen asesoría financiera profesional, recomendación de inversión, ni actividad de intermediación de valores. Finleg no realiza captación masiva y habitual de recursos ni ofrece consejos personalizados sobre la compra o venta de instrumentos financieros."
+                    </p>
+                    <p>
+                        El usuario es el único responsable de las decisiones tomadas con base en los indicadores generados. Recomendamos que cualquier decisión de inversión sea consultada con un profesional certificado ante la Autoridad de Autorregulación del Mercado de Valores (AMV).
+                    </p>
+                </section>
+
+                <section id="contacto" class="mt-12 pt-8 border-t border-gray-100">
+                    <p class="text-sm text-gray-500">
+                        Para ejercer sus derechos de Habeas Data o consultas sobre nuestras normas de gobernanza, puede escribirnos al correo: 
+                        <a href="mailto:mauricio.galvis@finleg.co" class="text-navy font-bold underline">mauricio.galvis@finleg.co</a>
+                    </p>
+                </section>
+
+            </div>
+        </div>
     </main>
+
+    <footer class="container mx-auto px-6 py-12 text-center border-t border-gray-200">
+        <p class="text-gray-400 text-sm">© 2026 Finleg | Cumplimiento Normativo y Ética Financiera.</p>
+    </footer>
 </body>
 </html>
