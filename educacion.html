@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Educación Financiera - FINLEG Academy</title>
+    <title>Educación Financiera - FINLEG</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -12,24 +12,22 @@
         .text-navy { color: #1a2b4c; }
         .bg-cyan-tech { background-color: #00e5ff; }
         .border-cyan-tech { border-color: #00e5ff; }
-        .card-academic { transition: all 0.3s ease; border-left: 4px solid #cbd5e1; }
-        .card-academic:hover { border-left-color: #00e5ff; transform: translateX(5px); }
+        .formula-box { background-color: #f1f5f9; border-left: 3px solid #1a2b4c; padding: 0.75rem; font-family: monospace; font-size: 0.9rem; margin-top: 0.5rem; }
     </style>
 </head>
 <body>
     <nav class="bg-navy p-6 shadow-xl sticky top-0 z-50">
         <div class="container mx-auto flex justify-between items-center">
             <a href="index.html" class="text-2xl font-bold text-white tracking-tighter">
-                <span class="text-[#00e5ff]">FIN</span>LEG <span class="font-light opacity-80 text-sm ml-2 border-l border-white/30 pl-2 uppercase tracking-widest">Academy</span>
+                FINLEG <span class="font-light opacity-80 text-sm ml-2 border-l border-white/30 pl-2 uppercase tracking-widest">Educación Financiera</span>
             </a>
             <a href="index.html" class="text-white hover:text-[#00e5ff] transition font-semibold">← Volver al Portal</a>
         </div>
     </nav>
 
     <header class="bg-white border-b py-16">
-        <div class="container mx-auto px-6">
-            <span class="text-cyan-tech font-bold uppercase tracking-widest text-sm">Centro de Conocimiento</span>
-            <h1 class="text-4xl md:text-5xl font-bold text-navy mt-2">Fundamentos de Finanzas Corporativas</h1>
+        <div class="container mx-auto px-6 text-left">
+            <h1 class="text-4xl md:text-5xl font-bold text-navy">Fundamentos de Finanzas Corporativas</h1>
             <p class="text-xl text-gray-600 mt-4 max-w-3xl leading-relaxed">
                 Entender las finanzas no se trata de números complejos, sino de tomar decisiones que aseguren la supervivencia y el crecimiento de su empresa.
             </p>
@@ -44,74 +42,83 @@
                 <section class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
                     <h2 class="text-2xl font-bold text-navy mb-6 flex items-center gap-2">
                         <span class="w-8 h-1 bg-cyan-tech inline-block"></span>
-                        ¿Qué son las Finanzas Corporativas?
+                        Indicadores de Gestión SIAF
                     </h2>
-                    <p class="text-gray-700 leading-relaxed mb-4">
-                        En palabras simples, es el arte de gestionar el dinero de la empresa para **crear valor**. Se basa en tres pilares que todo gerente debe dominar:
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Nuestra herramienta **SIAF** automatiza el cálculo de estos indicadores para que usted pueda concentrarse en la estrategia.
                     </p>
-                    <ul class="space-y-4">
-                        <li class="flex gap-4">
-                            <span class="bg-blue-50 text-navy font-bold rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">1</span>
-                            <div>
-                                <strong class="text-navy">Decisión de Inversión:</strong> ¿En qué activos o proyectos debemos poner nuestro dinero para que crezca?
+
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="font-bold text-navy text-lg">1. EBITDA (Utilidad Operativa + Depreciaciones)</h3>
+                            <p class="text-gray-600 text-sm italic">Mide la capacidad del negocio para generar efectivo solo por su operación.</p>
+                            <div class="formula-box text-navy">
+                                EBITDA = Utilidad Operativa + Depreciación + Amortización
                             </div>
-                        </li>
-                        <li class="flex gap-4">
-                            <span class="bg-blue-50 text-navy font-bold rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">2</span>
-                            <div>
-                                <strong class="text-navy">Decisión de Financiación:</strong> ¿De dónde sacamos el capital? ¿Préstamos bancarios, socios o recursos propios?
+                        </div>
+
+                        <div>
+                            <h3 class="font-bold text-navy text-lg">2. Margen Neto</h3>
+                            <p class="text-gray-600 text-sm italic">¿Qué porcentaje de cada peso vendido se convierte realmente en utilidad?.</p>
+                            <div class="formula-box text-navy">
+                                Margen Neto = (Utilidad Neta / Ventas Totales) * 100
                             </div>
-                        </li>
-                        <li class="flex gap-4">
-                            <span class="bg-blue-50 text-navy font-bold rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">3</span>
-                            <div>
-                                <strong class="text-navy">Gestión de Liquidez:</strong> Asegurar que siempre haya efectivo para pagar nómina y proveedores sin asfixiar la operación.
+                        </div>
+
+                        <div>
+                            <h3 class="font-bold text-navy text-lg">3. Prueba Ácida (Liquidez Inmediata)</h3>
+                            <p class="text-gray-600 text-sm italic">Capacidad de pagar deudas de corto plazo sin depender de la venta de inventarios.</p>
+                            <div class="formula-box text-navy">
+                                Prueba Ácida = (Activo Corriente - Inventarios) / Pasivo Corriente
                             </div>
-                        </li>
-                    </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="font-bold text-navy text-lg">4. Punto de Equilibrio</h3>
+                            <p class="text-gray-600 text-sm italic">El nivel de ventas donde los ingresos igualan exactamente a los costos y gastos.</p>
+                            <div class="formula-box text-navy">
+                                P.E. = Costos Fijos / (1 - (Costos Variables / Ventas Totales))
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
                 <section class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
                     <h2 class="text-2xl font-bold text-navy mb-6 flex items-center gap-2">
                         <span class="w-8 h-1 bg-cyan-tech inline-block"></span>
-                        Conceptos Clave para Gerentes
+                        Gestión de Liquidez y Riesgos
                     </h2>
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div class="card-academic p-4 bg-gray-50 rounded-r-lg">
-                            <h3 class="font-bold text-navy uppercase text-xs tracking-wider mb-1">EBITDA</h3>
-                            <p class="text-sm text-gray-600 italic">"La caja que genera tu negocio antes de pagar impuestos e intereses."</p>
-                        </div>
-                        <div class="card-academic p-4 bg-gray-50 rounded-r-lg">
-                            <h3 class="font-bold text-navy uppercase text-xs tracking-wider mb-1">WACC</h3>
-                            <p class="text-sm text-gray-600 italic">"Lo que le cuesta a tu empresa conseguir dinero para operar."</p>
-                        </div>
-                        <div class="card-academic p-4 bg-gray-50 rounded-r-lg">
-                            <h3 class="font-bold text-navy uppercase text-xs tracking-wider mb-1">Punto de Equilibrio</h3>
-                            <p class="text-sm text-gray-600 italic">"¿Cuánto tengo que vender exactamente para no perder ni un peso?"</p>
-                        </div>
-                        <div class="card-academic p-4 bg-gray-50 rounded-r-lg">
-                            <h3 class="font-bold text-navy uppercase text-xs tracking-wider mb-1">Flujo de Caja Libre</h3>
-                            <p class="text-sm text-gray-600 italic">"El dinero real que queda disponible para los dueños tras cubrir todo."</p>
-                        </div>
-                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        En la operación diaria, SIAF monitorea el impacto de la **Circular Básica Financiera (CBF)** para asegurar que su empresa no caiga en riesgos de iliquidez antes de la fecha límite de junio de 2026.
+                    </p>
                 </section>
             </div>
 
             <div class="space-y-6">
                 <div class="bg-navy text-white p-6 rounded-2xl shadow-lg">
-                    <h2 class="text-lg font-bold mb-4 border-b border-white/20 pb-2">Marco Normativo 2026</h2>
+                    <h2 class="text-lg font-bold mb-4 border-b border-white/20 pb-2">Contexto Legal y Tributario</h2>
                     
                     <div class="space-y-6">
                         <div>
-                            <span class="text-[10px] bg-cyan-tech text-navy px-2 py-0.5 rounded font-bold uppercase">Ley 2445 de 2025</span>
-                            <h3 class="font-semibold mt-1">Insolvencia para No Comerciantes</h3>
-                            <p class="text-xs opacity-80 mt-2 leading-relaxed">Esencial para proteger el patrimonio personal frente a crisis financieras severas.</p>
+                            <span class="text-[10px] bg-white/20 text-white px-2 py-0.5 rounded font-bold uppercase">Ley 1116 de 2006</span>
+                            <h3 class="font-semibold mt-1">Reorganización Empresarial</h3>
+                            <p class="text-xs opacity-80 mt-2 leading-relaxed">El salvavidas legal para empresas viables que atraviesan crisis de efectivo, permitiendo negociar deudas con acreedores.</p>
                         </div>
 
                         <div>
-                            <span class="text-[10px] bg-white/20 text-white px-2 py-0.5 rounded font-bold uppercase">Circular CBF</span>
-                            <h3 class="font-semibold mt-1">Nuevos Estándares de Riesgo</h3>
-                            <p class="text-xs opacity-80 mt-2 leading-relaxed">Reportes obligatorios y gestión de liquidez bajo la nueva normativa de la SuperFinanciera.</p>
+                            <span class="text-[10px] bg-cyan-tech text-navy px-2 py-0.5 rounded font-bold uppercase">Ley 2445 de 2025</span>
+                            <h3 class="font-semibold mt-1">Insolvencia No Comerciantes</h3>
+                            <p class="text-xs opacity-80 mt-2 leading-relaxed">Protección para personas naturales no comerciantes, clave para salvaguardar el patrimonio personal del emprendedor.</p>
+                        </div>
+
+                        <div class="pt-4 border-t border-white/10">
+                            <span class="text-[10px] bg-red-400 text-white px-2 py-0.5 rounded font-bold uppercase">Actualización 2026</span>
+                            <h3 class="font-semibold mt-1">Nuevos Impuestos Corporativos</h3>
+                            <ul class="text-xs opacity-80 mt-2 space-y-2 list-disc list-inside">
+                                <li>Ajustes en la Tasa de Tributación Depurada (TTD).</li>
+                                <li>Nuevas sobretasas para sectores específicos.</li>
+                                <li>Actualización de la UVT a $51.322 para 2026.</li>
+                            </ul>
                         </div>
                     </div>
 
@@ -121,9 +128,9 @@
                 </div>
 
                 <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
-                    <h3 class="font-bold text-navy mb-2">¿Por qué SIAF?</h3>
+                    <h3 class="font-bold text-navy mb-2">Análisis SIAF</h3>
                     <p class="text-sm text-gray-600 leading-relaxed">
-                        Porque automatiza estos conceptos y los convierte en diagnósticos que usted puede entender sin ser financiero.
+                        Nuestro motor de IA procesa sus estados financieros y proyecta el impacto de estos impuestos en su flujo de caja libre.
                     </p>
                 </div>
             </div>
@@ -132,7 +139,7 @@
     </main>
 
     <footer class="container mx-auto px-6 py-12 text-center border-t border-gray-200 mt-12">
-        <p class="text-gray-400 text-sm">© 2026 FINLEG Academy | Educación para la sostenibilidad empresarial.</p>
+        <p class="text-gray-400 text-sm">© 2026 FINLEG | Educación para la sostenibilidad empresarial basada en datos reales.</p>
     </footer>
 </body>
 </html>
