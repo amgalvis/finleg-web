@@ -2,15 +2,189 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Aviso Legal - FINLEG</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marco Legal y Cumplimiento - Finleg</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        .bg-navy { background-color: #1a2b4c; }
+        .text-navy { color: #1a2b4c; }
+        .bg-cyan-tech { background-color: #00e5ff; }
+        .border-cyan-tech { border-color: #00e5ff; }
+        .text-cyan-tech { color: #00e5ff; }
+        .card-academic { transition: all 0.3s ease; border-left: 4px solid #cbd5e1; }
+        .card-academic:hover { border-left-color: #00e5ff; transform: translateX(5px); }
+        .checkbox-custom:checked + label { color: #1a2b4c; font-weight: 600; }
+    </style>
 </head>
-<body class="bg-slate-50 p-10">
-    <div class="max-w-2xl mx-auto bg-white p-8 rounded shadow">
-        <h1 class="text-2xl font-bold mb-4">Aviso Legal</h1>
-        <p class="text-gray-600 italic mb-4">Esta página contiene los términos y condiciones de uso del portal.</p>
-        <p>Toda la información académica y técnica proporcionada por FINLEG tiene carácter informativo y no constituye por sí sola una relación contractual de representación jurídica, a menos que se formalice mediante contrato previo.</p>
-        <a href="index.html" class="block mt-6 text-blue-600">Regresar al inicio</a>
-    </div>
+<body>
+    <nav class="bg-navy p-6 shadow-xl sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-white tracking-tighter">
+                Finleg <span class="font-light opacity-80 text-sm ml-2 border-l border-white/30 pl-2 uppercase tracking-widest">Marco Legal</span>
+            </a>
+            <a href="index.html" class="text-white hover:text-[#00e5ff] transition font-semibold">← Volver al Portal</a>
+        </div>
+    </nav>
+
+    <header class="bg-white border-b py-16">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-5xl font-bold text-navy mt-2">Normativa de las Finanzas Corporativas</h1>
+            <p class="text-xl text-gray-600 mt-4 max-w-3xl leading-relaxed">
+                El cumplimiento normativo no es una carga, es el blindaje jurídico que protege la operación financiera y asegura la continuidad de su negocio en Colombia.
+            </p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <div class="grid lg:grid-cols-3 gap-8">
+            
+            <div class="lg:col-span-2 space-y-8">
+                
+                <section class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                    <h2 class="text-2xl font-bold text-navy mb-6 flex items-center gap-2">
+                        <span class="w-8 h-1 bg-cyan-tech inline-block"></span>
+                        Diagnóstico Rápido de Riesgo Legal
+                    </h2>
+                    <p class="text-gray-700 mb-6 leading-relaxed">Seleccione los criterios que cumple su organización para evaluar su nivel de exposición normativa:</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3 p-4 bg-gray-50 rounded-xl">
+                            <input type="checkbox" id="check1" class="w-5 h-5 accent-[#1a2b4c]">
+                            <label for="check1" class="text-gray-700">Sus pasivos en mora de más de 90 días son inferiores al 30 por ciento del total.</label>
+                        </div>
+                        <div class="flex items-center gap-3 p-4 bg-gray-50 rounded-xl">
+                            <input type="checkbox" id="check2" class="w-5 h-5 accent-[#1a2b4c]">
+                            <label for="check2" class="text-gray-700">Cuenta con una política formal de gestión de riesgos bajo la Circular Básica Financiera.</label>
+                        </div>
+                        <div class="flex items-center gap-3 p-4 bg-gray-50 rounded-xl">
+                            <input type="checkbox" id="check3" class="w-5 h-5 accent-[#1a2b4c]">
+                            <label for="check3" class="text-gray-700">Sus contratos de financiación bancaria han sido revisados frente a tasas de usura vigentes.</label>
+                        </div>
+                        <div class="flex items-center gap-3 p-4 bg-gray-50 rounded-xl">
+                            <input type="checkbox" id="check4" class="w-5 h-5 accent-[#1a2b4c]">
+                            <label for="check4" class="text-gray-700">Mantiene actualizado su registro de beneficiarios finales ante la DIAN.</label>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 p-6 bg-navy text-white rounded-xl">
+                        <p class="text-sm opacity-80 uppercase tracking-widest font-bold mb-2">Recomendación SIAF</p>
+                        <p class="text-lg">Si no ha marcado más de 2 casillas, su empresa podría estar en riesgo de incumplimiento técnico para junio de 2026. SIAF puede automatizar este monitoreo.</p>
+                    </div>
+                </section>
+
+                <section class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                    <h2 class="text-2xl font-bold text-navy mb-8 flex items-center gap-2">
+                        <span class="w-8 h-1 bg-cyan-tech inline-block"></span>
+                        Relación Jurídica de las Dimensiones SIAF
+                    </h2>
+                    
+                    <div class="mb-10">
+                        <h3 class="text-lg font-bold text-navy mb-4 flex items-center gap-2 uppercase tracking-wider">
+                            <span class="text-cyan-tech">●</span> Dimensión Legal: Liquidez
+                        </h3>
+                        <div class="card-academic p-4 bg-gray-50 rounded-r-lg mb-4">
+                            <p class="text-sm text-gray-700 leading-relaxed">
+                                La liquidez no es solo un ratio financiero, es el disparador legal de los procesos de insolvencia. Un indicador de prueba ácida inferior a 1.0 puede activar las causales de cesación de pagos contempladas en la Ley 1116 y la Ley 2445.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mb-10">
+                        <h3 class="text-lg font-bold text-navy mb-4 flex items-center gap-2 uppercase tracking-wider">
+                            <span class="text-cyan-tech">●</span> Dimensión Legal: Solvencia
+                        </h3>
+                        <div class="card-academic p-4 bg-gray-50 rounded-r-lg">
+                            <p class="text-sm text-gray-700 leading-relaxed">
+                                Evalúa la capacidad de respaldo frente a garantías reales y personales. Jurídicamente, una solvencia comprometida afecta la capacidad de contratar con el Estado y de acceder a nuevos cupos de crédito.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mb-10">
+                        <h3 class="text-lg font-bold text-navy mb-4 flex items-center gap-2 uppercase tracking-wider">
+                            <span class="text-cyan-tech">●</span> Dimensión Legal: Rentabilidad
+                        </h3>
+                        <div class="card-academic p-4 bg-gray-50 rounded-r-lg">
+                            <p class="text-sm text-gray-700 leading-relaxed">
+                                La utilidad operativa determina la base gravable. El cumplimiento de la Tasa de Tributación Depurada es un requisito legal para evitar sanciones de la autoridad tributaria y asegurar el pago correcto de dividendos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mb-10">
+                        <h3 class="text-lg font-bold text-navy mb-4 flex items-center gap-2 uppercase tracking-wider">
+                            <span class="text-cyan-tech">●</span> Dimensión Legal: Riesgo y VaR
+                        </h3>
+                        <div class="card-academic p-4 bg-gray-50 rounded-r-lg">
+                            <p class="text-sm text-gray-700 leading-relaxed">
+                                La gestión del Valor en Riesgo (VaR) está ligada a la responsabilidad de los administradores. No monitorear estos riesgos puede derivar en responsabilidad civil personal por decisiones que afecten el patrimonio de la sociedad.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-bold text-navy mb-4 flex items-center gap-2 uppercase tracking-wider">
+                            <span class="text-cyan-tech">●</span> Dimensión Legal: Tesorería
+                        </h3>
+                        <div class="card-academic p-4 bg-gray-50 rounded-r-lg">
+                            <p class="text-sm text-gray-700 leading-relaxed">
+                                Incluye el cumplimiento de las normas de prevención de lavado de activos y financiación del terrorismo (SAGRILAFT) y el reporte de operaciones ante entes de control.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="space-y-6">
+                <div class="bg-navy text-white p-6 rounded-2xl shadow-lg border border-white/10">
+                    <h2 class="text-lg font-bold mb-6 border-b border-white/20 pb-2">Normas Clave en Colombia</h2>
+                    
+                    <div class="space-y-8">
+                        <div>
+                            <span class="text-[10px] bg-cyan-tech text-navy px-2 py-0.5 rounded font-bold uppercase tracking-wider">Ley 2445 de 2025</span>
+                            <h3 class="font-semibold mt-2">Pequeños Comerciantes</h3>
+                            <p class="text-xs opacity-80 mt-2 leading-relaxed">
+                                Regula la insolvencia para personas naturales y pequeños comerciantes. Permite negociar deudas cuando el incumplimiento supera el 30 por ciento del pasivo total.
+                            </p>
+                        </div>
+
+                        <div>
+                            <span class="text-[10px] bg-cyan-tech text-navy px-2 py-0.5 rounded font-bold uppercase tracking-wider">Circular 004 de 2026</span>
+                            <h3 class="font-semibold mt-2">Circular Básica Financiera</h3>
+                            <p class="text-xs opacity-80 mt-2 leading-relaxed">
+                                Entra en vigor el 1 de junio de 2026. Establece nuevos estándares para la gestión de riesgos de liquidez y mercado por parte de la Superintendencia Financiera.
+                            </p>
+                        </div>
+
+                        <div class="pt-4 border-t border-white/10">
+                            <span class="text-[10px] bg-cyan-tech text-navy px-2 py-0.5 rounded font-bold uppercase tracking-wider">Decreto 410 de 1971</span>
+                            <h3 class="font-semibold mt-2">Código de Comercio</h3>
+                            <p class="text-xs opacity-80 mt-2 leading-relaxed">
+                                Define los deberes de los comerciantes y la obligatoriedad de llevar contabilidad bajo estándares legales para la creación de valor empresarial.
+                            </p>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/573103992919" class="mt-8 block text-center bg-cyan-tech text-navy font-bold py-3 rounded-xl hover:opacity-90 transition">
+                        Agendar Consultoría Legal
+                    </a>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+                    <h3 class="font-bold text-navy mb-2 uppercase text-xs tracking-widest">Aviso de Responsabilidad</h3>
+                    <p class="text-xs text-gray-500 leading-relaxed">
+                        Toda la información académica y técnica proporcionada por Finleg tiene carácter informativo y no constituye por sí sola una relación de representación jurídica, a menos que se formalice mediante contrato previo.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="container mx-auto px-6 py-12 text-center border-t border-gray-200 mt-12">
+        <p class="text-gray-400 text-sm">© 2026 Finleg | Seguridad Jurídica y Financiera.</p>
+    </footer>
 </body>
 </html>
