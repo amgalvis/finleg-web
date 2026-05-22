@@ -49,6 +49,12 @@
 </head>
 <body class="bg-gray-50 text-gray-900">
 
+    <!-- Elementos ocultos para forzar la descarga inmediata en caché -->
+    <div class="hidden" aria-hidden="true">
+        <img src="imagen_baner_arriba.png" alt="preload">
+        <img src="imagen_baner_abajo.png" alt="preload">
+    </div>
+
     <header class="bg-navy shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-6 h-24 flex justify-between items-center">
             <a href="index.html">
@@ -92,7 +98,7 @@
             </div>
             <div class="text-lg leading-relaxed font-light text-center w-full">
                 <p>
-                    <span class="font-semibold text-cyan-tech">Hola, soy Mauricio Galvis,</span> Especialista en Finanzas Corporativas y co-founder de Finleg. Tras una trayectoria de 20 años viviendo las finanzas desde el corazón de las operaciones de varias organizaciones en el país, hoy tengo el orgullo de presentar nuestra solución tecnológica insignia <span class="font-bold uppercase">SIAF</span>, un componente más del ecosistema de soluciones que tenemos para las empresas sin importar su tamaño.
+                    <span class="font-semibold text-cyan-tech">Hola, soy Mauricio Galvis,</span> Especialista en Finanzas Corporativas y co-founder de Finleg. Tras una trayectoria de 20 años viviendo las finanzas desde el corazón de las operaciones de varias organizaciones en el país, hoy tengo el orgullo de presentar nuestra solución tecnológica insignia <span class="font-bold uppercase">SIAF</span>, un component más del ecosistema de soluciones que tenemos para las empresas sin importar su tamaño.
                 </p>
             </div>
         </div>
@@ -162,7 +168,8 @@
         </div>
 
         <!-- Derechos y comentarios -->
-        <p class="text-white/70 text-sm">2026 Finleg | Comentarios en <a href="mailto:info@finleg.co" class="hover:underline text-white/70">info@finleg.co</a> | Todos los derechos reservados</p>
+        <p class="text-white/70 text-sm">2026 Finleg | Comentarios en <a href="mailto:info@finleg.co" class="hover:underline text-white/70">info@finleg.co</a> | Todos los derechos reservados.</p>
     </footer>
+
 </body>
 </html>
