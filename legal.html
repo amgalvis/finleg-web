@@ -12,7 +12,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; margin: 0; padding: 0; }
         .bg-navy { background-color: #1a2b4c; }
         .text-navy { color: #1a2b4c; }
         .bg-cyan-tech { background-color: #00e5ff; }
@@ -26,10 +26,11 @@
 <body>
     <nav class="bg-navy p-6 shadow-xl sticky top-0 z-50">
         <div class="container mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-white tracking-tighter">
-                Finleg <span class="font-light opacity-80 text-sm ml-2 border-l border-white/30 pl-2 uppercase tracking-widest">Marco Legal</span>
+            <a href="index.html" class="flex items-center gap-2">
+                <img src="finle_logo.png" alt="Finleg" class="h-10 md:h-12 w-auto object-contain"> 
+                <span class="font-light opacity-80 text-sm text-white tracking-widest border-l border-white/30 pl-2 ml-1">Marco Legal</span>
             </a>
-            <a href="index.html" class="text-white hover:text-[#00e5ff] transition font-semibold">← Volver al Portal</a>
+            <a href="index.html" class="text-white hover:text-[#00e5ff] transition font-semibold">← Volver</a>
         </div>
     </nav>
 
@@ -172,7 +173,7 @@
                         </div>
                     </div>
 
-                    <a href="https://wa.me/573103992919" class="mt-8 block text-center bg-cyan-tech text-navy font-bold py-3 rounded-xl hover:opacity-90 transition">
+                    <a href="https://wa.me/573103992919" class="mt-8 block text-center bg-cyan-tech text-navy font-bold py-3 rounded-xl hover:opacity-90 transition uppercase tracking-widest text-xs">
                         Agendar Consultoría Legal
                     </a>
                 </div>
