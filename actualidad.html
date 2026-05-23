@@ -3,42 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
-
     <title>Actualidad - Finleg</title>
     <meta name="description" content="Información de interés, sucesos económicos y regulatorios que impactan a las empresas en Colombia.">
-
-    <!-- CORRECCIÓN 1: preconnect antes de cargar fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <!-- CORRECCIÓN 2: Eliminado Font Awesome (~400 KB). Reemplazado por SVGs inline. -->
-
-    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #f8fafc; margin: 0; padding: 0; }
         .bg-navy { background-color: #1a2b4c; }
         .text-navy { color: #1a2b4c; }
-        .bg-cyan-tech { background-color: #00e5ff; }
         .text-cyan-tech { color: #00e5ff; }
+        .bg-cyan-tech { background-color: #00e5ff; }
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
         .editorial-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-        .editorial-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
+        .editorial-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
     </style>
 </head>
 <body>
     <nav class="bg-navy p-6 shadow-xl sticky top-0 z-50">
         <div class="container mx-auto flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-2">
-                <!-- CORRECCIÓN 3: width y height explícitos para evitar CLS -->
                 <img src="finle_logo.png" alt="Finleg" width="120" height="48" class="h-10 md:h-12 w-auto object-contain">
                 <span class="font-light opacity-80 text-sm text-white tracking-widest border-l border-white/30 pl-2 ml-1">Actualidad</span>
             </a>
@@ -55,102 +43,141 @@
         </div>
     </header>
 
+    <!-- SVG de iconos compartir reutilizable -->
+    <template id="svg-facebook">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+    </template>
+
     <main class="container mx-auto px-6 py-12">
         <section class="mb-16">
             <div class="flex overflow-x-auto gap-6 pb-8 snap-x hide-scrollbar">
 
-                <!-- CARD 1 -->
+                <!-- CARD 1: TASA BANREP -->
                 <div class="min-w-[320px] md:min-w-[550px] bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between snap-start editorial-card">
                     <div>
                         <div class="flex justify-between items-center mb-6">
-                            <span class="text-xs bg-navy text-white px-3 py-1 rounded-full font-semibold">31 de marzo de 2026</span>
+                            <span class="text-xs bg-navy text-white px-3 py-1 rounded-full font-semibold">30 de abril de 2026</span>
                             <span class="text-xs text-gray-400 font-bold tracking-wider">Finleg</span>
                         </div>
                         <h3 class="text-xl md:text-2xl font-bold text-navy mb-6 leading-tight">
-                            El Banco de la República mantiene la tasa de intervención en 11,25%
+                            Banrep sube tasa a 11,25% y la mantiene por unanimidad en abril
                         </h3>
                         <div class="space-y-6 mb-8">
                             <div>
                                 <h4 class="text-xs font-bold text-cyan-tech uppercase tracking-widest mb-2">Contexto</h4>
                                 <p class="text-sm text-gray-600 leading-relaxed">
-                                    En su más reciente sesión de política monetaria, la Junta Directiva decidió por mayoría mantener estable la tasa en 11,25%. La autoridad destacó la necesidad de evaluar el comportamiento de la inflación antes de retomar recortes.
+                                    El 31 de marzo, la Junta Directiva incrementó la tasa en 100 puntos básicos hasta 11,25%. En su reunión del 30 de abril, decidió por unanimidad mantenerla en ese nivel. Las minutas, publicadas el 6 de mayo de 2026, señalan que los miembros, aunque con visiones diversas, acordaron por consenso no hacer cambios mientras se evalúa el comportamiento de la inflación. Analistas del mercado estiman que la tasa podría superar el 12% antes de cerrar 2026.
                                 </p>
                             </div>
                             <div>
                                 <h4 class="text-xs font-bold text-navy uppercase tracking-widest mb-2">Análisis de Impacto</h4>
                                 <p class="text-sm text-gray-700 leading-relaxed font-medium">
-                                    Esta decisión implica un costo de endeudamiento elevado. Finleg recomienda priorizar el reperfilamiento de deudas de corto plazo, optimizar el capital de trabajo neto y revisar los presupuestos de Capex para mitigar el impacto en la cobertura de intereses y preservar el flujo de caja libre.
+                                    Con el crédito en su nivel más costoso en años y sin perspectiva de recortes en el corto plazo, las empresas deben actuar: reperfilar deuda de corto plazo, revisar coberturas de tasa de interés y fortalecer su capital de trabajo propio para reducir la dependencia del crédito bancario y proteger el flujo de caja libre.
                                 </p>
                             </div>
                         </div>
                     </div>
-
                     <div class="border-t border-gray-100 pt-6 flex justify-between items-center">
                         <span class="text-xs text-gray-400 font-semibold uppercase tracking-wider">Compartir</span>
                         <div class="flex gap-4 items-center">
-                            <!-- Facebook -->
-                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://finleg.co/actualidad.html" target="_blank" rel="noopener noreferrer" class="text-navy hover:text-[#00e5ff] transition" aria-label="Compartir en Facebook">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://finleg.co/actualidad.html" target="_blank" rel="noopener noreferrer" class="text-navy hover:text-[#00e5ff] transition" aria-label="Facebook">
                                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                             </a>
-                            <!-- LinkedIn -->
-                            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://finleg.co/actualidad.html" target="_blank" rel="noopener noreferrer" class="text-navy hover:text-[#00e5ff] transition" aria-label="Compartir en LinkedIn">
+                            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://finleg.co/actualidad.html" target="_blank" rel="noopener noreferrer" class="text-navy hover:text-[#00e5ff] transition" aria-label="LinkedIn">
                                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                             </a>
-                            <!-- X / Twitter -->
-                            <a href="https://twitter.com/intent/tweet?text=Análisis Financiero Finleg&url=https://finleg.co/actualidad.html" target="_blank" rel="noopener noreferrer" class="text-navy hover:text-[#00e5ff] transition" aria-label="Compartir en X">
+                            <a href="https://twitter.com/intent/tweet?text=Banrep mantiene tasa 11,25%25 - Análisis Finleg&url=https://finleg.co/actualidad.html" target="_blank" rel="noopener noreferrer" class="text-navy hover:text-[#00e5ff] transition" aria-label="X">
                                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                             </a>
-                            <!-- WhatsApp -->
-                            <a href="https://api.whatsapp.com/send?text=Mira este análisis de Finleg: https://finleg.co/actualidad.html" target="_blank" rel="noopener noreferrer" class="text-navy hover:text-[#00e5ff] transition" aria-label="Compartir en WhatsApp">
+                            <a href="https://api.whatsapp.com/send?text=Análisis tasa Banrep vía Finleg: https://finleg.co/actualidad.html" target="_blank" rel="noopener noreferrer" class="text-navy hover:text-[#00e5ff] transition" aria-label="WhatsApp">
                                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- CARD 2 -->
+                <!-- CARD 2: INFLACIÓN IPC -->
                 <div class="min-w-[320px] md:min-w-[550px] bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between snap-start editorial-card">
                     <div>
                         <div class="flex justify-between items-center mb-6">
-                            <span class="text-xs bg-navy text-white px-3 py-1 rounded-full font-semibold">15 de abril de 2026</span>
+                            <span class="text-xs bg-navy text-white px-3 py-1 rounded-full font-semibold">8 de mayo de 2026</span>
                             <span class="text-xs text-gray-400 font-bold tracking-wider">Finleg</span>
                         </div>
                         <h3 class="text-xl md:text-2xl font-bold text-navy mb-6 leading-tight">
-                            Entrada en vigencia de la nueva Circular Básica Contable de la Superintendencia
+                            Inflación repunta a 5,68% anual en abril: sexto año consecutivo por encima de la meta
                         </h3>
                         <div class="space-y-6 mb-8">
                             <div>
                                 <h4 class="text-xs font-bold text-cyan-tech uppercase tracking-widest mb-2">Contexto</h4>
                                 <p class="text-sm text-gray-600 leading-relaxed">
-                                    Se oficializaron las directrices para la actualización de reportes contables. La norma exige mayor granularidad en la revelación de pasivos financieros y endurece requisitos sobre riesgo de liquidez.
+                                    El DANE reportó para abril de 2026 una variación mensual del IPC de 0,78% y una variación anual de 5,68%, superior al 5,16% de abril de 2025. Los mayores aumentos en alimentos: zanahoria (+10,40%), tomate de árbol (+9,05%) y papas (+8,05%). El PIB del primer trimestre creció 2,2% y la tasa de desocupación nacional se ubica en 8,8%. Es el sexto año seguido que la inflación no regresa a la meta del 3%.
                                 </p>
                             </div>
                             <div>
                                 <h4 class="text-xs font-bold text-navy uppercase tracking-widest mb-2">Análisis de Impacto</h4>
                                 <p class="text-sm text-gray-700 leading-relaxed font-medium">
-                                    SIAF integra estos cambios de manera nativa. Las organizaciones deben ajustar el cálculo de indicadores de liquidez y capacitar equipos antes de junio de 2026 para evitar alertas de riesgo y asegurar la robustez del balance ante los entes de control.
+                                    La inflación persistente erosiona márgenes operativos y poder adquisitivo. Las empresas deben revisar sus estructuras de precios, indexar adecuadamente contratos con clientes y proveedores, y ajustar las proyecciones de flujo de caja para el segundo semestre, especialmente si se materializan los efectos del posible fenómeno de El Niño sobre el sector agrícola.
                                 </p>
                             </div>
                         </div>
                     </div>
-
                     <div class="border-t border-gray-100 pt-6 flex justify-between items-center">
                         <span class="text-xs text-gray-400 font-semibold uppercase tracking-wider">Compartir</span>
                         <div class="flex gap-4 items-center">
-                            <!-- Facebook -->
-                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://finleg.co/actualidad.html" target="_blank" rel="noopener noreferrer" class="text-navy hover:text-[#00e5ff] transition" aria-label="Compartir en Facebook">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://finleg.co/actualidad.html" target="_blank" rel="noopener noreferrer" class="text-navy hover:text-[#00e5ff] transition" aria-label="Facebook">
                                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                             </a>
-                            <!-- LinkedIn -->
-                            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://finleg.co/actualidad.html" target="_blank" rel="noopener noreferrer" class="text-navy hover:text-[#00e5ff] transition" aria-label="Compartir en LinkedIn">
+                            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://finleg.co/actualidad.html" target="_blank" rel="noopener noreferrer" class="text-navy hover:text-[#00e5ff] transition" aria-label="LinkedIn">
                                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                             </a>
-                            <!-- X / Twitter -->
-                            <a href="https://twitter.com/intent/tweet?text=Novedades Normativas Finleg&url=https://finleg.co/actualidad.html" target="_blank" rel="noopener noreferrer" class="text-navy hover:text-[#00e5ff] transition" aria-label="Compartir en X">
+                            <a href="https://twitter.com/intent/tweet?text=Inflación Colombia 5,68%25 abril 2026 - Finleg&url=https://finleg.co/actualidad.html" target="_blank" rel="noopener noreferrer" class="text-navy hover:text-[#00e5ff] transition" aria-label="X">
                                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                             </a>
-                            <!-- WhatsApp -->
-                            <a href="https://api.whatsapp.com/send?text=Actualización de la Superfinanciera vía Finleg: https://finleg.co/actualidad.html" target="_blank" rel="noopener noreferrer" class="text-navy hover:text-[#00e5ff] transition" aria-label="Compartir en WhatsApp">
+                            <a href="https://api.whatsapp.com/send?text=Inflación Colombia abril 2026 vía Finleg: https://finleg.co/actualidad.html" target="_blank" rel="noopener noreferrer" class="text-navy hover:text-[#00e5ff] transition" aria-label="WhatsApp">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 3: SUPERSOCIEDADES -->
+                <div class="min-w-[320px] md:min-w-[550px] bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between snap-start editorial-card">
+                    <div>
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="text-xs bg-navy text-white px-3 py-1 rounded-full font-semibold">Mayo 2026</span>
+                            <span class="text-xs text-gray-400 font-bold tracking-wider">Finleg</span>
+                        </div>
+                        <h3 class="text-xl md:text-2xl font-bold text-navy mb-6 leading-tight">
+                            Supersociedades: vence plazo para estados financieros y el interés bancario sube a 18,78%
+                        </h3>
+                        <div class="space-y-6 mb-8">
+                            <div>
+                                <h4 class="text-xs font-bold text-cyan-tech uppercase tracking-widest mb-2">Contexto</h4>
+                                <p class="text-sm text-gray-600 leading-relaxed">
+                                    Las empresas vigiladas debían presentar sus estados financieros con corte a diciembre de 2025 ante la Supersociedades vía SIRFIN (formato XBRL) entre el 13 de abril y el 11 de mayo de 2026. Los consolidados, hasta el 29 de mayo. El incumplimiento genera multas de hasta $350 millones. Simultáneamente, la Superfinanciera certificó el interés bancario corriente en 18,78% e.a. para mayo de 2026 (Resolución 0662), un aumento de 94 puntos básicos frente a abril.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold text-navy uppercase tracking-widest mb-2">Análisis de Impacto</h4>
+                                <p class="text-sm text-gray-700 leading-relaxed font-medium">
+                                    El incremento del interés bancario corriente eleva el techo de las tasas de mora y remuneratoria, encareciendo aún más la deuda. Si su empresa aún no reportó ante la Supersociedades o necesita revisar su posición ante estos cambios, Finleg puede acompañarle en la preparación, validación y cumplimiento normativo a tiempo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-t border-gray-100 pt-6 flex justify-between items-center">
+                        <span class="text-xs text-gray-400 font-semibold uppercase tracking-wider">Compartir</span>
+                        <div class="flex gap-4 items-center">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://finleg.co/actualidad.html" target="_blank" rel="noopener noreferrer" class="text-navy hover:text-[#00e5ff] transition" aria-label="Facebook">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                            </a>
+                            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://finleg.co/actualidad.html" target="_blank" rel="noopener noreferrer" class="text-navy hover:text-[#00e5ff] transition" aria-label="LinkedIn">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                            </a>
+                            <a href="https://twitter.com/intent/tweet?text=Supersociedades y tasas mayo 2026 vía Finleg&url=https://finleg.co/actualidad.html" target="_blank" rel="noopener noreferrer" class="text-navy hover:text-[#00e5ff] transition" aria-label="X">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                            </a>
+                            <a href="https://api.whatsapp.com/send?text=Supersociedades y tasas mayo 2026 vía Finleg: https://finleg.co/actualidad.html" target="_blank" rel="noopener noreferrer" class="text-navy hover:text-[#00e5ff] transition" aria-label="WhatsApp">
                                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                             </a>
                         </div>
@@ -176,24 +203,29 @@
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-gray-100">
+                            <tr class="opacity-50">
+                                <td class="py-5 text-sm text-gray-500 font-bold line-through">11 de mayo de 2026</td>
+                                <td class="py-5 text-sm text-gray-500 line-through">Plazo final estados financieros individuales — Supersociedades (SIRFIN).</td>
+                                <td class="py-5 text-sm"><span class="bg-gray-100 text-gray-400 px-3 py-1 rounded font-bold text-[10px] uppercase">Vencido</span></td>
+                            </tr>
+                            <tr class="opacity-50">
+                                <td class="py-5 text-sm text-gray-500 font-bold line-through">29 de mayo de 2026</td>
+                                <td class="py-5 text-sm text-gray-500 line-through">Plazo final estados financieros consolidados — Supersociedades.</td>
+                                <td class="py-5 text-sm"><span class="bg-gray-100 text-gray-400 px-3 py-1 rounded font-bold text-[10px] uppercase">Vencido</span></td>
+                            </tr>
                             <tr>
-                                <td class="py-5 text-sm text-gray-700 font-bold">12 de mayo de 2026</td>
-                                <td class="py-5 text-sm text-gray-600">Publicación del IPC de abril por el DANE.</td>
+                                <td class="py-5 text-sm text-gray-700 font-bold">Junio de 2026</td>
+                                <td class="py-5 text-sm text-gray-600">Reunión de la Junta Directiva del Banco de la República — decisión sobre tasa de intervención.</td>
                                 <td class="py-5 text-sm"><span class="bg-red-50 text-red-600 px-3 py-1 rounded font-bold text-[10px] uppercase">Alta</span></td>
                             </tr>
                             <tr>
-                                <td class="py-5 text-sm text-gray-700 font-bold">29 de mayo de 2026</td>
-                                <td class="py-5 text-sm text-gray-600">Reunión de la Junta Directiva del Banco de la República.</td>
+                                <td class="py-5 text-sm text-gray-700 font-bold">Junio de 2026</td>
+                                <td class="py-5 text-sm text-gray-600">Publicación del IPC de mayo por el DANE — indicador clave para proyecciones del segundo semestre.</td>
                                 <td class="py-5 text-sm"><span class="bg-red-50 text-red-600 px-3 py-1 rounded font-bold text-[10px] uppercase">Alta</span></td>
                             </tr>
                             <tr>
-                                <td class="py-5 text-sm text-gray-700 font-bold">1 de junio de 2026</td>
-                                <td class="py-5 text-sm text-gray-600">Plena entrada en vigencia de la nueva Circular Básica Financiera.</td>
-                                <td class="py-5 text-sm"><span class="bg-red-100 text-red-800 px-3 py-1 rounded font-bold text-[10px] uppercase">Crítica</span></td>
-                            </tr>
-                            <tr>
-                                <td class="py-5 text-sm text-gray-700 font-bold">18 de junio de 2026</td>
-                                <td class="py-5 text-sm text-gray-600">Presentación de informes trimestrales de solvencia y liquidez.</td>
+                                <td class="py-5 text-sm text-gray-700 font-bold">Julio de 2026</td>
+                                <td class="py-5 text-sm text-gray-600">Informe de Política Monetaria del Banrep — actualización de proyecciones macroeconómicas para el país.</td>
                                 <td class="py-5 text-sm"><span class="bg-blue-50 text-blue-600 px-3 py-1 rounded font-bold text-[10px] uppercase">Media</span></td>
                             </tr>
                         </tbody>
@@ -205,21 +237,20 @@
                 <div>
                     <h2 class="text-lg font-bold mb-4 border-b border-white/20 pb-2">Diagnóstico de Impacto</h2>
                     <p class="text-sm opacity-80 leading-relaxed mb-6">
-                        No permita que los cambios macroeconómicos tomen por sorpresa a su empresa. Finleg analiza el impacto de la inflación y las tasas directamente en sus estados financieros.
+                        Con la tasa en 11,25%, inflación en 5,68% anual e interés bancario en 18,78%, no deje que el entorno macroeconómico tome por sorpresa a su empresa. Finleg analiza el impacto directo en sus estados financieros.
                     </p>
                     <ul class="text-xs opacity-90 space-y-4 mb-8">
                         <li class="flex items-center gap-3">
-                            <!-- CORRECCIÓN 4: SVG check en lugar de Font Awesome -->
                             <svg class="w-4 h-4 text-cyan-tech flex-shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
                             Alertas tempranas de liquidez
                         </li>
                         <li class="flex items-center gap-3">
                             <svg class="w-4 h-4 text-cyan-tech flex-shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                            Proyecciones de rentabilidad
+                            Proyecciones de rentabilidad ajustadas a inflación real
                         </li>
                         <li class="flex items-center gap-3">
                             <svg class="w-4 h-4 text-cyan-tech flex-shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                            Ajustes normativos en tiempo real
+                            Cumplimiento de obligaciones ante Supersociedades
                         </li>
                     </ul>
                 </div>
