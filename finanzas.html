@@ -3,12 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link class="favicon" rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
     <title>Nuestros Servicios - Finleg</title>
     <meta name="description" content="Acompañamiento estratégico para la creación de valor y sostenibilidad empresarial en el nuevo entorno regulatorio colombiano.">
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- CORRECCIÓN 1: preconnect antes de cargar fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CDN (para producción, reemplazar por build con purge) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
         .bg-navy { background-color: #1a2b4c; }
@@ -21,7 +30,8 @@
     <nav class="bg-navy p-6 shadow-xl sticky top-0 z-50">
         <div class="container mx-auto flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-2">
-                <img src="finle_logo.png" alt="Finleg" class="h-10 md:h-12 w-auto object-contain"> 
+                <!-- CORRECCIÓN 2: width y height explícitos para evitar CLS -->
+                <img src="finle_logo.png" alt="Finleg" width="120" height="48" class="h-10 md:h-12 w-auto object-contain">
                 <span class="font-light opacity-80 text-sm text-white tracking-widest border-l border-white/30 pl-2 ml-1">Nuestros Servicios</span>
             </a>
             <a href="index.html" class="text-white hover:text-[#00e5ff] transition font-semibold">← Volver</a>
@@ -39,7 +49,6 @@
 
     <main class="container mx-auto px-6 py-12">
         <div class="grid lg:grid-cols-3 gap-8">
-
             <div class="lg:col-span-3 space-y-8">
 
                 <!-- BLOQUE 1: CONSULTORÍA PYME -->
@@ -51,7 +60,6 @@
                     <p class="text-gray-600 leading-relaxed mt-3 mb-8">
                         Acompañamos a los micro, pequeños y medianos empresarios en la dirección estratégica de su negocio.
                     </p>
-
                     <div class="space-y-5">
                         <div class="border-l-4 border-gray-200 pl-4 hover:border-[#00e5ff] transition-all duration-300">
                             <h3 class="font-bold text-navy">Consultoría Exprés para Pymes</h3>
@@ -73,7 +81,6 @@
                     <p class="text-gray-600 leading-relaxed mt-3 mb-8">
                         Analizamos las finanzas de tu empresa para que tomes decisiones estratégicas, sin importar el tamaño de tu negocio.
                     </p>
-
                     <div class="space-y-5">
                         <div class="border-l-4 border-gray-200 pl-4 hover:border-[#00e5ff] transition-all duration-300">
                             <h3 class="font-bold text-navy">SIAF: Tu Consultor Financiero con Inteligencia Artificial</h3>
@@ -95,7 +102,6 @@
                     <p class="text-gray-600 leading-relaxed mt-3 mb-8">
                         Guiamos a nuestros clientes bajo el marco jurídico colombiano vigente para proteger su negocio y su patrimonio.
                     </p>
-
                     <div class="space-y-5">
                         <div class="border-l-4 border-gray-200 pl-4 hover:border-[#00e5ff] transition-all duration-300">
                             <h3 class="font-bold text-navy">Insolvencia y Reorganización Empresarial</h3>
@@ -108,17 +114,17 @@
                     </div>
                 </div>
 
-                <!-- BOTÓN ÚNICO AL FINAL DE LOS BLOQUES -->
+                <!-- BOTÓN ÚNICO AL FINAL -->
                 <div class="text-center py-4">
                     <a href="https://wa.me/573103992919?text=Hola%20Finleg,%20deseo%20información%20sobre%20sus%20servicios"
                        target="_blank"
+                       rel="noopener noreferrer"
                        class="inline-block bg-navy text-white px-12 py-4 rounded-xl font-bold text-lg hover:opacity-90 transition shadow-md">
                         Agendar una Asesoría →
                     </a>
                 </div>
 
             </div>
-
         </div>
     </main>
 
