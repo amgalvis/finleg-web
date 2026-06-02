@@ -106,7 +106,8 @@
                     <div class="lg:w-5/12 w-full max-w-md relative group mx-auto lg:mx-0">
                         <div class="absolute -inset-4 bg-cyanTech/20 rounded-none blur-2xl group-hover:bg-cyanTech/30 transition-all"></div>
                         <div class="relative bg-navy rounded-none overflow-hidden border border-white/10 shadow-2xl">
-                            <img src="mauricio.png" alt="Asdrúbal Galvis" class="w-full h-auto object-cover">
+                            <!-- Se aplicó altura máxima fija y object-cover para recortar armónicamente la proporción vertical -->
+                            <img src="mauricio.png" alt="Asdrúbal Galvis" class="w-full h-80 object-cover object-top">
                         </div>
                     </div>
                     <div class="lg:w-7/12 space-y-8">
@@ -151,7 +152,6 @@
                     </div>
                     <div class="order-1 lg:order-2 flex justify-center">
                         <div class="relative w-72 h-72 md:w-96 md:h-96">
-                            <!-- Contenedor único, limpio, cuadrado y estático, idéntico al formato de la foto -->
                             <div class="bg-white border-8 border-slate-50 w-full h-full rounded-none shadow-[0_32px_64px_-15px_rgba(0,0,0,0.2)] flex items-center justify-center p-12">
                                 <img src="siaf_logo.png" alt="SIAF Logo" class="w-full h-auto object-contain">
                             </div>
@@ -168,12 +168,13 @@
                 <div class="w-20 h-1.5 bg-cyanTech mx-auto mt-4 rounded-full"></div>
             </div>
             <div class="container mx-auto px-6 grid md:grid-cols-2 gap-8">
-                <div class="group bg-white p-12 rounded-[2rem] shadow-sm hover:shadow-2xl transition-all border border-slate-200">
+                <!-- Se eliminaron bordes y redondeados de las tarjetas inferiores -->
+                <div class="group bg-white p-12 rounded-none shadow-sm hover:shadow-2xl transition-all">
                     <h3 class="text-2xl font-bold mb-4 group-hover:text-cyanTech transition-colors">Acompañamiento Inmersivo</h3>
                     <p class="text-slate-600 font-light mb-8">Intervenimos su operación financiera para estructurar el crecimiento y asegurar que cada peso trabaje para usted.</p>
                     <a href="https://wa.me/573103992919" class="font-bold text-navy flex items-center gap-2">Consultar ahora →</a>
                 </div>
-                <div class="group bg-white p-12 rounded-[2rem] shadow-sm hover:shadow-2xl transition-all border border-slate-200">
+                <div class="group bg-white p-12 rounded-none shadow-sm hover:shadow-2xl transition-all">
                     <h3 class="text-2xl font-bold mb-4 group-hover:text-cyanTech transition-colors">Reorganización (Ley 1116)</h3>
                     <p class="text-slate-600 font-light mb-8">Estrategia legal y financiera de alto nivel para proteger su patrimonio empresarial y garantizar la continuidad.</p>
                     <a href="https://wa.me/573103992919" class="font-bold text-navy flex items-center gap-2">Saber más →</a>
