@@ -8,14 +8,14 @@
     <title>Nuestros Servicios - Finleg</title>
     <meta name="description" content="Acompañamiento estratégico para la creación de valor y sostenibilidad empresarial en el nuevo entorno regulatorio colombiano.">
 
-    <!-- CORRECCIÓN 1: preconnect antes de cargar fuentes -->
+    <!-- preconnect antes de cargar fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Tailwind CDN (para producción, reemplazar por build con purge) -->
+    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
@@ -30,7 +30,6 @@
     <nav class="bg-navy p-6 shadow-xl sticky top-0 z-50">
         <div class="container mx-auto flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-2">
-                <!-- CORRECCIÓN 2: width y height explícitos para evitar CLS -->
                 <img src="finle_logo.png" alt="Finleg" width="120" height="48" class="h-10 md:h-12 w-auto object-contain">
                 <span class="font-light opacity-80 text-sm text-white tracking-widest border-l border-white/30 pl-2 ml-1">Nuestros Servicios</span>
             </a>
@@ -51,29 +50,7 @@
         <div class="grid lg:grid-cols-3 gap-8">
             <div class="lg:col-span-3 space-y-8">
 
-                <!-- SERVICIO 1: CONSULTORÍA EXPRÉS PARA PYMES -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 group transition-all duration-300">
-                    <h2 class="text-2xl font-bold text-navy mb-1 flex items-center gap-3">
-                        <span class="w-1 h-8 bg-gray-200 inline-block flex-shrink-0 group-hover:bg-[#00e5ff] transition-all duration-300"></span>
-                        Consultoría Exprés para Pymes
-                    </h2>
-                    <p class="text-gray-600 leading-relaxed mt-4 pl-4">
-                        Sesión de diagnóstico ágil pensada para pequeñas empresas, ideal para identificar desafíos puntuales en la gestión, operación o estrategia de tu negocio, saliendo con un plan de acción inmediato y prioridades claras.
-                    </p>
-                </div>
-
-                <!-- SERVICIO 2: EDUCACIÓN FINANCIERA -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 group transition-all duration-300">
-                    <h2 class="text-2xl font-bold text-navy mb-1 flex items-center gap-3">
-                        <span class="w-1 h-8 bg-gray-200 inline-block flex-shrink-0 group-hover:bg-[#00e5ff] transition-all duration-300"></span>
-                        Educación Financiera
-                    </h2>
-                    <p class="text-gray-600 leading-relaxed mt-4 pl-4">
-                        Talleres para equipos empresariales. Brindamos capacitación constante a las empresas y sus colaboradores sobre el manejo eficiente del dinero, el ahorro y la inversión.
-                    </p>
-                </div>
-
-                <!-- SERVICIO 3: SIAF -->
+                <!-- 1. SIAF -->
                 <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 group transition-all duration-300">
                     <h2 class="text-2xl font-bold text-navy mb-1 flex items-center gap-3">
                         <span class="w-1 h-8 bg-gray-200 inline-block flex-shrink-0 group-hover:bg-[#00e5ff] transition-all duration-300"></span>
@@ -84,7 +61,18 @@
                     </p>
                 </div>
 
-                <!-- SERVICIO 4: ACOMPAÑAMIENTO INMERSIVO -->
+                <!-- 2. CONSULTORÍA ÁGIL PARA PYMES -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 group transition-all duration-300">
+                    <h2 class="text-2xl font-bold text-navy mb-1 flex items-center gap-3">
+                        <span class="w-1 h-8 bg-gray-200 inline-block flex-shrink-0 group-hover:bg-[#00e5ff] transition-all duration-300"></span>
+                        Consultoría Ágil para Pymes
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed mt-4 pl-4">
+                        Sesión de diagnóstico ágil pensada para pequeñas empresas, ideal para identificar desafíos puntuales en la gestión, operación o estrategia de tu negocio, saliendo con un plan de acción inmediato y prioridades claras.
+                    </p>
+                </div>
+
+                <!-- 3. ACOMPAÑAMIENTO INMERSIVO -->
                 <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 group transition-all duration-300">
                     <h2 class="text-2xl font-bold text-navy mb-1 flex items-center gap-3">
                         <span class="w-1 h-8 bg-gray-200 inline-block flex-shrink-0 group-hover:bg-[#00e5ff] transition-all duration-300"></span>
@@ -95,7 +83,18 @@
                     </p>
                 </div>
 
-                <!-- SERVICIO 5: INSOLVENCIA Y REORGANIZACIÓN EMPRESARIAL -->
+                <!-- 4. EDUCACIÓN FINANCIERA -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 group transition-all duration-300">
+                    <h2 class="text-2xl font-bold text-navy mb-1 flex items-center gap-3">
+                        <span class="w-1 h-8 bg-gray-200 inline-block flex-shrink-0 group-hover:bg-[#00e5ff] transition-all duration-300"></span>
+                        Educación Financiera
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed mt-4 pl-4">
+                        Talleres para equipos empresariales. Brindamos capacitación constante a las empresas y sus colaboradores sobre el manejo eficiente del dinero, el ahorro y la inversión.
+                    </p>
+                </div>
+
+                <!-- 5. INSOLVENCIA Y REORGANIZACIÓN EMPRESARIAL -->
                 <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 group transition-all duration-300">
                     <h2 class="text-2xl font-bold text-navy mb-1 flex items-center gap-3">
                         <span class="w-1 h-8 bg-gray-200 inline-block flex-shrink-0 group-hover:bg-[#00e5ff] transition-all duration-300"></span>
@@ -106,7 +105,7 @@
                     </p>
                 </div>
 
-                <!-- BOTÓN ÚNICO AL FINAL -->
+                <!-- BOTÓN DE ACCIÓN -->
                 <div class="text-center py-4">
                     <a href="https://wa.me/573103992919?text=Hola%20Finleg,%20deseo%20información%20sobre%20sus%20servicios"
                        target="_blank"
@@ -121,7 +120,7 @@
     </main>
 
     <footer class="container mx-auto px-6 py-12 text-center border-t border-gray-200 mt-12">
-        <p class="text-gray-400 text-sm">2026 Finleg | Finanzas Inteligentes.</p>
+        <p class="text-gray-400 text-sm">2026 Finleg | contacto@finleg.co | Todos los derechos reservados</p>
     </footer>
 </body>
 </html>
