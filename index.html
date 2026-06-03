@@ -4,29 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finleg | Consultoría Ágil para Pymes e Inteligencia Artificial</title>
+
+    <link rel="icon" type="image/png" href="favicon.png">
     <meta name="description" content="Estrategia financiera y soluciones de IA para empresas en Colombia. Liderado por Asdrúbal Galvis.">
 
-    <!-- Google Fonts: Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
-                    },
+                    fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
                     colors: {
-                        navy: {
-                            DEFAULT: '#1a2b4c',
-                            dark: '#0f1a30',
-                            light: '#243b61',
-                        },
+                        navy: { DEFAULT: '#1a2b4c', dark: '#0f1a30', light: '#243b61' },
                         cyanTech: '#00e5ff',
                     }
                 }
@@ -37,55 +31,55 @@
     <style>
         .hero-mesh {
             background-color: #1a2b4c;
-            background-image: 
-                radial-gradient(at 80% 20%, rgba(0, 229, 255, 0.15) 0px, transparent 50%),
-                radial-gradient(at 20% 80%, rgba(15, 26, 48, 1) 0px, transparent 50%);
+            background-image:
+                radial-gradient(at 80% 20%, rgba(0,229,255,0.15) 0px, transparent 50%),
+                radial-gradient(at 20% 80%, rgba(15,26,48,1) 0px, transparent 50%);
         }
         .glass-card {
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(255,255,255,0.03);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255,255,255,0.1);
         }
     </style>
+
+    <!-- Google tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E3Q28T41LV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-E3Q28T41LV');
+    </script>
 </head>
 <body class="bg-slate-50 text-slate-900 antialiased">
 
-    <!-- HEADER -->
+    <!-- HEADER — FIX 3: hamburguesa eliminada, solo desktop nav -->
     <header class="fixed w-full z-50 bg-navy/95 backdrop-blur-md border-b border-white/10">
         <div class="container mx-auto px-6 h-20 flex justify-between items-center">
             <a href="index.html" class="hover:opacity-80 transition-opacity">
                 <img src="finle_logo.png" alt="Finleg" class="h-16 w-auto object-contain">
             </a>
-            
-            <nav class="hidden lg:flex items-center space-x-8">
-                <a href="finanzas.html" class="text-white/80 hover:text-cyanTech text-sm font-semibold uppercase tracking-wider transition-colors">Servicios</a>
-                <a href="https://wa.me/573103992919" class="text-white/80 hover:text-cyanTech text-sm font-semibold uppercase tracking-wider transition-colors">Contacto</a>
-                <a href="https://siaf.finleg.co/login" target="_blank" class="bg-white text-navy px-6 py-2 rounded-lg font-bold hover:bg-cyanTech transition-all shadow-lg hover:-translate-y-0.5">ACCESO SIAF</a>
+            <nav class="flex items-center space-x-6 md:space-x-8">
+                <a href="finanzas.html" class="text-white/80 hover:text-cyanTech text-xs md:text-sm font-semibold uppercase tracking-wider transition-colors">Servicios</a>
+                <a href="https://wa.me/573103992919" class="text-white/80 hover:text-cyanTech text-xs md:text-sm font-semibold uppercase tracking-wider transition-colors">Contacto</a>
+                <a href="https://siaf.finleg.co/login" target="_blank" class="bg-white text-navy px-4 md:px-6 py-2 rounded-lg font-bold hover:bg-cyanTech transition-all shadow-lg hover:-translate-y-0.5 text-xs md:text-sm">ACCESO SIAF</a>
             </nav>
-
-            <!-- Mobile Menu Icon (Visual Only) -->
-            <div class="lg:hidden text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
-            </div>
         </div>
     </header>
 
     <main>
-        <!-- HERO SECTION -->
+
+        <!-- HERO -->
         <section class="hero-mesh pt-40 pb-24 min-h-screen flex items-center relative overflow-hidden">
             <div class="container mx-auto px-6 relative z-10 text-center">
-                
                 <h1 class="text-4xl md:text-7xl font-extrabold text-white leading-tight mb-8">
-                    <span class="text-cyanTech">7 de cada 10 empresas</span> <br class="hidden md:block"> no superan los 5 años.
+                    <span class="text-cyanTech">7 de cada 10 empresas</span>
+                    <br class="hidden md:block">
+                    no superan los 5 años.
                 </h1>
-                
                 <p class="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-8 font-light">
                     En <span class="text-white font-semibold underline decoration-cyanTech">Finleg</span> transformamos esa estadística con dirección estratégica avanzada y tecnología de vanguardia.
                 </p>
-
-                <!-- 4 Bloques de servicios con formato de botones tecnológicos -->
                 <div class="flex flex-wrap justify-center gap-3 max-w-5xl mx-auto mb-12">
                     <div class="inline-flex items-center bg-white/10 border border-white/20 px-4 py-2 rounded-full">
                         <span class="text-cyanTech text-xs font-bold uppercase tracking-widest">Finanzas estratégicas</span>
@@ -100,26 +94,23 @@
                         <span class="text-cyanTech text-xs font-bold uppercase tracking-widest">Soluciones IA</span>
                     </div>
                 </div>
-
-                <!-- Botón Ajustado a Altura h-14 -->
+                <!-- FIX 2: botón sin w-full en móvil para que no se estire -->
                 <div class="flex justify-center items-center pt-4">
-                    <a href="https://wa.me/573103992919" class="w-full md:w-auto inline-flex items-center justify-center bg-white text-navy h-14 px-10 rounded-xl font-extrabold text-lg shadow-2xl hover:bg-cyanTech transition-all hover:scale-105 text-center">
+                    <a href="https://wa.me/573103992919" class="inline-flex items-center justify-center bg-white text-navy h-14 px-10 rounded-xl font-extrabold text-lg shadow-2xl hover:bg-cyanTech transition-all hover:scale-105">
                         Necesito Asesoría
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- SECCIÓN ASDRÚBAL -->
+        <!-- ASDRÚBAL — FIX 1: object-position top para corte limpio abajo -->
         <section id="asdrubal" class="py-24 bg-navy-dark text-white overflow-hidden">
             <div class="container mx-auto px-6">
                 <div class="flex flex-col lg:flex-row items-center gap-16">
                     <div class="w-full max-w-md flex justify-center lg:justify-start relative group">
-                        <div class="absolute -inset-4 bg-cyanTech/20 rounded-none blur-2xl group-hover:bg-cyanTech/30 transition-all"></div>
-                        <!-- Contenedor cuadrado estricto h-80 w-80 con fondo blanco intacto -->
-                        <div class="relative bg-white rounded-none overflow-hidden border border-white/10 shadow-2xl h-80 w-80">
-                            <!-- Se cambió object-contain por object-cover para un ajuste perfecto de la imagen -->
-                            <img src="mauricio.png" alt="Asdrúbal Galvis" class="w-full h-full object-cover object-center">
+                        <div class="absolute -inset-4 bg-cyanTech/20 blur-2xl group-hover:bg-cyanTech/30 transition-all"></div>
+                        <div class="relative bg-transparent overflow-hidden h-80 w-80">
+                            <img src="mauricio.png" alt="Asdrúbal Galvis" class="w-full h-full object-cover object-top">
                         </div>
                     </div>
                     <div class="lg:w-7/12 space-y-8">
@@ -128,7 +119,6 @@
                             <p class="text-cyanTech text-xl font-medium">Co-founder de Finleg</p>
                         </div>
                         <div class="w-20 h-1.5 bg-cyanTech rounded-full"></div>
-                        <!-- Texto actualizado agregando especialización en finanzas corporativas -->
                         <p class="text-lg text-slate-300 font-light leading-relaxed">
                             Con más de 20 años de experiencia en la gestión financiera y administrativa de organizaciones en Colombia, y como especialista en finanzas corporativas, hemos diseñado un ecosistema de servicios que incluye el rigor legal y la agilidad tecnológica.
                         </p>
@@ -140,43 +130,40 @@
             </div>
         </section>
 
-        <!-- SECCIÓN SIAF (Software) -->
+        <!-- SIAF — FIX 5: dashboard visible en móvil, sin restricción de tamaño fijo -->
         <section id="siaf" class="py-24 bg-white">
             <div class="container mx-auto px-6">
                 <div class="grid lg:grid-cols-2 gap-16 items-center">
                     <div class="order-2 lg:order-1">
                         <h2 class="text-4xl md:text-5xl font-extrabold text-navy mb-6">Su consultor Financiero con Inteligencia Artificial</h2>
                         <p class="text-xl text-slate-600 font-light mb-8 leading-relaxed">
-                            SIAF analiza la información financiera de tu negocio, proporcionando diagnósticos precisos para decisiones inteligentes y permitiéndote auditar, consultar y explorar tus datos mediante comandos en lenguaje natural. 
+                            SIAF analiza la información financiera de tu negocio, proporcionando diagnósticos precisos para decisiones inteligentes y permitiéndote auditar, consultar y explorar tus datos mediante comandos en lenguaje natural.
                         </p>
                         <ul class="space-y-4 mb-10">
                             <li class="flex items-center gap-3 text-slate-700">
-                                <svg class="h-6 w-6 text-cyanTech" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <svg class="h-6 w-6 text-cyanTech flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                                 Auditoría de Salud Financiera
                             </li>
                             <li class="flex items-center gap-3 text-slate-700">
-                                <svg class="h-6 w-6 text-cyanTech" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <svg class="h-6 w-6 text-cyanTech flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                                 Control Permanente de Capital de Trabajo
                             </li>
                         </ul>
-                        <!-- Botón Ajustado a Altura h-14 -->
                         <a href="https://wa.me/573103992919" class="inline-flex items-center justify-center bg-navy text-white h-14 px-8 rounded-xl font-bold shadow-xl hover:bg-navy-light transition-all">
                             Demostración SIAF
                         </a>
                     </div>
                     <div class="order-1 lg:order-2 flex justify-center">
-                        <div class="w-full max-w-md flex justify-center lg:justify-start relative group">
-                            <!-- Espejo exacto del marco: h-80 w-80 con fondo blanco intacto -->
-                            <div class="relative bg-white rounded-none overflow-hidden border border-slate-100 shadow-2xl h-80 w-80">
-                                <img src="siaf_logo.png" alt="SIAF Logo" class="w-full h-full object-contain object-center">
-                            </div>
+                        <div class="w-full relative">
+                            <div class="absolute -inset-2 bg-cyanTech/10 blur-2xl"></div>
+                            <img src="siaf_dashboard.png" alt="Dashboard SIAF" class="relative w-full h-auto object-contain shadow-2xl border border-slate-100">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SERVICIOS ÁGILES -->
+        <!-- SERVICIOS -->
         <section id="servicios" class="py-24 bg-slate-100">
             <div class="container mx-auto px-6 text-center mb-16">
                 <h2 class="text-4xl font-extrabold text-navy">Acompañamiento Para las Empresas</h2>
@@ -195,27 +182,28 @@
                 </div>
             </div>
         </section>
+
     </main>
 
-    <!-- FOOTER CORPORATIVO -->
+    <!-- FOOTER — FIX 4: LinkedIn URL corregida -->
     <footer class="bg-navy text-white pt-20 pb-10">
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-center border-b border-white/10 pb-12 mb-10 gap-8">
                 <div class="flex flex-col space-y-4">
                     <div class="flex space-x-6">
-                        <a href="https://www.facebook.com/FinlegColombia/" class="hover:text-cyanTech transition-colors">Facebook</a>
-                        <a href="https://www.instagram.com/Finlegcolombia" class="hover:text-cyanTech transition-colors">Instagram</a>
-                        <a href="#" class="hover:text-cyanTech transition-colors">LinkedIn</a>
+                        <a href="https://www.facebook.com/FinlegColombia/" target="_blank" rel="noopener noreferrer" class="hover:text-cyanTech transition-colors">Facebook</a>
+                        <a href="https://www.instagram.com/Finlegcolombia" target="_blank" rel="noopener noreferrer" class="hover:text-cyanTech transition-colors">Instagram</a>
+                        <a href="https://www.linkedin.com/company/finlegcolombia" target="_blank" rel="noopener noreferrer" class="hover:text-cyanTech transition-colors">LinkedIn</a>
                     </div>
                     <div class="flex space-x-6 text-sm text-white/60">
                         <a href="finanzas.html" class="hover:text-cyanTech transition-colors">Servicios</a>
                         <a href="https://siaf.finleg.co/login" target="_blank" class="hover:text-cyanTech transition-colors">Acceso SIAF</a>
                     </div>
                 </div>
-                <div class="flex flex-col space-y-2 items-end">
-                    <a href="mailto:contacto@finleg.co" class="text-cyanTech font-semibold transition-colors hover:opacity-80">contacto@finleg.co</a>
-                    <a href="https://wa.me/573103992919" class="text-cyanTech font-semibold transition-colors hover:opacity-80">310 399 2919</a>
-                    <span class="text-cyanTech font-semibold">Medellín Colombia</span>
+                <div class="flex flex-col space-y-2 items-center md:items-end">
+                    <a href="mailto:contacto@finleg.co" class="text-cyanTech font-semibold hover:opacity-80 transition-opacity">contacto@finleg.co</a>
+                    <a href="https://wa.me/573103992919" class="text-cyanTech font-semibold hover:opacity-80 transition-opacity">310 399 2919</a>
+                    <span class="text-cyanTech font-semibold">www.finleg.co · Medellín Colombia</span>
                 </div>
             </div>
             <p class="text-center text-white/40 text-xs tracking-widest uppercase font-medium">
