@@ -42,7 +42,6 @@
         }
     </style>
 
-    <!-- Google tag -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E3Q28T41LV"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -53,7 +52,7 @@
 </head>
 <body class="bg-slate-50 text-slate-900 antialiased">
 
-    <!-- HEADER — FIX 3: hamburguesa eliminada, solo desktop nav -->
+    <!-- HEADER -->
     <header class="fixed w-full z-50 bg-navy/95 backdrop-blur-md border-b border-white/10">
         <div class="container mx-auto px-6 h-20 flex justify-between items-center">
             <a href="index.html" class="hover:opacity-80 transition-opacity">
@@ -94,7 +93,6 @@
                         <span class="text-cyanTech text-xs font-bold uppercase tracking-widest">Soluciones IA</span>
                     </div>
                 </div>
-                <!-- FIX 2: botón sin w-full en móvil para que no se estire -->
                 <div class="flex justify-center items-center pt-4">
                     <a href="https://wa.me/573103992919" class="inline-flex items-center justify-center bg-white text-navy h-14 px-10 rounded-xl font-extrabold text-lg shadow-2xl hover:bg-cyanTech transition-all hover:scale-105">
                         Necesito Asesoría
@@ -103,14 +101,14 @@
             </div>
         </section>
 
-        <!-- ASDRÚBAL — FIX 1: object-position top para corte limpio abajo -->
+        <!-- ASDRÚBAL — vuelve exactamente como estaba antes -->
         <section id="asdrubal" class="py-24 bg-navy-dark text-white overflow-hidden">
             <div class="container mx-auto px-6">
                 <div class="flex flex-col lg:flex-row items-center gap-16">
                     <div class="w-full max-w-md flex justify-center lg:justify-start relative group">
-                        <div class="absolute -inset-4 bg-cyanTech/20 blur-2xl group-hover:bg-cyanTech/30 transition-all"></div>
-                        <div class="relative bg-transparent overflow-hidden h-80 w-80">
-                            <img src="mauricio.png" alt="Asdrúbal Galvis" class="w-full h-full object-cover object-top">
+                        <div class="absolute -inset-4 bg-cyanTech/20 rounded-none blur-2xl group-hover:bg-cyanTech/30 transition-all"></div>
+                        <div class="relative bg-white rounded-none overflow-hidden border border-white/10 shadow-2xl h-80 w-80">
+                            <img src="mauricio.png" alt="Asdrúbal Galvis" class="w-full h-full object-cover object-center">
                         </div>
                     </div>
                     <div class="lg:w-7/12 space-y-8">
@@ -130,7 +128,7 @@
             </div>
         </section>
 
-        <!-- SIAF — FIX 5: dashboard visible en móvil, sin restricción de tamaño fijo -->
+        <!-- SIAF -->
         <section id="siaf" class="py-24 bg-white">
             <div class="container mx-auto px-6">
                 <div class="grid lg:grid-cols-2 gap-16 items-center">
@@ -185,7 +183,7 @@
 
     </main>
 
-    <!-- FOOTER — FIX 4: LinkedIn URL corregida -->
+    <!-- FOOTER -->
     <footer class="bg-navy text-white pt-20 pb-10">
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-center border-b border-white/10 pb-12 mb-10 gap-8">
