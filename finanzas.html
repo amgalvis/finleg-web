@@ -8,119 +8,127 @@
     <title>Nuestros Servicios - Finleg</title>
     <meta name="description" content="Acompañamiento estratégico para la creación de valor y sostenibilidad empresarial en el nuevo entorno regulatorio colombiano.">
 
-    <!-- preconnect antes de cargar fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
-        .bg-navy { background-color: #1a2b4c; }
-        .text-navy { color: #1a2b4c; }
-        .bg-cyan-tech { background-color: #00e5ff; }
-        .text-cyan-tech { color: #00e5ff; }
-    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
+                    colors: {
+                        navy: { DEFAULT: '#1a2b4c', dark: '#0f1a30', light: '#243b61' },
+                        cyanTech: '#00e5ff',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-    <nav class="bg-navy p-6 shadow-xl sticky top-0 z-50">
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+    <!-- NAV -->
+    <nav class="bg-navy/95 backdrop-blur-md p-6 shadow-xl sticky top-0 z-50 border-b border-white/10">
         <div class="container mx-auto flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-2">
-                <img src="finle_logo.png" alt="Finleg" width="120" height="48" class="h-10 md:h-12 w-auto object-contain">
-                <span class="font-light opacity-80 text-sm text-white tracking-widest border-l border-white/30 pl-2 ml-1">Nuestros Servicios</span>
+                <img src="finle_logo.png" alt="Finleg" class="h-10 md:h-12 w-auto object-contain">
+                <span class="font-light opacity-60 text-sm text-white tracking-widest border-l border-white/30 pl-2 ml-1">Nuestros Servicios</span>
             </a>
-            <a href="index.html" class="text-white hover:text-[#00e5ff] transition font-semibold">← Volver</a>
+            <a href="index.html" class="text-white hover:text-cyanTech transition font-semibold text-sm">← Volver</a>
         </div>
     </nav>
 
-    <header class="bg-white border-b py-16">
+    <!-- HEADER — fondo azul oscuro diferenciado -->
+    <header style="background-color:#0f1a30;" class="py-20">
         <div class="container mx-auto px-6">
-            <h1 class="text-4xl md:text-5xl font-bold text-navy mt-2">Acompañamiento Para las Empresas</h1>
-            <p class="text-xl text-gray-600 mt-4 max-w-3xl leading-relaxed">
-                Un portafolio de servicios que se adapta a las necesidades de las empresas colombianas:
+            <p class="text-cyanTech text-xs font-bold uppercase tracking-widest mb-4">Portafolio</p>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Acompañamiento Para las Empresas</h1>
+            <div class="w-20 h-1.5 bg-cyanTech rounded-full mb-6"></div>
+            <p class="text-xl text-slate-400 font-light max-w-3xl leading-relaxed">
+                Un portafolio de servicios que se adapta a las necesidades de las empresas colombianas.
             </p>
         </div>
     </header>
 
-    <main class="container mx-auto px-6 py-12">
-        <div class="grid lg:grid-cols-3 gap-8">
-            <div class="lg:col-span-3 space-y-8">
+    <!-- SERVICIOS — tarjetas sin bordes curvados como en el index -->
+    <main class="container mx-auto px-6 py-16">
+        <div class="space-y-8">
 
-                <!-- 1. CONSULTORÍA ÁGIL PARA PYMES -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 group transition-all duration-300">
-                    <h2 class="text-2xl font-bold text-navy mb-1 flex items-center gap-3">
-                        <span class="w-1 h-8 bg-gray-200 inline-block flex-shrink-0 group-hover:bg-[#00e5ff] transition-all duration-300"></span>
-                        Consultoría Ágil para Pymes
-                    </h2>
-                    <p class="text-gray-600 leading-relaxed mt-4 pl-4">
-                        Sesión de diagnóstico pensada para pequeñas empresas, ideal para identificar desafíos puntuales en la gestión, operación o estrategia de tu negocio, saliendo con un plan de acción inmediato y prioridades claras.
-                    </p>
-                </div>
-
-                <!-- 2. SIAF -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 group transition-all duration-300">
-                    <h2 class="text-2xl font-bold text-navy mb-1 flex items-center gap-3">
-                        <span class="w-1 h-8 bg-gray-200 inline-block flex-shrink-0 group-hover:bg-[#00e5ff] transition-all duration-300"></span>
-                        SIAF: Tu Consultor Financiero con Inteligencia Artificial
-                    </h2>
-                    <p class="text-gray-600 leading-relaxed mt-4 pl-4">
-                        Nuestra herramienta de IA que permite realizar diagnósticos precisos de liquidez, rentabilidad y riesgo en tiempo real, y también está disponible para ti. Entiende la salud financiera de tu empresa sin ser un experto en finanzas.
-                    </p>
-                </div>
-
-                <!-- 3. ACOMPAÑAMIENTO INMERSIVO -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 group transition-all duration-300">
-                    <h2 class="text-2xl font-bold text-navy mb-1 flex items-center gap-3">
-                        <span class="w-1 h-8 bg-gray-200 inline-block flex-shrink-0 group-hover:bg-[#00e5ff] transition-all duration-300"></span>
-                        Acompañamiento Inmersivo
-                    </h2>
-                    <p class="text-gray-600 leading-relaxed mt-4 pl-4">
-                        Cuando el diagnóstico revela que tu negocio necesita más que una sesión. Acompañamiento financiero estructurado con alcance definido.
-                    </p>
-                </div>
-
-                <!-- 4. EDUCACIÓN FINANCIERA -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 group transition-all duration-300">
-                    <h2 class="text-2xl font-bold text-navy mb-1 flex items-center gap-3">
-                        <span class="w-1 h-8 bg-gray-200 inline-block flex-shrink-0 group-hover:bg-[#00e5ff] transition-all duration-300"></span>
-                        Educación Financiera
-                    </h2>
-                    <p class="text-gray-600 leading-relaxed mt-4 pl-4">
-                        Talleres para equipos empresariales. Brindamos capacitación constante a las empresas y sus colaboradores sobre el manejo eficiente del dinero, el ahorro y la inversión.
-                    </p>
-                </div>
-
-                <!-- 5. INSOLVENCIA Y REORGANIZACIÓN EMPRESARIAL -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 group transition-all duration-300">
-                    <h2 class="text-2xl font-bold text-navy mb-1 flex items-center gap-3">
-                        <span class="w-1 h-8 bg-gray-200 inline-block flex-shrink-0 group-hover:bg-[#00e5ff] transition-all duration-300"></span>
-                        Insolvencia y Reorganización Empresarial
-                    </h2>
-                    <p class="text-gray-600 leading-relaxed mt-4 pl-4">
-                        Acompañamiento en procesos bajo la Ley 1116 y la nueva Ley 2445 de 2025 para normalizar obligaciones y preservar la empresa.
-                    </p>
-                </div>
-
-                <!-- BOTÓN DE ACCIÓN -->
-                <div class="text-center py-4">
-                    <a href="https://wa.me/573103992919?text=Hola%20Finleg,%20deseo%20información%20sobre%20sus%20servicios"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="inline-block bg-navy text-white px-12 py-4 rounded-xl font-bold text-lg hover:opacity-90 transition shadow-md">
-                        Necesito asesoría
-                    </a>
-                </div>
-
+            <div class="group bg-white p-10 rounded-none shadow-sm hover:shadow-2xl transition-all border-t-4 border-transparent hover:border-cyanTech">
+                <h2 class="text-2xl font-bold text-navy mb-4 group-hover:text-cyanTech transition-colors">Consultoría Ágil para Pymes</h2>
+                <p class="text-slate-600 font-light leading-relaxed">
+                    Sesión de diagnóstico pensada para pequeñas empresas, ideal para identificar desafíos puntuales en la gestión, operación o estrategia de tu negocio, saliendo con un plan de acción inmediato y prioridades claras.
+                </p>
             </div>
+
+            <div class="group bg-white p-10 rounded-none shadow-sm hover:shadow-2xl transition-all border-t-4 border-transparent hover:border-cyanTech">
+                <h2 class="text-2xl font-bold text-navy mb-4 group-hover:text-cyanTech transition-colors">SIAF — Tu Consultor Financiero con Inteligencia Artificial</h2>
+                <p class="text-slate-600 font-light leading-relaxed">
+                    Nuestra herramienta de IA que permite realizar diagnósticos precisos de liquidez, rentabilidad y riesgo en tiempo real. Entiende la salud financiera de tu empresa sin ser un experto en finanzas.
+                </p>
+            </div>
+
+            <div class="group bg-white p-10 rounded-none shadow-sm hover:shadow-2xl transition-all border-t-4 border-transparent hover:border-cyanTech">
+                <h2 class="text-2xl font-bold text-navy mb-4 group-hover:text-cyanTech transition-colors">Acompañamiento Inmersivo</h2>
+                <p class="text-slate-600 font-light leading-relaxed">
+                    Cuando el diagnóstico revela que tu negocio necesita más que una sesión. Acompañamiento financiero estructurado con alcance definido.
+                </p>
+            </div>
+
+            <div class="group bg-white p-10 rounded-none shadow-sm hover:shadow-2xl transition-all border-t-4 border-transparent hover:border-cyanTech">
+                <h2 class="text-2xl font-bold text-navy mb-4 group-hover:text-cyanTech transition-colors">Educación Financiera</h2>
+                <p class="text-slate-600 font-light leading-relaxed">
+                    Talleres para equipos empresariales. Brindamos capacitación constante a las empresas y sus colaboradores sobre el manejo eficiente del dinero, el ahorro y la inversión.
+                </p>
+            </div>
+
+            <div class="group bg-white p-10 rounded-none shadow-sm hover:shadow-2xl transition-all border-t-4 border-transparent hover:border-cyanTech">
+                <h2 class="text-2xl font-bold text-navy mb-4 group-hover:text-cyanTech transition-colors">Insolvencia y Reorganización Empresarial</h2>
+                <p class="text-slate-600 font-light leading-relaxed">
+                    Acompañamiento en procesos bajo la Ley 1116 y la nueva Ley 2445 de 2025 para normalizar obligaciones y preservar la empresa.
+                </p>
+            </div>
+
+            <div class="text-center py-8">
+                <a href="https://wa.me/573103992919?text=Hola%20Finleg,%20deseo%20información%20sobre%20sus%20servicios"
+                   target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center justify-center bg-navy text-white h-14 px-10 rounded-xl font-bold text-lg shadow-xl hover:bg-navy-light transition-all">
+                    Necesito asesoría
+                </a>
+            </div>
+
         </div>
     </main>
 
-    <footer class="container mx-auto px-6 py-12 text-center border-t border-gray-200 mt-12">
-        <p class="text-gray-400 text-sm">2026 Finleg | contacto@finleg.co | Todos los derechos reservados</p>
+    <!-- FOOTER igual al index -->
+    <footer class="bg-navy text-white pt-20 pb-10">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center border-b border-white/10 pb-12 mb-10 gap-8">
+                <div class="flex flex-col space-y-4">
+                    <div class="flex space-x-6">
+                        <a href="https://www.facebook.com/FinlegColombia/" target="_blank" rel="noopener noreferrer" class="hover:text-cyanTech transition-colors">Facebook</a>
+                        <a href="https://www.instagram.com/Finlegcolombia" target="_blank" rel="noopener noreferrer" class="hover:text-cyanTech transition-colors">Instagram</a>
+                        <a href="https://www.linkedin.com/company/finlegcolombia" target="_blank" rel="noopener noreferrer" class="hover:text-cyanTech transition-colors">LinkedIn</a>
+                    </div>
+                    <div class="flex space-x-6 text-sm text-white/60">
+                        <a href="https://wa.me/573103992919" target="_blank" rel="noopener noreferrer" class="hover:text-cyanTech transition-colors">Contacto</a>
+                        <a href="https://siaf.finleg.co/login" target="_blank" class="hover:text-cyanTech transition-colors">Acceso SIAF</a>
+                    </div>
+                </div>
+                <div class="flex flex-col space-y-2 items-center md:items-end">
+                    <a href="mailto:contacto@finleg.co" class="text-cyanTech font-semibold hover:opacity-80 transition-opacity">contacto@finleg.co</a>
+                    <a href="https://wa.me/573103992919" class="text-cyanTech font-semibold hover:opacity-80 transition-opacity">310 399 2919</a>
+                    <span class="text-cyanTech font-semibold">www.finleg.co · Medellín Colombia</span>
+                </div>
+            </div>
+            <p class="text-center text-white/40 text-xs tracking-widest uppercase font-medium">
+                2026 Finleg | Todos los derechos reservados
+            </p>
+        </div>
     </footer>
+
 </body>
 </html>
