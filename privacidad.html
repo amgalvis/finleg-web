@@ -9,14 +9,33 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
+                    colors: {
+                        navy: { DEFAULT: '#1a2b4c', dark: '#0f1a30', light: '#243b61' },
+                        cyanTech: '#00e5ff',
+                    }
+                }
+            }
+        }
+    </script>
+
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #334155; scroll-behavior: smooth; margin: 0; padding: 0; }
-        .bg-navy { background-color: #1a2b4c; }
-        .text-navy { color: #1a2b4c; }
-        .bg-cyan-tech { background-color: #00e5ff; }
+        .hero-mesh {
+            background-color: #1a2b4c;
+            background-image:
+                radial-gradient(at 80% 20%, rgba(0,229,255,0.15) 0px, transparent 50%),
+                radial-gradient(at 20% 80%, rgba(15,26,48,1) 0px, transparent 50%);
+        }
         .legal-text h2 { color: #1a2b4c; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem; border-left: 4px solid #00e5ff; padding-left: 1rem; }
         .legal-text p { margin-bottom: 1.25rem; text-align: justify; line-height: 1.8; }
         .legal-text ul { margin-bottom: 1.5rem; list-style-type: none; padding-left: 0; }
@@ -25,21 +44,27 @@
         .sidebar-link:hover { color: #00e5ff; padding-left: 5px; transition: all 0.2s; }
     </style>
 </head>
-<body>
-    <nav class="bg-navy p-6 shadow-xl sticky top-0 z-50">
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+    <!-- NAV -->
+    <nav class="bg-navy/95 backdrop-blur-md p-6 shadow-xl sticky top-0 z-50 border-b border-white/10">
         <div class="container mx-auto flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-2">
                 <img src="finle_logo.png" alt="Finleg" class="h-10 md:h-12 w-auto object-contain"> 
-                <span class="font-light opacity-80 text-sm text-white tracking-widest border-l border-white/30 pl-2 ml-1">Legal</span>
+                <span class="font-light opacity-60 text-sm text-white tracking-widest border-l border-white/30 pl-2 ml-1">Legal</span>
             </a>
-            <a href="index.html" class="text-white hover:text-[#00e5ff] transition font-semibold">← Volver</a>
+            <a href="index.html" class="text-white hover:text-cyanTech transition font-semibold text-sm">← Volver</a>
         </div>
     </nav>
 
-    <header class="bg-white border-b py-12">
-        <div class="container mx-auto px-6 text-center">
-            <h1 class="text-3xl md:text-4xl font-bold text-navy">Transparencia y Seguridad</h1>
-            <p class="text-gray-500 mt-2">Última actualización: 1 de mayo de 2026</p>
+    <!-- HEADER — Con aspecto visual de la página servicios -->
+    <header class="hero-mesh py-20 relative overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Transparencia y Seguridad</h1>
+            <div class="w-20 h-1.5 bg-cyanTech rounded-full mb-6"></div>
+            <p class="text-xl text-slate-400 font-light max-w-3xl leading-relaxed">
+                Última actualización: 1 de mayo de 2026
+            </p>
         </div>
     </header>
 
@@ -47,7 +72,7 @@
         <div class="flex flex-col lg:flex-row gap-12">
             
             <aside class="lg:w-1/4">
-                <div class="sticky top-28 bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                <div class="sticky top-28 bg-white p-6 rounded-none shadow-sm border border-gray-100">
                     <h3 class="font-bold text-navy mb-4 uppercase text-xs tracking-widest">Contenido</h3>
                     <nav class="flex flex-col gap-3 text-sm font-medium text-gray-600">
                         <a href="#tratamiento" class="sidebar-link">Política de Datos</a>
@@ -58,7 +83,7 @@
                 </div>
             </aside>
 
-            <div class="lg:w-3/4 bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-gray-100 legal-text">
+            <div class="lg:w-3/4 bg-white p-8 md:p-12 rounded-none shadow-sm border border-gray-100 legal-text">
                 
                 <section id="tratamiento">
                     <h2>1. Política de Tratamiento de Información Personal</h2>
@@ -89,13 +114,13 @@
                     </ul>
                 </section>
 
-                <section id="disclaimer" class="bg-slate-50 p-8 rounded-xl border-l-4 border-navy mt-12">
+                <section id="disclaimer" class="bg-slate-50 p-8 rounded-none border-l-4 border-navy mt-12">
                     <h2 class="!mt-0">3. Exención de Responsabilidad (Disclaimer)</h2>
                     <p class="font-semibold text-navy">Aviso Legal Importante sobre Asesoría de Inversiones:</p>
                     <p>
                         Finleg y su plataforma de inteligencia analítica proporcionan herramientas de diagnóstico, educación y monitoreo financiero corporativo. Conforme a lo establecido en la Ley 964 de 2005 y el Decreto 2555 de 2010 de la República de Colombia:
                     </p>
-                    <p class="text-gray-700 bg-white p-4 border border-gray-200 rounded-lg">
+                    <p class="text-gray-700 bg-white p-4 border border-gray-200 rounded-none">
                         "La información, análisis y proyecciones presentadas en este portal NO constituyen asesoría financiera profesional, recomendación de inversión, ni actividad de intermediación de valores. Finleg no realiza captación masiva y habitual de recursos ni ofrece consejos personalizados sobre la compra o venta de instrumentos financieros."
                     </p>
                     <p>
@@ -106,7 +131,7 @@
                 <section id="contacto" class="mt-12 pt-8 border-t border-gray-100">
                     <p class="text-sm text-gray-500">
                         Para ejercer sus derechos de Habeas Data o consultas sobre nuestras normas de gobernanza, puede escribirnos al correo: 
-                        <a href="mailto:info@Finleg.co" class="text-navy font-bold underline">info@Finleg.co</a>
+                        <a href="mailto:contacto@finleg.co" class="text-navy font-bold underline">contacto@finleg.co</a>
                     </p>
                 </section>
 
@@ -114,8 +139,32 @@
         </div>
     </main>
 
-    <footer class="container mx-auto px-6 py-12 text-center border-t border-gray-200">
-        <p class="text-gray-400 text-sm">2026 Finleg | Finanzas Inteligentes.</p>
+    <!-- FOOTER — Reemplazado por el de la página servicios -->
+    <footer class="bg-navy text-white pt-20 pb-10">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center border-b border-white/10 pb-12 mb-10 gap-8">
+                <div class="flex flex-col space-y-4">
+                    <div class="flex space-x-6">
+                        <a href="https://www.facebook.com/FinlegColombia/" target="_blank" rel="noopener noreferrer" class="hover:text-cyanTech transition-colors">Facebook</a>
+                        <a href="https://www.instagram.com/Finlegcolombia" target="_blank" rel="noopener noreferrer" class="hover:text-cyanTech transition-colors">Instagram</a>
+                        <a href="https://www.linkedin.com/in/finlegcolombia" target="_blank" rel="noopener noreferrer" class="hover:text-cyanTech transition-colors">LinkedIn</a>
+                    </div>
+                    <div class="flex space-x-6 text-sm text-white/60">
+                        <a href="servicios.html" class="hover:text-cyanTech transition-colors">Servicios</a>
+                        <a href="https://siaf.finleg.co/login" target="_blank" class="hover:text-cyanTech transition-colors">Acceso SIAF</a>
+                    </div>
+                </div>
+                <div class="flex flex-col space-y-2 items-end">
+                    <a href="mailto:contacto@finleg.co" class="text-cyanTech font-semibold hover:opacity-80 transition-opacity">contacto@finleg.co</a>
+                    <a href="https://wa.me/573103992919" class="text-cyanTech font-semibold hover:opacity-80 transition-opacity">310 399 2919</a>
+                    <span class="text-cyanTech font-semibold">Medellín Colombia</span>
+                </div>
+            </div>
+            <p class="text-center text-white/40 text-xs tracking-widest uppercase font-medium">
+                2026 Finleg | Todos los derechos reservados
+            </p>
+        </div>
     </footer>
+
 </body>
 </html>
