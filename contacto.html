@@ -47,28 +47,26 @@
 </head>
 <body class="bg-slate-50 text-slate-900 antialiased">
 
-    <!-- HEADER -->
-    <header class="fixed w-full z-50 bg-navy/95 backdrop-blur-md border-b border-white/10">
-        <div class="container mx-auto px-6 h-20 flex justify-between items-center">
-            <a href="index.html" class="hover:opacity-80 transition-opacity">
-                <img src="finle_logo.png" alt="Finleg" class="h-16 w-auto object-contain">
+    <!-- NAV — Idéntico a la estructura de la página de servicios -->
+    <nav class="bg-navy/95 backdrop-blur-md p-6 shadow-xl sticky top-0 z-50 border-b border-white/10">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2">
+                <img src="finle_logo.png" alt="Finleg" class="h-10 md:h-12 w-auto object-contain">
+                <span class="font-light opacity-60 text-sm text-white tracking-widest border-l border-white/30 pl-2 ml-1">Contacto</span>
             </a>
-            <nav class="hidden md:flex items-center space-x-6 md:space-x-8">
-                <a href="servicios.html" class="text-white/80 hover:text-cyanTech text-xs md:text-sm font-semibold uppercase tracking-wider transition-colors">Servicios</a>
-                <a href="contacto.html" class="text-cyanTech text-xs md:text-sm font-semibold uppercase tracking-wider transition-colors">Contacto</a>
-                <a href="https://siaf.finleg.co/login" target="_blank" class="bg-white text-navy px-4 md:px-6 py-2 rounded-lg font-bold hover:bg-cyanTech transition-all shadow-lg hover:-translate-y-0.5 text-xs md:text-sm">ACCESO SIAF</a>
-            </nav>
+            <a href="index.html" class="text-white hover:text-cyanTech transition font-semibold text-sm">← Volver</a>
         </div>
-    </header>
+    </nav>
 
     <main>
 
-        <!-- BLOQUE 1: HERO -->
-        <section class="hero-mesh pt-44 pb-20 text-white relative overflow-hidden">
+        <!-- BLOQUE 1: HERO — Ajustado el padding para acoplarse a la nueva barra de navegación -->
+        <section class="hero-mesh py-20 text-white relative overflow-hidden">
             <div class="container mx-auto px-6 text-center relative z-10">
-                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">
+                <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
                     Estamos listos para <span class="text-cyanTech">impulsar</span> su empresa
                 </h1>
+                <div class="w-20 h-1.5 bg-cyanTech rounded-full mb-6 mx-auto"></div>
                 <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto font-light">
                     Escríbanos o agenda una sesión diagnóstica directamente con nuestros especialistas.
                 </p>
