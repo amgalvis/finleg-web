@@ -37,10 +37,6 @@
         }
     </style>
 
-    <!-- Google Calendar JavaScript API para evitar bloqueos de origen cruzado -->
-    <link href="https://calendar.google.com/calendar/scheduling-button/styles.css" rel="stylesheet">
-    <script src="https://calendar.google.com/calendar/scheduling-button/button.js" async></script>
-
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E3Q28T41LV"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -79,11 +75,10 @@
             </div>
         </section>
 
-        <!-- BLOQUE 2: GOOGLE CALENDAR (Integración Segura Incorporada) -->
+        <!-- BLOQUE 2: SECCIÓN DE AGENDAMIENTO -->
         <section class="py-16 bg-white">
-            <div class="container mx-auto px-4 max-w-5xl">
+            <div class="container mx-auto px-4 max-w-3xl">
                 
-                <!-- Textos encima del calendario -->
                 <div class="text-center mb-10 space-y-2">
                     <h2 class="text-2xl md:text-3xl font-extrabold text-navy">
                         Agenda tu asesoría exploratoria sin costo
@@ -93,70 +88,88 @@
                     </p>
                 </div>
 
-                <!-- Contenedor optimizado de carga dinámica -->
-                <div class="bg-white border border-slate-200 rounded-2xl shadow-xl overflow-hidden min-h-[600px] w-full flex flex-col items-center justify-center p-4">
-                    <!-- Contenedor donde la API de Google inyectará la agenda autorizada -->
-                    <div id="calendar-booking-container" class="w-full h-full min-h-[550px]"></div>
-                    
-                    <script>
-                        window.addEventListener('load', function() {
-                            const target = document.getElementById('calendar-booking-container');
-                            if (window.calendar && window.calendar.schedulingButton) {
-                                window.calendar.schedulingButton.load({
-                                    url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2SYYjSXfRFyAWvG5DyB_OorCbyeEm4Cft3wfc3YSRYTyCdKOSefSP-LpN2M2zJh8y1wsU7IfFk?gv=true',
-                                    target: target,
-                                    label: 'Reservar una cita',
-                                });
-                            } else {
-                                // Alternativa si el script de Google tarda en cargar en conexiones lentas
-                                target.innerHTML = '<iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2SYYjSXfRFyAWvG5DyB_OorCbyeEm4Cft3wfc3YSRYTyCdKOSefSP-LpN2M2zJh8y1wsU7IfFk?gv=true" style="border: 0" width="100%" height="550" frameborder="0"></iframe>';
-                            }
-                        });
-                    </script>
+                <!-- Tarjeta Agendamiento Actualizada con los nuevos textos comerciales -->
+                <div class="bg-slate-50 border border-slate-200 shadow-sm p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                    <div class="flex items-start space-x-4 max-w-xl">
+                        <div class="w-12 h-12 bg-navy/5 text-navy flex items-center justify-center shrink-0">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="space-y-1">
+                            <h3 class="text-xl font-bold text-navy">Asesoría Inicial sin Costo</h3>
+                            <p class="text-sm text-slate-600 font-light leading-relaxed">
+                                Reserve una asesoría para evaluar la situación actual de su negocio y estructurar una ruta de soluciones inmediatas.
+                            </p>
+                        </div>
+                    </div>
+                    <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2SYYjSXfRFyAWvG5DyB_OorCbyeEm4Cft3wfc3YSRYTyCdKOSefSP-LpN2M2zJh8y1wsU7IfFk?gv=true" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="w-full md:w-auto text-center inline-block bg-navy text-white hover:bg-cyanTech hover:text-navy px-6 py-3 font-bold tracking-wide transition-all uppercase text-xs shadow-sm shrink-0 whitespace-nowrap">
+                        Agendar Asesoría →
+                    </a>
                 </div>
+
             </div>
         </section>
 
         <!-- BLOQUE 3: CANALES DE ATENCIÓN DIRECTA -->
         <section class="py-16 bg-slate-100 border-t border-slate-200">
-            <div class="container mx-auto px-6 max-w-5xl">
+            <div class="container mx-auto px-4 max-w-3xl">
+                
                 <div class="text-center mb-12">
                     <h2 class="text-2xl md:text-3xl font-extrabold text-navy">Canales de contacto Finleg</h2>
                     <p class="text-slate-600 font-light mt-2 text-sm md:text-base">Si lo prefieres, puedes contactarnos directamente a través de nuestros medios oficiales.</p>
                 </div>
 
-                <div class="grid md:grid-cols-2 gap-8">
+                <!-- Tarjetas Verticales Con Botón Individual -->
+                <div class="space-y-6">
+                    
                     <!-- Tarjeta WhatsApp Finleg -->
-                    <a href="https://wa.me/573103992919" target="_blank" rel="noopener noreferrer" class="group bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-slate-200 flex flex-col justify-between">
-                        <div class="space-y-4">
-                            <div class="w-12 h-12 bg-[#25D366]/10 text-[#25D366] rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                                <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                    <div class="bg-white border border-slate-200 shadow-sm p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                        <div class="flex items-start space-x-4 max-w-xl">
+                            <div class="w-12 h-12 bg-[#25D366]/10 text-[#25D366] flex items-center justify-center shrink-0">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.588 1.451 5.416 1.452 5.386 0 9.766-4.38 9.769-9.766.002-2.61-1.014-5.064-2.863-6.915C17.117 2.072 14.661 1.055 12.004 1.055 6.618 1.055 2.238 5.435 2.234 10.82c-.001 1.823.48 3.609 1.393 5.184l-.995 3.634 3.72l-.913-.543zm10.42-5.419c-.293-.146-1.73-.853-1.997-.951-.268-.098-.463-.146-.659.146-.195.293-.756.951-.926 1.146-.17.195-.341.219-.634.073-1.007-.504-1.741-.83-2.427-2.005-.183-.314.183-.292.523-.971.033-.066.017-.122-.008-.17-.025-.049-.268-.646-.367-.884-.095-.23-.193-.199-.265-.203-.068-.004-.146-.004-.223-.004-.077 0-.203.029-.31.146-.107.117-.41.401-.41.979 0 .578.42 1.138.479 1.219.059.081.826 1.262 2.001 1.77.279.12.498.192.67.247.281.09.537.077.739.047.226-.033.73-.298.833-.586.103-.288.103-.535.073-.586-.029-.05-.107-.08-.4-.226z"/>
                                 </svg>
                             </div>
-                            <h3 class="text-xl font-bold text-navy">WhatsApp Finleg</h3>
-                            <p class="text-slate-600 font-light text-sm leading-relaxed">
-                                Escríbanos para resolver inquietudes puntuales o recibir orientación básica sobre el alcance de nuestras líneas de consultoría.
-                            </p>
+                            <div class="space-y-1">
+                                <h3 class="text-xl font-bold text-navy">WhatsApp Finleg</h3>
+                                <p class="text-sm text-slate-600 font-light leading-relaxed">
+                                    Escríbanos para resolver inquietudes puntuales o recibir orientación básica sobre el alcance de nuestras líneas de consultoría.
+                                </p>
+                            </div>
                         </div>
-                        <span class="text-sm font-semibold text-navy mt-6 inline-block group-hover:text-cyanTech transition-colors">Enviar mensaje →</span>
-                    </a>
+                        <a href="https://wa.me/573103992919" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="w-full md:w-auto text-center inline-block bg-[#25D366] text-white hover:bg-navy hover:text-white px-6 py-3 font-bold tracking-wide transition-all uppercase text-xs shadow-sm shrink-0 whitespace-nowrap">
+                            Contactar WhatsApp →
+                        </a>
+                    </div>
 
                     <!-- Tarjeta Correo Finleg -->
-                    <a href="mailto:contacto@finleg.co" class="group bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-slate-200 flex flex-col justify-between">
-                        <div class="space-y-4">
-                            <div class="w-12 h-12 bg-navy/10 text-navy rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <div class="bg-white border border-slate-200 shadow-sm p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                        <div class="flex items-start space-x-4 max-w-xl">
+                            <div class="w-12 h-12 bg-navy/10 text-navy flex items-center justify-center shrink-0">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                                 </svg>
                             </div>
-                            <h3 class="text-xl font-bold text-navy">Correo Finleg</h3>
-                            <p class="text-slate-600 font-light text-sm leading-relaxed">
-                                Remita solicitudes estructuradas, pliegos o propuestas corporativas de manera directa a nuestra cuenta de atención institucional.
-                            </p>
+                            <div class="space-y-1">
+                                <h3 class="text-xl font-bold text-navy">Correo Finleg</h3>
+                                <p class="text-sm text-slate-600 font-light leading-relaxed">
+                                    Remita solicitudes estructuradas, pliegos o propuestas corporativas de manera directa a nuestra cuenta de atención institucional.
+                                </p>
+                            </div>
                         </div>
-                        <span class="text-sm font-semibold text-navy mt-6 inline-block group-hover:text-cyanTech transition-colors">contacto@finleg.co →</span>
-                    </a>
+                        <a href="mailto:contacto@finleg.co" 
+                           class="w-full md:w-auto text-center inline-block bg-navy text-white hover:bg-cyanTech hover:text-navy px-6 py-3 font-bold tracking-wide transition-all uppercase text-xs shadow-sm shrink-0 whitespace-nowrap">
+                            Enviar Correo →
+                        </a>
+                    </div>
+
                 </div>
             </div>
         </section>
