@@ -1,288 +1,177 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Finleg</title>
+
     <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="apple-touch-icon" href="favicon.png">
-    <title>Actualidad - Finleg</title>
-    <meta name="description" content="Información de interés, sucesos económicos y regulatorios que impactan a las empresas en Colombia.">
+    <meta name="description" content="Póngase en contacto con el equipo de consultores estratégicos de Finleg.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; margin: 0; padding: 0; }
-        .bg-navy { background-color: #1a2b4c; }
-        .text-navy { color: #1a2b4c; }
-        .text-cyan-tech { color: #00e5ff; }
-        .bg-cyan-tech { background-color: #00e5ff; }
-        .editorial-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-        .editorial-card:hover { transform: translateY(-3px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.08); }
-    </style>
-</head>
-<body>
-    <nav class="bg-navy p-6 shadow-xl sticky top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-2">
-                <img src="finle_logo.png" alt="Finleg" width="120" height="48" class="h-10 md:h-12 w-auto object-contain">
-                <span class="font-light opacity-80 text-sm text-white tracking-widest border-l border-white/30 pl-2 ml-1">Actualidad</span>
-            </a>
-            <a href="index.html" class="text-white hover:text-[#00e5ff] transition font-semibold">← Volver</a>
-        </div>
-    </nav>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-    <header class="bg-white border-b py-16">
-        <div class="container mx-auto px-6">
-            <h1 class="text-4xl md:text-5xl font-bold text-navy mt-2">Actualidad Empresarial</h1>
-            <p class="text-xl text-gray-600 mt-4 max-w-3xl leading-relaxed">
-                Información de interés, sucesos económicos y regulatorios que impactan a las empresas en Colombia.
-            </p>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
+                    colors: {
+                        navy: { DEFAULT: '#1a2b4c', dark: '#0f1a30', light: '#243b61' },
+                        cyanTech: '#00e5ff',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .hero-mesh {
+            background-color: #1a2b4c;
+            background-image:
+                radial-gradient(at 80% 20%, rgba(0,229,255,0.15) 0px, transparent 50%),
+                radial-gradient(at 20% 80%, rgba(15,26,48,1) 0px, transparent 50%);
+        }
+    </style>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E3Q28T41LV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-E3Q28T41LV');
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+    <!-- HEADER -->
+    <header class="fixed w-full z-50 bg-navy/95 backdrop-blur-md border-b border-white/10">
+        <div class="container mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="index.html" class="hover:opacity-80 transition-opacity">
+                <img src="finle_logo.png" alt="Finleg" class="h-16 w-auto object-contain">
+            </a>
+            <nav class="hidden md:flex items-center space-x-6 md:space-x-8">
+                <a href="servicios.html" class="text-white/80 hover:text-cyanTech text-xs md:text-sm font-semibold uppercase tracking-wider transition-colors">Servicios</a>
+                <a href="contacto.html" class="text-cyanTech text-xs md:text-sm font-semibold uppercase tracking-wider transition-colors">Contacto</a>
+                <a href="https://siaf.finleg.co/login" target="_blank" class="bg-white text-navy px-4 md:px-6 py-2 rounded-lg font-bold hover:bg-cyanTech transition-all shadow-lg hover:-translate-y-0.5 text-xs md:text-sm">ACCESO SIAF</a>
+            </nav>
         </div>
     </header>
 
-    <main class="container mx-auto px-6 py-12">
+    <main>
 
-        <!-- CARDS VERTICALES: de más reciente a más antigua -->
-        <section class="mb-16 space-y-6">
-
-            <!-- CARD 1: MÁS RECIENTE — INFLACIÓN IPC -->
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 editorial-card">
-                <div class="flex justify-between items-center mb-6">
-                    <span class="text-xs bg-navy text-white px-3 py-1 rounded-full font-semibold">8 de mayo de 2026</span>
-                    <span class="text-xs text-gray-400 font-bold tracking-wider">Finleg</span>
-                </div>
-                <h3 class="text-xl md:text-2xl font-bold text-navy mb-6 leading-tight">
-                    Inflación repunta a 5,68% anual en abril: sexto año consecutivo por encima de la meta
-                </h3>
-                <div class="grid md:grid-cols-2 gap-6 mb-8">
-                    <div>
-                        <h4 class="text-xs font-bold text-cyan-tech uppercase tracking-widest mb-2">Contexto</h4>
-                        <p class="text-sm text-gray-600 leading-relaxed">
-                            El DANE reportó para abril de 2026 una variación mensual del IPC de 0,78% y una variación anual de 5,68%, superior al 5,16% de abril de 2025. Los mayores aumentos en alimentos: zanahoria (+10,40%), tomate de árbol (+9,05%) y papas (+8,05%). El PIB del primer trimestre creció 2,2% y la tasa de desocupación nacional se ubica en 8,8%. Es el sexto año seguido que la inflación no regresa a la meta del 3%.
-                        </p>
-                    </div>
-                    <div>
-                        <h4 class="text-xs font-bold text-navy uppercase tracking-widest mb-2">Análisis de Impacto</h4>
-                        <p class="text-sm text-gray-700 leading-relaxed font-medium">
-                            La inflación persistente erosiona márgenes operativos y poder adquisitivo. Las empresas deben revisar sus estructuras de precios, indexar adecuadamente contratos con clientes y proveedores, y ajustar las proyecciones de flujo de caja para el segundo semestre, especialmente si se materializan los efectos del posible fenómeno de El Niño sobre el sector agrícola.
-                        </p>
-                    </div>
-                </div>
-                <div class="border-t border-gray-100 pt-6 flex justify-between items-center">
-                    <span class="text-xs text-gray-400 font-semibold uppercase tracking-wider">Compartir</span>
-                    <div class="flex gap-4 items-center">
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://finleg.co/actualidad.html" target="_blank" rel="noopener noreferrer" class="text-navy hover:text-[#00e5ff] transition" aria-label="Facebook">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                        </a>
-                        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://finleg.co/actualidad.html" target="_blank" rel="noopener noreferrer" class="text-navy hover:text-[#00e5ff] transition" aria-label="LinkedIn">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                        </a>
-                        <a href="https://twitter.com/intent/tweet?text=Inflación Colombia 5,68%25 abril 2026 - Finleg&url=https://finleg.co/actualidad.html" target="_blank" rel="noopener noreferrer" class="text-navy hover:text-[#00e5ff] transition" aria-label="X">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                        </a>
-                        <a href="https://api.whatsapp.com/send?text=Inflación Colombia abril 2026 vía Finleg: https://finleg.co/actualidad.html" target="_blank" rel="noopener noreferrer" class="text-navy hover:text-[#00e5ff] transition" aria-label="WhatsApp">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                        </a>
-                    </div>
-                </div>
+        <!-- BLOQUE 1: ENCABEZADO HERO ORIGINAL RESTAURADO -->
+        <section class="hero-mesh pt-40 pb-16 text-white relative overflow-hidden">
+            <div class="container mx-auto px-6 text-center relative z-10">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">
+                    Estamos listos para <span class="text-cyanTech">impulsar</span> su empresa
+                </h1>
+                <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto font-light">
+                    Escríbanos o agende una sesión diagnóstica directamente con nuestros especialistas.
+                </p>
             </div>
-
-            <!-- CARD 2 — TASA BANREP -->
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 editorial-card">
-                <div class="flex justify-between items-center mb-6">
-                    <span class="text-xs bg-navy text-white px-3 py-1 rounded-full font-semibold">30 de abril de 2026</span>
-                    <span class="text-xs text-gray-400 font-bold tracking-wider">Finleg</span>
-                </div>
-                <h3 class="text-xl md:text-2xl font-bold text-navy mb-6 leading-tight">
-                    Banrep sube tasa a 11,25% y la mantiene por unanimidad en abril
-                </h3>
-                <div class="grid md:grid-cols-2 gap-6 mb-8">
-                    <div>
-                        <h4 class="text-xs font-bold text-cyan-tech uppercase tracking-widest mb-2">Contexto</h4>
-                        <p class="text-sm text-gray-600 leading-relaxed">
-                            El 31 de marzo, la Junta Directiva incrementó la tasa en 100 puntos básicos hasta 11,25%. En su reunión del 30 de abril, decidió por unanimidad mantenerla en ese nivel. Las minutas, publicadas el 6 de mayo de 2026, señalan que los miembros, aunque con visiones diversas, acordaron por consenso no hacer cambios mientras se evalúa el comportamiento de la inflación. Analistas del mercado estiman que la tasa podría superar el 12% antes de cerrar 2026.
-                        </p>
-                    </div>
-                    <div>
-                        <h4 class="text-xs font-bold text-navy uppercase tracking-widest mb-2">Análisis de Impacto</h4>
-                        <p class="text-sm text-gray-700 leading-relaxed font-medium">
-                            Con el crédito en su nivel más costoso en años y sin perspectiva de recortes en el corto plazo, las empresas deben actuar: reperfilar deuda de corto plazo, revisar coberturas de tasa de interés y fortalecer su capital de trabajo propio para reducir la dependencia del crédito bancario y proteger el flujo de caja libre.
-                        </p>
-                    </div>
-                </div>
-                <div class="border-t border-gray-100 pt-6 flex justify-between items-center">
-                    <span class="text-xs text-gray-400 font-semibold uppercase tracking-wider">Compartir</span>
-                    <div class="flex gap-4 items-center">
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://finleg.co/actualidad.html" target="_blank" rel="noopener noreferrer" class="text-navy hover:text-[#00e5ff] transition" aria-label="Facebook">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                        </a>
-                        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://finleg.co/actualidad.html" target="_blank" rel="noopener noreferrer" class="text-navy hover:text-[#00e5ff] transition" aria-label="LinkedIn">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                        </a>
-                        <a href="https://twitter.com/intent/tweet?text=Banrep mantiene tasa 11,25%25 - Finleg&url=https://finleg.co/actualidad.html" target="_blank" rel="noopener noreferrer" class="text-navy hover:text-[#00e5ff] transition" aria-label="X">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                        </a>
-                        <a href="https://api.whatsapp.com/send?text=Análisis tasa Banrep vía Finleg: https://finleg.co/actualidad.html" target="_blank" rel="noopener noreferrer" class="text-navy hover:text-[#00e5ff] transition" aria-label="WhatsApp">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CARD 3: MÁS ANTIGUA — SUPERSOCIEDADES -->
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 editorial-card">
-                <div class="flex justify-between items-center mb-6">
-                    <span class="text-xs bg-navy text-white px-3 py-1 rounded-full font-semibold">13 de abril de 2026</span>
-                    <span class="text-xs text-gray-400 font-bold tracking-wider">Finleg</span>
-                </div>
-                <h3 class="text-xl md:text-2xl font-bold text-navy mb-6 leading-tight">
-                    Supersociedades: vence plazo para estados financieros e interés bancario sube a 18,78%
-                </h3>
-                <div class="grid md:grid-cols-2 gap-6 mb-8">
-                    <div>
-                        <h4 class="text-xs font-bold text-cyan-tech uppercase tracking-widest mb-2">Contexto</h4>
-                        <p class="text-sm text-gray-600 leading-relaxed">
-                            Las empresas vigiladas debían presentar sus estados financieros con corte a diciembre de 2025 ante la Supersociedades vía SIRFIN (formato XBRL) entre el 13 de abril y el 11 de mayo de 2026. Los consolidados, hasta el 29 de mayo. El incumplimiento genera multas de hasta $350 millones. Simultáneamente, la Superfinanciera certificó el interés bancario corriente en 18,78% e.a. para mayo de 2026 (Resolución 0662), un aumento de 94 puntos básicos frente a abril.
-                        </p>
-                    </div>
-                    <div>
-                        <h4 class="text-xs font-bold text-navy uppercase tracking-widest mb-2">Análisis de Impacto</h4>
-                        <p class="text-sm text-gray-700 leading-relaxed font-medium">
-                            El incremento del interés bancario corriente eleva el techo de las tasas de mora y remuneratoria, encareciendo aún más la deuda. Si su empresa necesita revisar su posición ante estos cambios o normalizar obligaciones pendientes, Finleg puede acompañarle en la preparación, validación y cumplimiento normativo.
-                        </p>
-                    </div>
-                </div>
-                <div class="border-t border-gray-100 pt-6 flex justify-between items-center">
-                    <span class="text-xs text-gray-400 font-semibold uppercase tracking-wider">Compartir</span>
-                    <div class="flex gap-4 items-center">
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://finleg.co/actualidad.html" target="_blank" rel="noopener noreferrer" class="text-navy hover:text-[#00e5ff] transition" aria-label="Facebook">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                        </a>
-                        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://finleg.co/actualidad.html" target="_blank" rel="noopener noreferrer" class="text-navy hover:text-[#00e5ff] transition" aria-label="LinkedIn">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                        </a>
-                        <a href="https://twitter.com/intent/tweet?text=Supersociedades y tasas mayo 2026 vía Finleg&url=https://finleg.co/actualidad.html" target="_blank" rel="noopener noreferrer" class="text-navy hover:text-[#00e5ff] transition" aria-label="X">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                        </a>
-                        <a href="https://api.whatsapp.com/send?text=Supersociedades y tasas mayo 2026 vía Finleg: https://finleg.co/actualidad.html" target="_blank" rel="noopener noreferrer" class="text-navy hover:text-[#00e5ff] transition" aria-label="WhatsApp">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
         </section>
 
-        <!-- CALENDARIO: ancho completo, sin tarjeta de diagnóstico -->
-        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 mb-12">
-            <h2 class="text-2xl font-bold text-navy mb-6 flex items-center gap-2">
-                <span class="w-8 h-1 bg-cyan-tech inline-block"></span>
-                Calendario de Eventos Económico-Financieros
-            </h2>
-            <div class="overflow-x-auto">
-                <table class="w-full">
-                    <thead>
-                        <tr class="border-b border-gray-200">
-                            <th class="text-left py-4 text-xs font-bold uppercase tracking-wider text-navy w-48">Fecha</th>
-                            <th class="text-left py-4 text-xs font-bold uppercase tracking-wider text-navy">Evento</th>
-                            <th class="text-left py-4 text-xs font-bold uppercase tracking-wider text-navy w-28">Relevancia</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-gray-100">
-                        <!-- MACROECONÓMICOS -->
-                        <tr>
-                            <td class="py-4 text-sm text-gray-700 font-bold align-top pt-5">5 de junio de 2026</td>
-                            <td class="py-4 text-sm text-gray-600 pt-5">
-                                <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 block mb-1">Macroeconómico</span>
-                                Publicación del IPC de mayo por el DANE — dato clave para proyecciones de inflación del segundo semestre.
-                            </td>
-                            <td class="py-4 pt-5"><span class="bg-red-50 text-red-600 px-3 py-1 rounded font-bold text-[10px] uppercase">Alta</span></td>
-                        </tr>
-                        <tr>
-                            <td class="py-4 text-sm text-gray-700 font-bold align-top pt-5">30 de junio de 2026</td>
-                            <td class="py-4 text-sm text-gray-600 pt-5">
-                                <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 block mb-1">Macroeconómico</span>
-                                Reunión JDBR — decisión sobre tasa de intervención. Próxima oportunidad de ajuste tras dos reuniones sin cambio.
-                            </td>
-                            <td class="py-4 pt-5"><span class="bg-red-50 text-red-600 px-3 py-1 rounded font-bold text-[10px] uppercase">Alta</span></td>
-                        </tr>
-                        <tr>
-                            <td class="py-4 text-sm text-gray-700 font-bold align-top pt-5">31 de julio de 2026</td>
-                            <td class="py-4 text-sm text-gray-600 pt-5">
-                                <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 block mb-1">Macroeconómico</span>
-                                Reunión JDBR con decisión de tasa + publicación del Informe de Política Monetaria — actualización de proyecciones macroeconómicas del país.
-                            </td>
-                            <td class="py-4 pt-5"><span class="bg-red-50 text-red-600 px-3 py-1 rounded font-bold text-[10px] uppercase">Alta</span></td>
-                        </tr>
-                        <!-- CORPORATIVOS / REGULATORIOS -->
-                        <tr>
-                            <td class="py-4 text-sm text-gray-700 font-bold align-top pt-5">30 de junio de 2026</td>
-                            <td class="py-4 text-sm text-gray-600 pt-5">
-                                <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 block mb-1">Obligación Corporativa</span>
-                                Cierre del primer semestre contable — revisión de estados financieros intermedios, indicadores de liquidez y cumplimiento de covenants bancarios.
-                            </td>
-                            <td class="py-4 pt-5"><span class="bg-red-100 text-red-800 px-3 py-1 rounded font-bold text-[10px] uppercase">Crítica</span></td>
-                        </tr>
-                        <tr>
-                            <td class="py-4 text-sm text-gray-700 font-bold align-top pt-5">Agosto de 2026</td>
-                            <td class="py-4 text-sm text-gray-600 pt-5">
-                                <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 block mb-1">Obligación Corporativa</span>
-                                Presentación de informes de gestión del primer semestre ante juntas de socios y accionistas — verificar quórums, actas y cumplimiento estatutario.
-                            </td>
-                            <td class="py-4 pt-5"><span class="bg-blue-50 text-blue-600 px-3 py-1 rounded font-bold text-[10px] uppercase">Media</span></td>
-                        </tr>
-                        <tr>
-                            <td class="py-4 text-sm text-gray-700 font-bold align-top pt-5">30 de septiembre de 2026</td>
-                            <td class="py-4 text-sm text-gray-600 pt-5">
-                                <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 block mb-1">Macroeconómico</span>
-                                Reunión JDBR — tercera decisión de tasa del segundo semestre. Punto clave para proyectar el costo financiero del cuarto trimestre.
-                            </td>
-                            <td class="py-4 pt-5"><span class="bg-red-50 text-red-600 px-3 py-1 rounded font-bold text-[10px] uppercase">Alta</span></td>
-                        </tr>
-                        <tr>
-                            <td class="py-4 text-sm text-gray-700 font-bold align-top pt-5">Octubre de 2026</td>
-                            <td class="py-4 text-sm text-gray-600 pt-5">
-                                <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 block mb-1">Obligación Corporativa</span>
-                                Inicio del proceso de presupuestación y planeación financiera 2027 — proyecciones de flujo de caja, inversiones y estructura de deuda para el año siguiente.
-                            </td>
-                            <td class="py-4 pt-5"><span class="bg-blue-50 text-blue-600 px-3 py-1 rounded font-bold text-[10px] uppercase">Media</span></td>
-                        </tr>
-                        <tr>
-                            <td class="py-4 text-sm text-gray-700 font-bold align-top pt-5">18 de diciembre de 2026</td>
-                            <td class="py-4 text-sm text-gray-600 pt-5">
-                                <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 block mb-1">Macroeconómico</span>
-                                Última reunión JDBR del año — decisión de cierre sobre tasa de intervención que define el panorama financiero para enero de 2027.
-                            </td>
-                            <td class="py-4 pt-5"><span class="bg-red-50 text-red-600 px-3 py-1 rounded font-bold text-[10px] uppercase">Alta</span></td>
-                        </tr>
-                        <tr>
-                            <td class="py-4 text-sm text-gray-700 font-bold align-top pt-5">31 de diciembre de 2026</td>
-                            <td class="py-4 text-sm text-gray-600 pt-5">
-                                <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 block mb-1">Obligación Corporativa</span>
-                                Cierre contable del ejercicio 2026 — preparación de estados financieros de fin de año, inventarios, conciliaciones y ajustes para reporte ante Supersociedades en 2027.
-                            </td>
-                            <td class="py-4 pt-5"><span class="bg-red-100 text-red-800 px-3 py-1 rounded font-bold text-[10px] uppercase">Crítica</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+        <!-- BLOQUE 2: GOOGLE CALENDAR CON TEXTOS SOLICITADOS -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 max-w-5xl">
+                
+                <!-- Textos encima del calendario -->
+                <div class="text-center mb-10 space-y-2">
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-navy">
+                        Agenda tu asesoría exploratoria sin costo
+                    </h2>
+                    <p class="text-slate-600 font-light max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
+                        Te atendemos en una entrevista de no más de 15 minutos para conversar y conocer las necesidades específicas de tu empresa.
+                    </p>
+                </div>
 
-        <!-- BOTÓN FINAL igual que finanzas.html -->
-        <div class="text-center py-4">
-            <a href="https://wa.me/573103992919?text=Hola%20Finleg,%20deseo%20información%20sobre%20sus%20servicios"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="inline-block bg-navy text-white px-12 py-4 rounded-xl font-bold text-lg hover:opacity-90 transition shadow-md">
-                Agendar una Asesoría →
-            </a>
-        </div>
+                <!-- Tarjeta contenedora del calendario de Google Workspace -->
+                <div class="bg-white border border-slate-200 rounded-2xl shadow-xl overflow-hidden h-[450px] md:h-[500px]">
+                    <!-- Google Calendar Appointment Scheduling begin -->
+                    <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2SYYjSXfRFyAWvG5DyB_OorCbyeEm4Cft3wfc3YSRYTyCdKOSefSP-LpN2M2zJh8y1wsU7IfFk?gv=true" style="border: 0" width="100%" height="100%" frameborder="0"></iframe>
+                    <!-- end Google Calendar Appointment Scheduling -->
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOQUE 3: OTROS CANALES DE ATENCIÓN OPTIMIZADOS -->
+        <section class="py-16 bg-slate-100 border-t border-slate-200">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <div class="text-center mb-12">
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-navy">Nuestros canales de contacto</h2>
+                    <p class="text-slate-600 font-light mt-2 text-sm md:text-base">Si lo prefieres, puedes contactarnos directamente a través de nuestros medios oficiales.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Tarjeta WhatsApp Finleg -->
+                    <a href="https://wa.me/573103992919" target="_blank" rel="noopener noreferrer" class="group bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-slate-200 flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 bg-[#25D366]/10 text-[#25D366] rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.588 1.451 5.416 1.452 5.386 0 9.766-4.38 9.769-9.766.002-2.61-1.014-5.064-2.863-6.915C17.117 2.072 14.661 1.055 12.004 1.055 6.618 1.055 2.238 5.435 2.234 10.82c-.001 1.823.48 3.609 1.393 5.184l-.995 3.634 3.72l-.913-.543zm10.42-5.419c-.293-.146-1.73-.853-1.997-.951-.268-.098-.463-.146-.659.146-.195.293-.756.951-.926 1.146-.17.195-.341.219-.634.073-1.007-.504-1.741-.83-2.427-2.005-.183-.314.183-.292.523-.971.033-.066.017-.122-.008-.17-.025-.049-.268-.646-.367-.884-.095-.23-.193-.199-.265-.203-.068-.004-.146-.004-.223-.004-.077 0-.203.029-.31.146-.107.117-.41.401-.41.979 0 .578.42 1.138.479 1.219.059.081.826 1.262 2.001 1.77.279.12.498.192.67.247.281.09.537.077.739.047.226-.033.73-.298.833-.586.103-.288.103-.535.073-.586-.029-.05-.107-.08-.4-.226z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-navy">WhatsApp Finleg</h3>
+                            <p class="text-slate-600 font-light text-sm leading-relaxed">
+                                Escríbanos para resolver inquietudes puntuales o recibir orientación básica sobre el alcance de nuestras líneas de consultoría.
+                            </p>
+                        </div>
+                        <span class="text-sm font-semibold text-navy mt-6 inline-block group-hover:text-cyanTech transition-colors">Enviar mensaje →</span>
+                    </a>
+
+                    <!-- Tarjeta Correo Finleg -->
+                    <a href="mailto:contacto@finleg.co" class="group bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-slate-200 flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 bg-navy/10 text-navy rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-navy">Correo Finleg</h3>
+                            <p class="text-slate-600 font-light text-sm leading-relaxed">
+                                Remita solicitudes estructuradas, pliegos o propuestas corporativas de manera directa a nuestra cuenta de atención institucional.
+                            </p>
+                        </div>
+                        <span class="text-sm font-semibold text-navy mt-6 inline-block group-hover:text-cyanTech transition-colors">contacto@finleg.co →</span>
+                    </a>
+                </div>
+            </div>
+        </section>
 
     </main>
 
-    <footer class="container mx-auto px-6 py-12 text-center border-t border-gray-200 mt-12">
-        <p class="text-gray-400 text-sm">2026 Finleg | Finanzas Inteligentes.</p>
+    <!-- FOOTER -->
+    <footer class="bg-navy text-white pt-20 pb-10">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center border-b border-white/10 pb-12 mb-10 gap-8">
+                <div class="flex flex-col space-y-4 w-full md:w-auto">
+                    <div class="flex space-x-6">
+                        <a href="https://www.facebook.com/FinlegColombia/" target="_blank" rel="noopener noreferrer" class="hover:text-cyanTech transition-colors">Facebook</a>
+                        <a href="https://www.instagram.com/Finlegcolombia" target="_blank" rel="noopener noreferrer" class="hover:text-cyanTech transition-colors">Instagram</a>
+                        <a href="https://www.linkedin.com/in/finlegcolombia" target="_blank" rel="noopener noreferrer" class="hover:text-cyanTech transition-colors">LinkedIn</a>
+                    </div>
+                    <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/60">
+                        <a href="servicios.html" class="hover:text-cyanTech transition-colors">Servicios</a>
+                        <a href="https://siaf.finleg.co/login" target="_blank" class="hover:text-cyanTech transition-colors">Acceso SIAF</a>
+                        <a href="privacidad.html" class="hover:text-cyanTech transition-colors">Política de privacidad</a>
+                        <a href="nosotros.html" class="hover:text-cyanTech transition-colors">Conoce Finleg</a>
+                    </div>
+                </div>
+                <div class="flex flex-col space-y-2 items-end">
+                    <a href="mailto:contacto@finleg.co" class="text-cyanTech font-semibold hover:opacity-80 transition-opacity">contacto@finleg.co</a>
+                    <a href="https://wa.me/573103992919" class="text-cyanTech font-semibold hover:opacity-80 transition-opacity">WhatsApp 3103992919</a>
+                    <span class="text-cyanTech font-semibold">Medellín Colombia</span>
+                </div>
+            </div>
+            <p class="text-center text-white/40 text-xs tracking-widest uppercase font-medium">
+                2026 Finleg | Todos los derechos reservados
+            </p>
+        </div>
     </footer>
+
 </body>
 </html>
