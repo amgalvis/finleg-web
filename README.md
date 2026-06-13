@@ -1,2 +1,2 @@
 # finleg-web
-Finanzas Corporativas y Consultoria Legal
+Sitio Web de Finleg, firma de consultoría empresarial para empresas colombianas.
